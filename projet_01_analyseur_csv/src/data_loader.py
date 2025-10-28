@@ -1,6 +1,7 @@
 """
 Module de chargement et validation des fichiers CSV
 Responsabilité: Charger, détecter l'encodage et valider les données
+Version 2.2 - Optimisée pour gros fichiers
 """
 
 import pandas as pd
@@ -11,7 +12,12 @@ import io
 
 
 class DataLoader:
-    """Classe pour charger et valider les fichiers CSV"""
+    """Classe pour charger et valider les fichiers CSV (Version Optimisée)"""
+    
+    # Constantes d'optimisation
+    SAMPLE_SIZE = 10000  # 10 KB pour détection encodage
+    CHUNK_THRESHOLD = 10_000_000  # 10 MB - seuil pour chargement par chunks
+    MAX_FILE_SIZE = 500_000_000  # 500 MB - taille maximale
     
     def __init__(self):
         self.df: Optional[pd.DataFrame] = None
@@ -19,20 +25,22 @@ class DataLoader:
     
     def detect_encoding(self, file_bytes: bytes) -> str:
         """
-        Détecte l'encodage du fichier
+        Détecte l'encodage du fichier (optimisé - échantillon seulement)
         
         Args:
-            file_bytes: Contenu du fichier en bytes
+            file_bytes: Contenu du fichier en bytes (ou échantillon)
             
         Returns:
             str: Encodage détecté
         """
-        result = chardet.detect(file_bytes)
+        # Utiliser seulement un échantillon pour détecter l'encodage
+        sample = file_bytes[:self.SAMPLE_SIZE] if len(file_bytes) > self.SAMPLE_SIZE else file_bytes
+        result = chardet.detect(sample)
         return result['encoding'] or 'utf-8'
     
     def load_from_upload(self, uploaded_file) -> Tuple[bool, str]:
         """
-        Charge un fichier depuis l'upload Streamlit
+        Charge un fichier depuis l'upload Streamlit (optimisé)
         
         Args:
             uploaded_file: Fichier uploadé par Streamlit
@@ -41,26 +49,53 @@ class DataLoader:
             Tuple[bool, str]: (Succès, Message)
         """
         try:
-            # Lire le contenu du fichier
+            # Vérifier la taille du fichier
+            if uploaded_file.size > self.MAX_FILE_SIZE:
+                return False, f"❌ Fichier trop volumineux ({uploaded_file.size / 1_000_000:.1f} MB). Maximum: {self.MAX_FILE_SIZE / 1_000_000:.0f} MB"
+            
+            # Lire le contenu du fichier UNE SEULE FOIS
             file_bytes = uploaded_file.read()
             
-            # Détecter l'encodage
+            # Détecter l'encodage sur échantillon seulement
             encoding = self.detect_encoding(file_bytes)
             
-            # Réinitialiser le pointeur du fichier
-            uploaded_file.seek(0)
-            
-            # Charger selon le type de fichier
+            # Déterminer le type de fichier
             file_extension = uploaded_file.name.split('.')[-1].lower()
             
+            # Créer un BytesIO pour éviter de relire
+            file_io = io.BytesIO(file_bytes)
+            
+            # Chargement optimisé selon taille
             if file_extension == 'csv':
-                self.df = pd.read_csv(
-                    io.BytesIO(file_bytes),
-                    encoding=encoding,
-                    encoding_errors='ignore'
-                )
+                if uploaded_file.size > self.CHUNK_THRESHOLD:
+                    # Gros fichier : charger par chunks avec barre de progression
+                    with st.spinner(f"Chargement d'un gros fichier ({uploaded_file.size / 1_000_000:.1f} MB)..."):
+                        chunks = []
+                        chunk_size = 50000  # 50K lignes par chunk
+                        
+                        for chunk in pd.read_csv(
+                            file_io,
+                            encoding=encoding,
+                            encoding_errors='ignore',
+                            chunksize=chunk_size
+                        ):
+                            chunks.append(chunk)
+                        
+                        self.df = pd.concat(chunks, ignore_index=True)
+                else:
+                    # Petit fichier : chargement normal
+                    self.df = pd.read_csv(
+                        file_io,
+                        encoding=encoding,
+                        encoding_errors='ignore'
+                    )
             elif file_extension in ['xlsx', 'xls']:
-                self.df = pd.read_excel(io.BytesIO(file_bytes))
+                # Excel ne supporte pas chunksize
+                if uploaded_file.size > self.CHUNK_THRESHOLD:
+                    with st.spinner(f"Chargement d'un gros fichier Excel ({uploaded_file.size / 1_000_000:.1f} MB)..."):
+                        self.df = pd.read_excel(file_io)
+                else:
+                    self.df = pd.read_excel(file_io)
             else:
                 return False, f"❌ Format non supporté: {file_extension}"
             
@@ -70,11 +105,14 @@ class DataLoader:
                 'taille': f"{uploaded_file.size / 1024:.2f} KB",
                 'encodage': encoding,
                 'lignes': len(self.df),
-                'colonnes': len(self.df.columns)
+                'colonnes': len(self.df.columns),
+                'memoire': f"{self.df.memory_usage(deep=True).sum() / 1024 / 1024:.2f} MB"
             }
             
             return True, "✅ Fichier chargé avec succès"
             
+        except MemoryError:
+            return False, "❌ Mémoire insuffisante pour charger ce fichier"
         except Exception as e:
             return False, f"❌ Erreur lors du chargement: {str(e)}"
     

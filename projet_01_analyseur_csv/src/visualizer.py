@@ -1,6 +1,7 @@
 """
 Module de visualisation avec Plotly
 Responsabilité: Créer tous les graphiques interactifs
+Version 2.2 - Optimisée avec échantillonnage et cache
 """
 
 import pandas as pd
@@ -12,17 +13,37 @@ from typing import List, Optional
 
 
 class Visualizer:
-    """Classe pour créer des visualisations interactives avec Plotly"""
+    """Classe pour créer des visualisations interactives avec Plotly (Version Optimisée)"""
+    
+    # Constantes d'optimisation
+    SAMPLE_THRESHOLD = 50_000  # Si > 50K lignes, échantillonner
+    SAMPLE_SIZE = 10_000  # Taille de l'échantillon pour visualisations
+    MAX_BINS = 50  # Nombre maximum de bins pour histogrammes
     
     def __init__(self, df: pd.DataFrame, theme: str = 'plotly_white'):
         self.df = df
         self.theme = theme
         self.color_palette = px.colors.qualitative.Set2
+        # Cache pour stats déjà calculées
+        self._stats_cache = {}
+    
+    def _get_sample(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Échantillonne les données si trop volumineuses"""
+        if len(df) > self.SAMPLE_THRESHOLD:
+            return df.sample(n=self.SAMPLE_SIZE, random_state=42)
+        return df
+    
+    def _get_cached_stats(self, column: str) -> tuple:
+        """Récupère ou calcule mean/std (avec cache)"""
+        if column not in self._stats_cache:
+            data = self.df[column].dropna()
+            self._stats_cache[column] = (data.mean(), data.std(), data.min(), data.max())
+        return self._stats_cache[column]
     
     def create_histogram(self, column: str, nbins: int = 30, 
                         show_distribution: bool = True) -> go.Figure:
         """
-        Crée un histogramme interactif
+        Crée un histogramme interactif (OPTIMISÉ avec échantillonnage)
         
         Args:
             column: Nom de la colonne
@@ -32,12 +53,18 @@ class Visualizer:
         Returns:
             Figure Plotly
         """
+        # Échantillonner si nécessaire
+        df_viz = self._get_sample(self.df)
+        
+        # Limiter le nombre de bins pour gros datasets
+        effective_bins = min(nbins, self.MAX_BINS)
+        
         fig = go.Figure()
         
         # Histogramme
         fig.add_trace(go.Histogram(
-            x=self.df[column],
-            nbinsx=nbins,
+            x=df_viz[column],
+            nbinsx=effective_bins,
             name='Distribution',
             marker_color=self.color_palette[0],
             opacity=0.7
@@ -45,14 +72,15 @@ class Visualizer:
         
         # Ajouter la courbe de distribution normale si demandé
         if show_distribution:
-            mean = self.df[column].mean()
-            std = self.df[column].std()
-            x_range = np.linspace(self.df[column].min(), self.df[column].max(), 100)
+            # Utiliser stats cachées au lieu de recalculer
+            mean, std, min_val, max_val = self._get_cached_stats(column)
+            
+            x_range = np.linspace(min_val, max_val, 100)
             y_normal = ((1 / (std * np.sqrt(2 * np.pi))) * 
                        np.exp(-0.5 * ((x_range - mean) / std) ** 2))
             
             # Normaliser pour l'histogramme
-            y_normal = y_normal * len(self.df[column]) * (self.df[column].max() - self.df[column].min()) / nbins
+            y_normal = y_normal * len(df_viz) * (max_val - min_val) / effective_bins
             
             fig.add_trace(go.Scatter(
                 x=x_range,
@@ -62,8 +90,12 @@ class Visualizer:
                 line=dict(color='red', width=2)
             ))
         
+        title = f'Distribution de {column}'
+        if len(self.df) > self.SAMPLE_THRESHOLD:
+            title += f' (échantillon de {self.SAMPLE_SIZE:,} lignes)'
+        
         fig.update_layout(
-            title=f'Distribution de {column}',
+            title=title,
             xaxis_title=column,
             yaxis_title='Fréquence',
             template=self.theme,
@@ -75,7 +107,7 @@ class Visualizer:
     def create_boxplot(self, columns: List[str] = None, 
                       orientation: str = 'v') -> go.Figure:
         """
-        Crée des box plots pour visualiser les outliers
+        Crée des box plots pour visualiser les outliers (OPTIMISÉ avec échantillonnage)
         
         Args:
             columns: Liste des colonnes (None = toutes numériques)
@@ -87,26 +119,33 @@ class Visualizer:
         if columns is None:
             columns = self.df.select_dtypes(include=['number']).columns.tolist()
         
+        # Échantillonner si nécessaire
+        df_viz = self._get_sample(self.df)
+        
         fig = go.Figure()
         
         for i, col in enumerate(columns):
             if orientation == 'v':
                 fig.add_trace(go.Box(
-                    y=self.df[col],
+                    y=df_viz[col],
                     name=col,
                     marker_color=self.color_palette[i % len(self.color_palette)],
                     boxmean='sd'  # Affiche moyenne et écart-type
                 ))
             else:
                 fig.add_trace(go.Box(
-                    x=self.df[col],
+                    x=df_viz[col],
                     name=col,
                     marker_color=self.color_palette[i % len(self.color_palette)],
                     boxmean='sd'
                 ))
         
+        title = 'Box Plots - Détection des Outliers'
+        if len(self.df) > self.SAMPLE_THRESHOLD:
+            title += f' (échantillon de {self.SAMPLE_SIZE:,} lignes)'
+        
         fig.update_layout(
-            title='Box Plots - Détection des Outliers',
+            title=title,
             template=self.theme,
             showlegend=True,
             hovermode='closest'

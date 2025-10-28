@@ -1,6 +1,7 @@
 """
 Module d'analyse de corrélation
 Responsabilité: Calculer et analyser les corrélations entre variables
+Version 2.2 - Optimisée avec cache et échantillonnage
 """
 
 import pandas as pd
@@ -10,18 +11,26 @@ from typing import Dict, List, Tuple, Optional
 
 
 class CorrelationAnalyzer:
-    """Classe pour analyser les corrélations entre variables"""
+    """Classe pour analyser les corrélations entre variables (Version Optimisée)"""
+    
+    # Constantes d'optimisation
+    MAX_COLUMNS = 50  # Limiter le nombre de colonnes pour la matrice
+    SAMPLE_THRESHOLD = 100_000  # Si > 100K lignes, échantillonner
+    SAMPLE_SIZE = 50_000  # Taille de l'échantillon
     
     def __init__(self, df: pd.DataFrame):
         self.df = df
         self.numeric_columns = df.select_dtypes(include=['number']).columns.tolist()
+        # Cache pour matrice de corrélation
+        self._corr_cache = {}
     
-    def get_correlation_matrix(self, method: str = 'pearson') -> pd.DataFrame:
+    def get_correlation_matrix(self, method: str = 'pearson', use_sample: bool = None) -> pd.DataFrame:
         """
-        Calcule la matrice de corrélation
+        Calcule la matrice de corrélation (OPTIMISÉ avec cache et échantillonnage)
         
         Args:
             method: Méthode de corrélation ('pearson', 'spearman', 'kendall')
+            use_sample: Forcer échantillonnage (None = auto si > 100K lignes)
             
         Returns:
             DataFrame avec la matrice de corrélation
@@ -29,7 +38,29 @@ class CorrelationAnalyzer:
         if len(self.numeric_columns) < 2:
             return pd.DataFrame()
         
-        return self.df[self.numeric_columns].corr(method=method)
+        # Vérifier le cache
+        cache_key = f"corr_{method}"
+        if cache_key in self._corr_cache:
+            return self._corr_cache[cache_key]
+        
+        # Limiter le nombre de colonnes si trop nombreuses
+        cols_to_use = self.numeric_columns[:self.MAX_COLUMNS] if len(self.numeric_columns) > self.MAX_COLUMNS else self.numeric_columns
+        
+        # Décider si échantillonnage nécessaire
+        if use_sample is None:
+            use_sample = len(self.df) > self.SAMPLE_THRESHOLD
+        
+        # Préparer les données
+        if use_sample and len(self.df) > self.SAMPLE_THRESHOLD:
+            # Échantillonnage aléatoire pour gros datasets
+            df_sample = self.df[cols_to_use].sample(n=self.SAMPLE_SIZE, random_state=42)
+            corr_matrix = df_sample.corr(method=method)
+        else:
+            corr_matrix = self.df[cols_to_use].corr(method=method)
+        
+        # Mettre en cache
+        self._corr_cache[cache_key] = corr_matrix
+        return corr_matrix
     
     def get_correlation_pairs(self, threshold: float = 0.7, 
                              method: str = 'pearson') -> List[Dict]:

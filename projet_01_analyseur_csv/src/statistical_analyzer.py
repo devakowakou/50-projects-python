@@ -1,24 +1,28 @@
 """
 Module d'analyse statistique descriptive
 Responsabilité: Calculer toutes les statistiques descriptives
+Version 2.2 - Optimisée avec calculs en un seul passage
 """
 
 import pandas as pd
 import numpy as np
 from scipy import stats
 from typing import Dict, List, Optional
+from functools import lru_cache
 
 
 class StatisticalAnalyzer:
-    """Classe pour effectuer l'analyse statistique descriptive"""
+    """Classe pour effectuer l'analyse statistique descriptive (Version Optimisée)"""
     
     def __init__(self, df: pd.DataFrame):
         self.df = df
         self.numeric_columns = df.select_dtypes(include=['number']).columns.tolist()
+        # Cache pour éviter recalculs
+        self._stats_cache = {}
     
     def get_basic_statistics(self, column: Optional[str] = None) -> pd.DataFrame:
         """
-        Calcule les statistiques de base
+        Calcule les statistiques de base (OPTIMISÉ - un seul passage)
         
         Args:
             column: Colonne spécifique (None = toutes les colonnes numériques)
@@ -31,25 +35,36 @@ class StatisticalAnalyzer:
         else:
             data = self.df[self.numeric_columns]
         
+        # Utiliser describe() qui est optimisé en C - UN SEUL PASSAGE
+        desc = data.describe()
+        
+        # Calculer les stats supplémentaires en un passage
+        q1 = desc.loc['25%']
+        q3 = desc.loc['75%']
+        iqr = q3 - q1
+        mean = desc.loc['mean']
+        std = desc.loc['std']
+        
+        # Construire le résultat avec les valeurs déjà calculées
         stats_dict = {
-            'Moyenne': data.mean(),
-            'Médiane': data.median(),
-            'Écart-type': data.std(),
-            'Variance': data.var(),
-            'Minimum': data.min(),
-            'Maximum': data.max(),
-            'Q1 (25%)': data.quantile(0.25),
-            'Q3 (75%)': data.quantile(0.75),
-            'IQR': data.quantile(0.75) - data.quantile(0.25),
-            'Étendue': data.max() - data.min(),
-            'CV (%)': (data.std() / data.mean() * 100).round(2),
+            'Moyenne': mean,
+            'Médiane': desc.loc['50%'],
+            'Écart-type': std,
+            'Variance': std ** 2,  # Calculé depuis std au lieu de var()
+            'Minimum': desc.loc['min'],
+            'Maximum': desc.loc['max'],
+            'Q1 (25%)': q1,
+            'Q3 (75%)': q3,
+            'IQR': iqr,
+            'Étendue': desc.loc['max'] - desc.loc['min'],
+            'CV (%)': (std / mean * 100).round(2),
         }
         
         return pd.DataFrame(stats_dict).T
     
     def get_advanced_statistics(self, column: str) -> Dict:
         """
-        Calcule des statistiques avancées pour une colonne
+        Calcule des statistiques avancées pour une colonne (avec cache)
         
         Args:
             column: Nom de la colonne
@@ -57,18 +72,31 @@ class StatisticalAnalyzer:
         Returns:
             Dictionnaire avec les statistiques avancées
         """
+        # Vérifier le cache
+        cache_key = f"advanced_{column}"
+        if cache_key in self._stats_cache:
+            return self._stats_cache[cache_key]
+        
         data = self.df[column].dropna()
         
-        return {
+        # Calculer une seule fois
+        mean_val = data.mean()
+        std_val = data.std()
+        
+        result = {
             'skewness': stats.skew(data),
             'kurtosis': stats.kurtosis(data),
             'mode': data.mode().values[0] if len(data.mode()) > 0 else None,
-            'coef_variation': (data.std() / data.mean() * 100) if data.mean() != 0 else None,
+            'coef_variation': (std_val / mean_val * 100) if mean_val != 0 else None,
             'erreur_standard': stats.sem(data),
             'intervalle_confiance_95': stats.t.interval(
-                0.95, len(data)-1, loc=data.mean(), scale=stats.sem(data)
+                0.95, len(data)-1, loc=mean_val, scale=stats.sem(data)
             )
         }
+        
+        # Mettre en cache
+        self._stats_cache[cache_key] = result
+        return result
     
     def get_distribution_analysis(self, column: str) -> Dict:
         """

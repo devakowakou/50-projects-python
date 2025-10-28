@@ -1,16 +1,22 @@
 """
 Module de détection d'anomalies et outliers
 Responsabilité: Identifier les valeurs aberrantes dans les données
+Version 2.2 - Optimisée avec parallélisation
 """
 
 import pandas as pd
 import numpy as np
 from scipy import stats
 from typing import Dict, List
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 class AnomalyDetector:
-    """Classe pour détecter les anomalies et outliers"""
+    """Classe pour détecter les anomalies et outliers (Version Optimisée)"""
+    
+    # Constantes d'optimisation
+    MAX_WORKERS = 4  # Nombre de threads pour parallélisation
+    ENABLE_PARALLEL = True  # Activer la parallélisation
     
     def __init__(self, df: pd.DataFrame):
         self.df = df
@@ -19,7 +25,7 @@ class AnomalyDetector:
     
     def detect_outliers_iqr(self, column: str, multiplier: float = 1.5) -> Dict:
         """
-        Détecte les outliers avec la méthode IQR
+        Détecte les outliers avec la méthode IQR (OPTIMISÉ)
         
         Args:
             column: Nom de la colonne
@@ -30,8 +36,10 @@ class AnomalyDetector:
         """
         data = self.df[column].dropna()
         
-        Q1 = data.quantile(0.25)
-        Q3 = data.quantile(0.75)
+        # Utiliser describe() pour calculer Q1, Q3 en un seul passage
+        desc = data.describe()
+        Q1 = desc['25%']
+        Q3 = desc['75%']
         IQR = Q3 - Q1
         
         lower_bound = Q1 - multiplier * IQR
@@ -49,7 +57,7 @@ class AnomalyDetector:
             'limite_inferieure': lower_bound,
             'limite_superieure': upper_bound,
             'nombre_outliers': len(outliers),
-            'pourcentage': round(len(outliers) / len(data) * 100, 2),
+            'pourcentage': round(len(outliers) / len(data) * 100, 2) if len(data) > 0 else 0,
             'outliers_indices': outliers.index.tolist(),
             'outliers_valeurs': outliers.tolist()
         }
@@ -90,7 +98,7 @@ class AnomalyDetector:
     def detect_outliers_all_columns(self, method: str = 'IQR', 
                                    threshold: float = 1.5) -> pd.DataFrame:
         """
-        Détecte les outliers pour toutes les colonnes numériques
+        Détecte les outliers pour toutes les colonnes numériques (OPTIMISÉ - parallèle)
         
         Args:
             method: Méthode de détection ('IQR' ou 'Z-Score')
@@ -101,23 +109,54 @@ class AnomalyDetector:
         """
         results = []
         
-        for col in self.numeric_columns:
-            if method.upper() == 'IQR':
-                result = self.detect_outliers_iqr(col, threshold)
-            else:
-                result = self.detect_outliers_zscore(col, threshold)
-            
-            results.append({
-                'Colonne': col,
-                'Méthode': method,
-                'Nombre_Outliers': result['nombre_outliers'],
-                'Pourcentage': result['pourcentage'],
-                'Min_Outlier': min(result['outliers_valeurs']) if result['outliers_valeurs'] else None,
-                'Max_Outlier': max(result['outliers_valeurs']) if result['outliers_valeurs'] else None
-            })
-            
-            # Stocker pour référence
-            self.outliers_info[col] = result
+        # Version parallélisée si activée et plusieurs colonnes
+        if self.ENABLE_PARALLEL and len(self.numeric_columns) > 2:
+            with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
+                # Soumettre toutes les tâches
+                future_to_col = {}
+                for col in self.numeric_columns:
+                    if method.upper() == 'IQR':
+                        future = executor.submit(self.detect_outliers_iqr, col, threshold)
+                    else:
+                        future = executor.submit(self.detect_outliers_zscore, col, threshold)
+                    future_to_col[future] = col
+                
+                # Collecter les résultats
+                for future in as_completed(future_to_col):
+                    col = future_to_col[future]
+                    try:
+                        result = future.result()
+                        results.append({
+                            'Colonne': col,
+                            'Méthode': method,
+                            'Nombre_Outliers': result['nombre_outliers'],
+                            'Pourcentage': result['pourcentage'],
+                            'Min_Outlier': min(result['outliers_valeurs']) if result['outliers_valeurs'] else None,
+                            'Max_Outlier': max(result['outliers_valeurs']) if result['outliers_valeurs'] else None
+                        })
+                        self.outliers_info[col] = result
+                    except Exception as e:
+                        # En cas d'erreur, continuer avec les autres colonnes
+                        pass
+        else:
+            # Version séquentielle (fallback)
+            for col in self.numeric_columns:
+                if method.upper() == 'IQR':
+                    result = self.detect_outliers_iqr(col, threshold)
+                else:
+                    result = self.detect_outliers_zscore(col, threshold)
+                
+                results.append({
+                    'Colonne': col,
+                    'Méthode': method,
+                    'Nombre_Outliers': result['nombre_outliers'],
+                    'Pourcentage': result['pourcentage'],
+                    'Min_Outlier': min(result['outliers_valeurs']) if result['outliers_valeurs'] else None,
+                    'Max_Outlier': max(result['outliers_valeurs']) if result['outliers_valeurs'] else None
+                })
+                
+                # Stocker pour référence
+                self.outliers_info[col] = result
         
         return pd.DataFrame(results).sort_values('Nombre_Outliers', ascending=False)
     
