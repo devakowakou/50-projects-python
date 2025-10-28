@@ -6,9 +6,9 @@ echo ""
 
 # Vérifier si l'environnement virtuel existe
 if [ ! -d ".venv" ]; then
-    echo "📦 Création de l'environnement virtuel..."
+    echo " Création de l'environnement virtuel..."
     python3 -m venv .venv
-    echo "✅ Environnement virtuel créé"
+    echo " Environnement virtuel créé"
     echo ""
 fi
 
@@ -22,10 +22,10 @@ pip install -q --upgrade pip
 pip install -q -r requirements.txt
 
 echo ""
-echo "✅ Installation terminée"
+echo " Installation terminée"
 echo ""
-echo "🌐 Lancement de l'application Streamlit..."
-echo "📱 L'application s'ouvrira dans votre navigateur"
+echo " Lancement de l'application Streamlit..."
+echo " L'application s'ouvrira dans votre navigateur"
 echo ""
 
 # Lancer l'application

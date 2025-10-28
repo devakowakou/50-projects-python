@@ -1,0 +1,106 @@
+/* Styles CSS personnalisés pour le Budget Dashboard */
+
+/* En-têtes */
+.main-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f77b4;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Cartes de métriques */
+.metric-card {
+    background: linear-gradient(135deg, #f0f2f6 0%, #e8eaf0 100%);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 5px solid #1f77b4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Alertes */
+.alert-warning {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #856404;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #721c24;
+    font-weight: 500;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.85;
+    }
+}
+
+.success-message {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Boutons */
+.stButton button {
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.stButton button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Formulaires */
+.stForm {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #dee2e6;
+}
+
+/* Tableaux */
+.dataframe {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: #f8f9fa;
+}
+
+/* Info boxes */
+.stInfo, .stWarning, .stSuccess, .stError {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

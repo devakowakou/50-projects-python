@@ -40,11 +40,11 @@ MAX_OPERATION_TIME = 300  # Timeout max pour une opération (secondes)
 
 # ============= MESSAGES =============
 MESSAGES = {
-    'large_file_warning': "⚠️ Fichier volumineux détecté. Optimisations activées.",
-    'sampling_active': "📊 Échantillonnage activé : {sample_size:,} lignes sur {total_size:,}",
+    'large_file_warning': " Fichier volumineux détecté. Optimisations activées.",
+    'sampling_active': " Échantillonnage activé : {sample_size:,} lignes sur {total_size:,}",
     'parallel_processing': "⚡ Traitement parallèle activé ({workers} threads)",
     'cache_hit': "✓ Résultat en cache",
-    'performance_tip': "💡 Pour de meilleures performances, réduisez le nombre de colonnes ou la taille du fichier"
+    'performance_tip': " Pour de meilleures performances, réduisez le nombre de colonnes ou la taille du fichier"
 }
 
 # ============= PROFILING =============

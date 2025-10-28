@@ -50,10 +50,10 @@ st.markdown("---")
 
 # ============= SIDEBAR =============
 with st.sidebar:
-    st.header("⚙️ Configuration")
+    st.header(" Configuration")
     
     # Section Upload
-    st.subheader("📁 Charger les données")
+    st.subheader(" Charger les données")
     
     upload_option = st.radio(
         "Source des données",
@@ -95,7 +95,7 @@ with st.sidebar:
     # Informations du fichier
     if st.session_state.df is not None:
         st.markdown("---")
-        st.subheader("📋 Informations")
+        st.subheader(" Informations")
         info = st.session_state.file_info
         st.metric("Lignes", info.get('lignes', 0))
         st.metric("Colonnes", info.get('colonnes', 0))
@@ -111,7 +111,7 @@ if st.session_state.df is None:
     
     with col1:
         st.markdown("""
-        ### 📊 Statistiques
+        ###  Statistiques
         - Moyenne, médiane, écart-type
         - Distribution et normalité
         - Quartiles et percentiles
@@ -119,7 +119,7 @@ if st.session_state.df is None:
     
     with col2:
         st.markdown("""
-        ### 🔗 Corrélations
+        ###  Corrélations
         - Matrice de corrélation
         - Tests de significativité
         - Visualisations interactives
@@ -127,7 +127,7 @@ if st.session_state.df is None:
     
     with col3:
         st.markdown("""
-        ### 🚨 Anomalies
+        ###  Anomalies
         - Détection d'outliers (IQR, Z-Score)
         - Analyse multivariée
         - Recommandations
@@ -138,40 +138,40 @@ else:
     
     # Onglets principaux
     tabs = st.tabs([
-        "📊 Aperçu",
-        "🧹 Nettoyage",
-        "📈 Statistiques",
-        "🔗 Corrélations",
-        "🚨 Anomalies",
-        "📉 Visualisations",
-        "📄 Rapports"
+        " Aperçu",
+        " Nettoyage",
+        " Statistiques",
+        " Corrélations",
+        " Anomalies",
+        " Visualisations",
+        " Rapports"
     ])
     
     # ============= ONGLET 1: APERÇU =============
     with tabs[0]:
-        st.header("📊 Aperçu des Données")
+        st.header(" Aperçu des Données")
         
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            st.metric("📏 Lignes", len(df))
+            st.metric(" Lignes", len(df))
         with col2:
-            st.metric("📊 Colonnes", len(df.columns))
+            st.metric(" Colonnes", len(df.columns))
         with col3:
             missing_pct = (df.isnull().sum().sum() / df.size * 100)
-            st.metric("⚠️ Valeurs Manquantes", f"{missing_pct:.1f}%")
+            st.metric(" Valeurs Manquantes", f"{missing_pct:.1f}%")
         with col4:
-            st.metric("🔄 Duplicatas", df.duplicated().sum())
+            st.metric(" Duplicatas", df.duplicated().sum())
         
         st.markdown("---")
         
         # Aperçu des données
-        st.subheader("🔍 Aperçu des données")
+        st.subheader(" Aperçu des données")
         n_rows = st.slider("Nombre de lignes à afficher", 5, 100, 10)
         st.dataframe(df.head(n_rows), use_container_width=True)
         
         # Types de colonnes
-        st.subheader("📋 Types de colonnes")
+        st.subheader(" Types de colonnes")
         
         # Calculer les types directement depuis df
         numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
@@ -187,12 +187,12 @@ else:
     
     # ============= ONGLET 2: NETTOYAGE =============
     with tabs[1]:
-        st.header("🧹 Nettoyage des Données")
+        st.header(" Nettoyage des Données")
         
         cleaner = DataCleaner(df)
         
         # Résumé des valeurs manquantes
-        st.subheader("⚠️ Valeurs Manquantes")
+        st.subheader(" Valeurs Manquantes")
         missing_summary = cleaner.get_missing_values_summary()
         
         if len(missing_summary) > 0:
@@ -211,14 +211,14 @@ else:
                 strategy_value = config.MISSING_VALUE_STRATEGIES[strategy]
                 cleaner.handle_missing_values(strategy=strategy_value)
                 st.session_state.df_cleaned = cleaner.get_cleaned_data()
-                st.success("✅ Nettoyage appliqué !")
+                st.success(" Nettoyage appliqué !")
                 st.rerun()
         else:
-            st.success("✅ Aucune valeur manquante !")
+            st.success(" Aucune valeur manquante !")
         
         # Rapport de qualité
         st.markdown("---")
-        st.subheader("📊 Rapport de Qualité")
+        st.subheader(" Rapport de Qualité")
         quality_report = cleaner.get_data_quality_report()
         
         col1, col2, col3 = st.columns(3)
@@ -231,7 +231,7 @@ else:
     
     # ============= ONGLET 3: STATISTIQUES =============
     with tabs[2]:
-        st.header("📈 Analyse Statistique")
+        st.header(" Analyse Statistique")
         
         analyzer = StatisticalAnalyzer(df)
         
@@ -251,7 +251,7 @@ else:
         st.markdown("---")
         
         # Statistiques descriptives
-        st.subheader("📊 Statistiques Descriptives")
+        st.subheader(" Statistiques Descriptives")
         
         numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
         
@@ -263,7 +263,7 @@ else:
             st.dataframe(stats_df, use_container_width=True)
             
             # Statistiques avancées
-            with st.expander("📊 Statistiques Avancées"):
+            with st.expander(" Statistiques Avancées"):
                 advanced_stats = analyzer.get_advanced_statistics(selected_col)
                 col1, col2 = st.columns(2)
                 
@@ -276,11 +276,11 @@ else:
                     if advanced_stats['coef_variation'] is not None:
                         st.metric("CV (%)", f"{advanced_stats['coef_variation']:.2f}")
         else:
-            st.warning("⚠️ Aucune colonne numérique à analyser")
+            st.warning(" Aucune colonne numérique à analyser")
     
     # ============= ONGLET 4: CORRÉLATIONS =============
     with tabs[3]:
-        st.header("🔗 Analyse de Corrélation")
+        st.header(" Analyse de Corrélation")
         
         corr_analyzer = CorrelationAnalyzer(df)
         
@@ -308,14 +308,14 @@ else:
             st.markdown("---")
             
             # Heatmap
-            st.subheader("🔥 Matrice de Corrélation")
+            st.subheader(" Matrice de Corrélation")
             visualizer = Visualizer(df)
             fig = visualizer.create_correlation_heatmap(corr_matrix, method)
             st.plotly_chart(fig, use_container_width=True)
             
             # Paires corrélées
             st.markdown("---")
-            st.subheader("🔗 Paires Fortement Corrélées")
+            st.subheader(" Paires Fortement Corrélées")
             threshold = st.slider("Seuil de corrélation", 0.0, 1.0, 0.7, 0.05)
             pairs = corr_analyzer.get_correlation_pairs(threshold=threshold, method=method)
             
@@ -325,11 +325,11 @@ else:
             else:
                 st.info("Aucune paire avec corrélation supérieure au seuil")
         else:
-            st.warning("⚠️ Pas assez de colonnes numériques pour calculer les corrélations")
+            st.warning(" Pas assez de colonnes numériques pour calculer les corrélations")
     
     # ============= ONGLET 5: ANOMALIES =============
     with tabs[4]:
-        st.header("🚨 Détection d'Anomalies")
+        st.header(" Détection d'Anomalies")
         
         detector = AnomalyDetector(df)
         
@@ -343,14 +343,14 @@ else:
             else:
                 threshold = st.slider("Seuil Z-Score", 2.0, 4.0, 3.0, 0.5)
         
-        if st.button("🔍 Détecter les anomalies"):
+        if st.button(" Détecter les anomalies"):
             with st.spinner("Détection en cours..."):
                 outliers_summary = detector.detect_outliers_all_columns(
                     method=method,
                     threshold=threshold
                 )
                 
-                st.subheader("📊 Résumé des Anomalies")
+                st.subheader(" Résumé des Anomalies")
                 st.dataframe(outliers_summary, use_container_width=True)
                 
                 # Sélection pour visualisation
@@ -364,7 +364,7 @@ else:
                 
                 # Suggestions
                 st.markdown("---")
-                st.subheader("💡 Suggestions de Traitement")
+                st.subheader(" Suggestions de Traitement")
                 suggestions = detector.suggest_treatment(selected_col)
                 st.write(f"**Recommandation:** {suggestions['recommandation']}")
                 st.write("**Autres options:**")
@@ -373,7 +373,7 @@ else:
     
     # ============= ONGLET 6: VISUALISATIONS =============
     with tabs[5]:
-        st.header("📉 Visualisations Interactives")
+        st.header(" Visualisations Interactives")
         
         visualizer = Visualizer(df, theme=config.PLOTLY_THEME)
         
@@ -440,10 +440,10 @@ else:
     
     # ============= ONGLET 7: RAPPORTS =============
     with tabs[6]:
-        st.header("📄 Génération de Rapports Professionnels")
+        st.header(" Génération de Rapports Professionnels")
         
         # Configuration du rapport
-        with st.expander("⚙️ Configuration du Rapport", expanded=True):
+        with st.expander(" Configuration du Rapport", expanded=True):
             col1, col2 = st.columns(2)
             with col1:
                 company_name = st.text_input("Nom de l'entreprise/projet", "Analyse de Données")
@@ -465,10 +465,10 @@ else:
             if st.button("� CSV", use_container_width=True):
                 with st.spinner("Génération du fichier CSV..."):
                     filepath = report_gen.export_to_csv()
-                    st.success(f"✅ Fichier créé")
+                    st.success(f" Fichier créé")
                     with open(filepath, 'rb') as f:
                         st.download_button(
-                            "⬇️ Télécharger CSV",
+                            " Télécharger CSV",
                             f,
                             file_name=f"donnees_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                             mime='text/csv',
@@ -476,15 +476,15 @@ else:
                         )
         
         with col2:
-            if st.button("📋 JSON", use_container_width=True):
+            if st.button(" JSON", use_container_width=True):
                 with st.spinner("Génération du fichier JSON..."):
                     analyzer = StatisticalAnalyzer(df)
                     summary = analyzer.get_complete_summary()
                     filepath = report_gen.export_statistics_to_json(summary)
-                    st.success(f"✅ Fichier créé")
+                    st.success(f" Fichier créé")
                     with open(filepath, 'rb') as f:
                         st.download_button(
-                            "⬇️ Télécharger JSON",
+                            " Télécharger JSON",
                             f,
                             file_name=f"statistiques_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
                             mime='application/json',
@@ -492,7 +492,7 @@ else:
                         )
         
         with col3:
-            if st.button("📑 Excel", use_container_width=True):
+            if st.button(" Excel", use_container_width=True):
                 with st.spinner("Génération du fichier Excel..."):
                     analyzer = StatisticalAnalyzer(df)
                     stats_df = {
@@ -500,10 +500,10 @@ else:
                         'Résumé': pd.DataFrame([analyzer.get_complete_summary()['dimensions']])
                     }
                     filepath = report_gen.create_excel_report(stats_df)
-                    st.success(f"✅ Fichier créé")
+                    st.success(f" Fichier créé")
                     with open(filepath, 'rb') as f:
                         st.download_button(
-                            "⬇️ Télécharger Excel",
+                            " Télécharger Excel",
                             f,
                             file_name=f"rapport_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
                             mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
@@ -513,74 +513,74 @@ else:
         st.markdown("---")
         
         # Section 2: Rapports professionnels
-        st.subheader("📑 Rapports Professionnels")
+        st.subheader(" Rapports Professionnels")
         
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            if st.button("📕 PDF", use_container_width=True, type="primary"):
+            if st.button(" PDF", use_container_width=True, type="primary"):
                 with st.spinner("Génération du rapport PDF professionnel..."):
                     try:
                         filepath = modern_gen.generate_pdf_report(
                             company_name=company_name,
                             include_charts=include_charts
                         )
-                        st.success(f"✅ Rapport PDF créé !")
+                        st.success(f" Rapport PDF créé !")
                         with open(filepath, 'rb') as f:
                             st.download_button(
-                                "⬇️ Télécharger PDF",
+                                " Télécharger PDF",
                                 f,
                                 file_name=f"rapport_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
                                 mime='application/pdf',
                                 use_container_width=True
                             )
                     except Exception as e:
-                        st.error(f"❌ Erreur: {str(e)}")
-                        st.info("💡 Installez les dépendances: pip install reportlab")
+                        st.error(f" Erreur: {str(e)}")
+                        st.info(" Installez les dépendances: pip install reportlab")
         
         with col2:
-            if st.button("📘 DOCX (Word)", use_container_width=True, type="primary"):
+            if st.button(" DOCX (Word)", use_container_width=True, type="primary"):
                 with st.spinner("Génération du rapport Word..."):
                     try:
                         filepath = modern_gen.generate_docx_report(company_name=company_name)
-                        st.success(f"✅ Rapport DOCX créé !")
+                        st.success(f" Rapport DOCX créé !")
                         with open(filepath, 'rb') as f:
                             st.download_button(
-                                "⬇️ Télécharger DOCX",
+                                " Télécharger DOCX",
                                 f,
                                 file_name=f"rapport_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx",
                                 mime='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
                                 use_container_width=True
                             )
                     except Exception as e:
-                        st.error(f"❌ Erreur: {str(e)}")
-                        st.info("💡 Installez les dépendances: pip install python-docx")
+                        st.error(f" Erreur: {str(e)}")
+                        st.info(" Installez les dépendances: pip install python-docx")
         
         with col3:
-            if st.button("🌐 HTML", use_container_width=True, type="primary"):
+            if st.button(" HTML", use_container_width=True, type="primary"):
                 with st.spinner("Génération du rapport HTML interactif..."):
                     try:
                         filepath = modern_gen.generate_html_report(
                             include_interactive_charts=include_charts
                         )
-                        st.success(f"✅ Rapport HTML créé !")
+                        st.success(f" Rapport HTML créé !")
                         with open(filepath, 'rb') as f:
                             st.download_button(
-                                "⬇️ Télécharger HTML",
+                                " Télécharger HTML",
                                 f,
                                 file_name=f"rapport_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html",
                                 mime='text/html',
                                 use_container_width=True
                             )
                     except Exception as e:
-                        st.error(f"❌ Erreur: {str(e)}")
+                        st.error(f" Erreur: {str(e)}")
         
         st.markdown("---")
         
         # Section 3: Aperçu du rapport
-        st.subheader("👁️ Aperçu du Rapport")
+        st.subheader(" Aperçu du Rapport")
         
-        tab1, tab2 = st.tabs(["📝 Markdown", "💡 Recommandations"])
+        tab1, tab2 = st.tabs([" Markdown", " Recommandations"])
         
         with tab1:
             analyzer = StatisticalAnalyzer(df)
@@ -591,9 +591,9 @@ else:
         with tab2:
             recommendations = modern_gen._generate_recommendations()
             for i, rec in enumerate(recommendations, 1):
-                if "✅" in rec:
+                if "" in rec:
                     st.success(f"{i}. {rec}")
-                elif "⚠️" in rec:
+                elif "" in rec:
                     st.warning(f"{i}. {rec}")
                 else:
                     st.info(f"{i}. {rec}")
@@ -602,7 +602,7 @@ else:
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: gray;'>"
-    "📊 Analyseur CSV Professionnel | Projet 1/50 | Fait avec ❤️ et Streamlit"
+    " Analyseur CSV Professionnel | Projet 1/50 | Fait avec ❤️ et Streamlit"
     "</div>",
     unsafe_allow_html=True
 )

@@ -30,29 +30,29 @@ streamlit run app.py
 
 ---
 
-## 📦 Dépendances Installées
+##  Dépendances Installées
 
 ### Core
-- ✅ streamlit==1.28.0
-- ✅ pandas==2.1.1
-- ✅ numpy==1.25.2
-- ✅ plotly==5.17.0
-- ✅ scipy==1.11.3
+-  streamlit==1.28.0
+-  pandas==2.1.1
+-  numpy==1.25.2
+-  plotly==5.17.0
+-  scipy==1.11.3
 
 ### Utilitaires
-- ✅ chardet==5.2.0 (détection encodage)
-- ✅ openpyxl==3.1.2 (Excel)
+-  chardet==5.2.0 (détection encodage)
+-  openpyxl==3.1.2 (Excel)
 
 ### Rapports Modernes
-- ✅ reportlab==4.4.4 (PDF)
-- ✅ python-docx==1.2.0 (Word)
-- ✅ python-pptx==1.0.2 (PowerPoint)
-- ✅ pillow==10.4.0 (Images)
-- ✅ kaleido==1.1.0 (Export graphiques)
+-  reportlab==4.4.4 (PDF)
+-  python-docx==1.2.0 (Word)
+-  python-pptx==1.0.2 (PowerPoint)
+-  pillow==10.4.0 (Images)
+-  kaleido==1.1.0 (Export graphiques)
 
 ---
 
-## 🎯 Premier Test
+##  Premier Test
 
 ### Charger le Fichier Exemple
 
@@ -65,12 +65,12 @@ streamlit run app.py
 
 1. Naviguer vers l'onglet **"Rapports"**
 2. Entrer le nom de votre entreprise
-3. Cliquer sur **"📄 Générer Rapport PDF"**
+3. Cliquer sur **" Générer Rapport PDF"**
 4. Télécharger le fichier généré
 
 ---
 
-## 🐛 Résolution de Problèmes
+##  Résolution de Problèmes
 
 ### Erreur : Module chardet non trouvé
 ```bash
@@ -89,23 +89,23 @@ streamlit run app.py --server.port 8502
 
 ---
 
-## 📊 Formats Supportés
+##  Formats Supportés
 
 ### Import
-- ✅ CSV (tous encodages)
-- ✅ Excel (.xlsx, .xls)
+-  CSV (tous encodages)
+-  Excel (.xlsx, .xls)
 
 ### Export
-- ✅ CSV
-- ✅ JSON
-- ✅ Excel
-- ✅ PDF ⭐ NOUVEAU
-- ✅ DOCX ⭐ NOUVEAU
-- ✅ HTML ⭐ NOUVEAU
+-  CSV
+-  JSON
+-  Excel
+-  PDF ⭐ NOUVEAU
+-  DOCX ⭐ NOUVEAU
+-  HTML ⭐ NOUVEAU
 
 ---
 
-## ✅ Checklist Post-Installation
+##  Checklist Post-Installation
 
 - [ ] Application se lance sans erreur
 - [ ] Fichier exemple se charge
@@ -117,11 +117,11 @@ streamlit run app.py --server.port 8502
 
 ---
 
-## 🎓 Documentation Complète
+##  Documentation Complète
 
 - 📖 [README.md](README.md) - Vue d'ensemble
 - 🔧 [DOCUMENTATION_TECHNIQUE.md](DOCUMENTATION_TECHNIQUE.md) - Architecture
-- 📈 [PROGRESSION.md](PROGRESSION.md) - Historique du projet
+-  [PROGRESSION.md](PROGRESSION.md) - Historique du projet
 - ✨ [AMELIORATIONS.md](AMELIORATIONS.md) - Nouvelles fonctionnalités
 
 ---

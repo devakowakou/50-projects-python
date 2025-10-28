@@ -278,7 +278,7 @@ class Visualizer:
             # Créer un graphique vide avec message
             fig = go.Figure()
             fig.add_annotation(
-                text="✅ Aucune valeur manquante !",
+                text=" Aucune valeur manquante !",
                 xref="paper", yref="paper",
                 x=0.5, y=0.5, showarrow=False,
                 font=dict(size=20, color="green")

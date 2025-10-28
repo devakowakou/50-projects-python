@@ -19,7 +19,7 @@ outputs/
 
 ---
 
-## 📄 reports/
+##  reports/
 
 ### Description
 Contient tous les rapports professionnels générés par l'application.
@@ -44,7 +44,7 @@ test_rapport_corrige.pdf
 
 ---
 
-## 📊 exports/
+##  exports/
 
 ### Description
 Contient les exports de données dans différents formats.
@@ -96,7 +96,7 @@ make clean  # si Makefile disponible
 
 ---
 
-## 📝 Bonnes Pratiques
+##  Bonnes Pratiques
 
 ### Nommage des Fichiers
 - Utiliser des timestamps : `rapport_2025-10-27_14-30-15.pdf`
@@ -135,7 +135,7 @@ gen.generate_pdf_report(
 
 ---
 
-## 📊 Statistiques d'Utilisation
+##  Statistiques d'Utilisation
 
 ### Espace Disque
 - Chaque rapport : ~50 KB max
@@ -149,13 +149,13 @@ gen.generate_pdf_report(
 
 ---
 
-## ⚠️ Important
+##  Important
 
 ### Ne Pas Commiter
-- ❌ Rapports générés
-- ❌ Exports de données
-- ❌ Fichiers temporaires
-- ✅ Seulement .gitkeep
+-  Rapports générés
+-  Exports de données
+-  Fichiers temporaires
+-  Seulement .gitkeep
 
 ### Sécurité
 - Ne pas partager de données sensibles

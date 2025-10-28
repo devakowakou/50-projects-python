@@ -392,12 +392,12 @@ class ModernReportGenerator:
 </head>
 <body>
     <div class="container">
-        <h1>📊 Rapport d'Analyse de Données</h1>
+        <h1> Rapport d'Analyse de Données</h1>
         <p style="text-align: center; color: #666;">
             Généré le {datetime.now().strftime('%d/%m/%Y à %H:%M')}
         </p>
         
-        <h2>📈 Résumé Exécutif</h2>
+        <h2> Résumé Exécutif</h2>
         <div style="text-align: center;">
             <div class="metric">
                 <div class="metric-value">{len(self.df):,}</div>
@@ -417,10 +417,10 @@ class ModernReportGenerator:
             </div>
         </div>
         
-        <h2>📊 Statistiques Descriptives</h2>
+        <h2> Statistiques Descriptives</h2>
         {self._generate_stats_html_table()}
         
-        <h2>💡 Recommandations</h2>
+        <h2> Recommandations</h2>
         {self._generate_recommendations_html()}
         
         <div class="footer">

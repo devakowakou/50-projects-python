@@ -108,7 +108,7 @@ Ce dossier contient toute la documentation du projet Analyseur CSV Professionnel
 
 ---
 
-## 📊 Structure de la Documentation
+##  Structure de la Documentation
 
 ```
 docs/
@@ -129,7 +129,7 @@ docs/
 
 ---
 
-## 🔍 Index par Sujet
+##  Index par Sujet
 
 ### Installation
 - `INSTALLATION_RAPIDE.md` - Guide complet
@@ -155,7 +155,7 @@ docs/
 
 ---
 
-## 📈 Versions
+##  Versions
 
 - **v1.0** : Projet initial complet
 - **v2.0** : Ajout rapports modernes (PDF, DOCX, HTML)
@@ -163,7 +163,7 @@ docs/
 
 ---
 
-## 💡 Comment Naviguer
+##  Comment Naviguer
 
 1. **Nouveau sur le projet ?**
    - Commencez par `README.md`

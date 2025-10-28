@@ -1,8 +1,8 @@
-# ✅ Checklist de Validation - Version 2.0
+#  Checklist de Validation - Version 2.0
 
-## 🎯 Tests des Nouvelles Fonctionnalités
+##  Tests des Nouvelles Fonctionnalités
 
-### 📄 Test 1 : Export PDF
+###  Test 1 : Export PDF
 
 **Objectif** : Vérifier la génération de rapports PDF professionnels
 
@@ -11,7 +11,7 @@
 2. [ ] Charger le fichier `exemple_ventes.csv`
 3. [ ] Naviguer vers l'onglet **"Rapports"**
 4. [ ] Entrer un nom d'entreprise (ex: "Ma Société")
-5. [ ] Cliquer sur **"📄 Générer Rapport PDF"**
+5. [ ] Cliquer sur **" Générer Rapport PDF"**
 6. [ ] Vérifier le message de succès
 7. [ ] Télécharger le fichier PDF
 8. [ ] Ouvrir le PDF et vérifier :
@@ -21,17 +21,17 @@
    - [ ] Section recommandations
    - [ ] Mise en page professionnelle
 
-**Résultat attendu** : ✅ PDF professionnel généré avec toutes les sections
+**Résultat attendu** :  PDF professionnel généré avec toutes les sections
 
 ---
 
-### 📝 Test 2 : Export DOCX
+###  Test 2 : Export DOCX
 
 **Objectif** : Vérifier la génération de documents Word
 
 #### Étapes
 1. [ ] Dans l'onglet **"Rapports"**
-2. [ ] Cliquer sur **"📝 Générer Rapport DOCX"**
+2. [ ] Cliquer sur **" Générer Rapport DOCX"**
 3. [ ] Télécharger le fichier DOCX
 4. [ ] Ouvrir avec Microsoft Word ou LibreOffice
 5. [ ] Vérifier :
@@ -41,17 +41,17 @@
    - [ ] Liste des recommandations
    - [ ] Format modifiable
 
-**Résultat attendu** : ✅ Document Word professionnel et éditable
+**Résultat attendu** :  Document Word professionnel et éditable
 
 ---
 
-### 🌐 Test 3 : Export HTML
+###  Test 3 : Export HTML
 
 **Objectif** : Vérifier la génération de rapports HTML interactifs
 
 #### Étapes
 1. [ ] Dans l'onglet **"Rapports"**
-2. [ ] Cliquer sur **"🌐 Générer Rapport HTML"**
+2. [ ] Cliquer sur **" Générer Rapport HTML"**
 3. [ ] Télécharger le fichier HTML
 4. [ ] Ouvrir dans un navigateur
 5. [ ] Vérifier :
@@ -61,7 +61,7 @@
    - [ ] Responsive (tester sur mobile)
    - [ ] Recommandations avec badges
 
-**Résultat attendu** : ✅ Page HTML moderne et responsive
+**Résultat attendu** :  Page HTML moderne et responsive
 
 ---
 
@@ -78,7 +78,7 @@
    - [ ] Message sur colonnes numériques
    - [ ] Message sur taille du dataset
 
-**Résultat attendu** : ✅ Recommandations positives avec badges verts
+**Résultat attendu** :  Recommandations positives avec badges verts
 
 #### Test 4b : Dataset avec Problèmes
 1. [ ] Créer un CSV de test avec :
@@ -91,7 +91,7 @@
    - [ ] Badge bleu pour duplicatas
    - [ ] Recommandation de normalisation
 
-**Résultat attendu** : ✅ Alertes et recommandations contextuelles
+**Résultat attendu** :  Alertes et recommandations contextuelles
 
 ---
 
@@ -102,20 +102,20 @@
 #### Étapes
 1. [ ] Naviguer vers l'onglet **"Rapports"**
 2. [ ] Vérifier la présence de 3 sections :
-   - [ ] "📊 Export des Données" (CSV, JSON, Excel)
-   - [ ] "📑 Rapports Professionnels" (PDF, DOCX, HTML)
-   - [ ] "👁️ Aperçu" (Markdown + Recommandations)
+   - [ ] " Export des Données" (CSV, JSON, Excel)
+   - [ ] " Rapports Professionnels" (PDF, DOCX, HTML)
+   - [ ] " Aperçu" (Markdown + Recommandations)
 3. [ ] Tester le champ "Nom de l'entreprise"
 4. [ ] Vérifier les couleurs des boutons :
    - [ ] PDF = bleu
    - [ ] DOCX = vert
    - [ ] HTML = orange
 
-**Résultat attendu** : ✅ Interface claire et organisée
+**Résultat attendu** :  Interface claire et organisée
 
 ---
 
-### 📦 Test 6 : Compatibilité Multi-Format
+###  Test 6 : Compatibilité Multi-Format
 
 **Objectif** : Tester avec différents types de fichiers
 
@@ -135,7 +135,7 @@
 2. [ ] Générer les 3 types de rapports
 3. [ ] Vérifier les performances
 
-**Résultat attendu** : ✅ Tous les formats supportés correctement
+**Résultat attendu** :  Tous les formats supportés correctement
 
 ---
 
@@ -153,7 +153,7 @@
 2. [ ] Générer un rapport
 3. [ ] Vérifier le comportement par défaut
 
-**Résultat attendu** : ✅ Messages d'erreur clairs et utiles
+**Résultat attendu** :  Messages d'erreur clairs et utiles
 
 ---
 
@@ -174,7 +174,7 @@
 
 ---
 
-## 📊 Résultats des Tests
+##  Résultats des Tests
 
 ### Tableau de Synthèse
 
@@ -195,13 +195,13 @@
 
 **Légende** :
 - ⬜ Non testé
-- ✅ Réussi
-- ⚠️ Attention requise
-- ❌ Échec
+-  Réussi
+-  Attention requise
+-  Échec
 
 ---
 
-## 🐛 Bugs Détectés
+##  Bugs Détectés
 
 ### Format de Rapport
 
@@ -213,7 +213,7 @@
 
 ---
 
-## 💡 Améliorations Suggérées
+##  Améliorations Suggérées
 
 ### Après Tests
 
@@ -225,7 +225,7 @@
 
 ---
 
-## ✅ Validation Finale
+##  Validation Finale
 
 ### Critères d'Acceptation
 
@@ -245,7 +245,7 @@
 
 ---
 
-## 📝 Notes de Test
+##  Notes de Test
 
 ### Environnement
 - OS : Linux
@@ -267,6 +267,6 @@
 
 ---
 
-**🎯 Objectif** : Valider que la version 2.0 est production-ready
+** Objectif** : Valider que la version 2.0 est production-ready
 
 **📅 Date de validation** : _______________

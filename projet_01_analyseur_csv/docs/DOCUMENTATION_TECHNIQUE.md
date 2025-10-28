@@ -262,7 +262,7 @@ Variables de session Streamlit:
 
 ---
 
-## 📊 Cas d'Usage
+##  Cas d'Usage
 
 ### 1. Analyse de Ventes
 ```python
@@ -290,7 +290,7 @@ Variables de session Streamlit:
 
 ---
 
-## 🧪 Tests et Validation
+##  Tests et Validation
 
 ### Tests Manuels
 

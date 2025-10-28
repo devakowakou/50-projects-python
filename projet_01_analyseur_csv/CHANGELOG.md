@@ -1,9 +1,9 @@
-# 📝 Changelog - Analyseur CSV Professionnel
+#  Changelog - Analyseur CSV Professionnel
 
 ## Version 2.2 - Optimisations de Performance 🚀
 **Date:** 28 octobre 2025
 
-### 🎯 Highlights
+###  Highlights
 - **Performance améliorée de 5-10x** sur les gros fichiers
 - Gestion intelligente des fichiers volumineux (jusqu'à 500 MB)
 - Échantillonnage automatique transparent
@@ -63,7 +63,7 @@
 - ⚡ Limitation adaptative du nombre de bins
 - ⚡ **Gain: 70-80%**
 
-### 📊 Performances
+###  Performances
 
 #### Benchmarks
 | Dataset | Lignes | v2.1 | v2.2 | Amélioration |
@@ -73,14 +73,14 @@
 | Grand | 100K | 45.2s | 7.2s | 84% ⚡⚡ |
 | Très Grand | 200K | 118.5s | 12.4s | 90% ⚡⚡⚡ |
 
-### 📁 Fichiers ajoutés
+###  Fichiers ajoutés
 - `config_performance.py` - Configuration des optimisations
 - `src/performance_utils.py` - Utilitaires de monitoring
 - `tests/test_performance.py` - Tests de performance
 - `docs/OPTIMISATIONS_V2.2.md` - Documentation détaillée
 - `docs/RESUME_OPTIMISATIONS.md` - Résumé exécutif
 
-### 📝 Fichiers modifiés
+###  Fichiers modifiés
 - `src/data_loader.py` - Version optimisée avec chunks
 - `src/statistical_analyzer.py` - Stats en un passage
 - `src/correlation_analyzer.py` - Cache + échantillonnage
@@ -101,7 +101,7 @@ Nouveau fichier `config_performance.py` avec:
 - Instructions de configuration
 - Guide de tests de performance
 
-### ⚠️ Notes de migration
+###  Notes de migration
 - Pas de changement d'API
 - Rétrocompatible avec v2.1
 - Nouvelles dépendances: aucune
@@ -109,10 +109,10 @@ Nouveau fichier `config_performance.py` avec:
 
 ---
 
-## Version 2.1 - Corrections des Rapports 📄
+## Version 2.1 - Corrections des Rapports 
 **Date:** 27 octobre 2025
 
-### 🐛 Corrections
+###  Corrections
 
 #### Génération de rapports
 - Correction des tableaux tronqués dans les PDF
@@ -126,13 +126,13 @@ Nouveau fichier `config_performance.py` avec:
 - Remplacement emojis par texte: "ATTENTION:", "INFO:", etc.
 - Encodage ASCII pour colonnes: `.encode('ascii', 'ignore').decode('ascii')`
 
-### 🧪 Tests
+###  Tests
 - Création de `test_rapports_corriges.py`
 - Validation des 3 formats (PDF, DOCX, HTML)
 - Tests de génération de recommandations
 - Taux de réussite: 100%
 
-### 📁 Réorganisation
+###  Réorganisation
 - Structure de projet professionnelle
 - Séparation docs/, tests/, outputs/
 - Fichier .gitignore optimisé
@@ -140,7 +140,7 @@ Nouveau fichier `config_performance.py` avec:
 
 ---
 
-## Version 2.0 - Rapports Modernes 📊
+## Version 2.0 - Rapports Modernes 
 **Date:** 26 octobre 2025
 
 ### ✨ Nouvelles fonctionnalités
@@ -165,14 +165,14 @@ Nouveau fichier `config_performance.py` avec:
 - Alertes sur outliers
 - Conseils d'optimisation
 
-### 📝 Documentation
+###  Documentation
 - Guide de génération de rapports
 - Exemples de rapports
 - Guide d'utilisation des exports
 
 ---
 
-## Version 1.0 - Version Initiale 🎉
+## Version 1.0 - Version Initiale 
 **Date:** 25 octobre 2025
 
 ### ✨ Fonctionnalités principales
@@ -208,7 +208,7 @@ Nouveau fichier `config_performance.py` avec:
 - Nuages de points
 - Graphiques de séries temporelles
 
-### 📦 Technologies
+###  Technologies
 - Python 3.11
 - Streamlit 1.28.0
 - Pandas 2.1.1
@@ -268,4 +268,4 @@ Nouveau fichier `config_performance.py` avec:
 **Auteur:** Dev AKW  
 **Licence:** MIT  
 **Version actuelle:** 2.2  
-**Statut:** ✅ Production Ready
+**Statut:**  Production Ready

@@ -1,56 +1,74 @@
-# 🎯 Challenge 50 Projets Python - Progression
+#  Challenge 50 Projets Python - Progression
 
 **Date de début**: 26 octobre 2025  
 **Objectif**: Compléter 50 projets Python en données et analyse
 
 ---
 
-## 📊 Progression Globale
+##  Progression Globale
 
-**Projets complétés**: 1 / 50 (2%)
+**Projets complétés**: 2 / 50 (4%)
 
 ```
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2%
+████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4%
 ```
 
 ---
 
-## ✅ Projets Terminés
+##  Projets Terminés
 
-### ✅ Projet 1 : Analyseur CSV avec Statistiques Descriptives
+###  Projet 1 : Analyseur CSV avec Statistiques Descriptives
 - **Date**: 27 octobre 2025 (Jour 2)
 - **Technologies**: Streamlit, Pandas, NumPy, Plotly, SciPy
 - **Lignes de code**: ~2,384
-- **Statut**: ✅ COMPLET
+- **Statut**:  COMPLET
 - **Dossier**: `projet_01_analyseur_csv/`
 - **Lien**: [README](./projet_01_analyseur_csv/README.md)
 
 **Fonctionnalités implémentées**:
-- ✅ Chargement et validation CSV/Excel
-- ✅ Nettoyage des données (5 stratégies)
-- ✅ Statistiques descriptives complètes
-- ✅ Analyse de corrélations (3 méthodes)
-- ✅ Détection d'anomalies (IQR, Z-Score, Mahalanobis)
-- ✅ 8+ types de visualisations interactives
-- ✅ Génération de rapports (CSV, JSON, Markdown)
-- ✅ Interface Streamlit professionnelle
+-  Chargement et validation CSV/Excel
+-  Nettoyage des données (5 stratégies)
+-  Statistiques descriptives complètes
+-  Analyse de corrélations (3 méthodes)
+-  Détection d'anomalies (IQR, Z-Score, Mahalanobis)
+-  8+ types de visualisations interactives
+-  Génération de rapports (CSV, JSON, Markdown)
+-  Interface Streamlit professionnelle
+
+###  Projet 2 : Dashboard de Suivi de Budget Personnel
+- **Date**: 28 octobre 2025 (Jour 3)
+- **Technologies**: Streamlit, Pandas, Plotly
+- **Lignes de code**: ~800
+- **Statut**:  COMPLET
+- **Dossier**: `projet_02_budget_dashboard/`
+- **Lien**: [README](./projet_02_budget_dashboard/README.md)
+
+**Fonctionnalités implémentées**:
+-  CRUD complet transactions (revenus/dépenses)
+-  Dashboard 4 métriques clés
+-  Graphiques interactifs (tendance, camembert, barres)
+-  Système d'alertes (dépassement budget)
+-  Filtres par période/catégorie
+-  État des budgets par catégorie
+-  Export CSV/JSON
+-  100 transactions exemple
 
 ---
 
 ## 🚧 Projet En Cours
 
-### 🔄 Projet 2 : Dashboard de Suivi de Budget Personnel
-- **Date début**: 27 octobre 2025 (Jour 2)
-- **Technologies prévues**: Streamlit, Pandas, Plotly
-- **Statut**: 📋 À COMMENCER
+###  Projet 3 : Scraper de Prix Amazon
+- **Date début**: 28 octobre 2025 (Jour 3)
+- **Technologies prévues**: BeautifulSoup/Scrapy, Pandas, SQLite
+- **Statut**:  À COMMENCER
 
 ---
 
 ## 📅 Projets À Venir (selon la liste)
 
 ### Semaine 1 (Projets 1-7)
-1. ✅ Analyseur CSV avec statistiques descriptives
-2. ⏳ Dashboard de suivi de budget personnel avec graphiques
+1.  Analyseur CSV avec statistiques descriptives
+2.  Dashboard de suivi de budget personnel avec graphiques
 3. ⏳ Scraper de prix Amazon avec historique et alertes
 4. ⏳ Visualiseur de données COVID par pays et par date
 5. ⏳ Calculatrice de ROI et conversion pour campagnes marketing
@@ -79,24 +97,24 @@
 
 ---
 
-## 📈 Statistiques du Challenge
+##  Statistiques du Challenge
 
 | Métrique | Valeur |
 |----------|--------|
-| Projets complétés | 1 |
+| Projets complétés | 2 |
 | Projets en cours | 0 |
-| Projets restants | 49 |
-| Jours écoulés | 2 |
-| Lignes de code totales | 2,384 |
-| Technologies utilisées | 5 |
+| Projets restants | 48 |
+| Jours écoulés | 3 |
+| Lignes de code totales | 3,184 |
+| Technologies utilisées | 6 |
 
 ---
 
-## 🎯 Objectifs Hebdomadaires
+##  Objectifs Hebdomadaires
 
 ### Semaine 1 (26 oct - 1 nov)
-- [x] Projet 1 - Analyseur CSV ✅
-- [ ] Projet 2 - Dashboard Budget
+- [x] Projet 1 - Analyseur CSV 
+- [x] Projet 2 - Dashboard Budget 
 - [ ] Projet 3 - Scraper Amazon
 - [ ] Projet 4 - Visualiseur COVID
 - [ ] Projet 5 - Calculatrice ROI
@@ -150,21 +168,21 @@
 
 ---
 
-## 💡 Compétences Acquises
+##  Compétences Acquises
 
 ### Projet 1
-- ✅ Architecture modulaire
-- ✅ Streamlit avancé
-- ✅ Analyse statistique descriptive
-- ✅ Détection d'anomalies
-- ✅ Analyse de corrélations
-- ✅ Visualisations interactives Plotly
-- ✅ Gestion de fichiers CSV/Excel
-- ✅ Documentation technique
+-  Architecture modulaire
+-  Streamlit avancé
+-  Analyse statistique descriptive
+-  Détection d'anomalies
+-  Analyse de corrélations
+-  Visualisations interactives Plotly
+-  Gestion de fichiers CSV/Excel
+-  Documentation technique
 
 ---
 
-## 🎓 Leçons Apprises
+##  Leçons Apprises
 
 ### Général
 1. **Planification** > Codage précipité
@@ -181,14 +199,14 @@
 
 ---
 
-## 📝 Notes pour les Prochains Projets
+##  Notes pour les Prochains Projets
 
 ### Ce qui fonctionne bien
-- ✅ Structure modulaire avec responsabilités claires
-- ✅ Configuration centralisée (config.py)
-- ✅ Documentation parallèle au développement
-- ✅ Fichier d'exemple de données
-- ✅ Script de lancement automatique
+-  Structure modulaire avec responsabilités claires
+-  Configuration centralisée (config.py)
+-  Documentation parallèle au développement
+-  Fichier d'exemple de données
+-  Script de lancement automatique
 
 ### À améliorer
 - [ ] Tests unitaires (pytest)
@@ -199,10 +217,10 @@
 
 ---
 
-## 🎯 Prochaines Étapes
+##  Prochaines Étapes
 
 **Aujourd'hui (27 oct)**:
-1. ✅ Finaliser Projet 1
+1.  Finaliser Projet 1
 2. [ ] Commencer Projet 2 (Dashboard Budget)
 3. [ ] Architecture Projet 2
 4. [ ] Premier commit Projet 2
@@ -239,6 +257,6 @@
 ---
 
 **Dernière mise à jour**: 27 octobre 2025  
-**Prochain objectif**: Projet 2/50 📊
+**Prochain objectif**: Projet 2/50 
 
 🚀 **Keep going! The best is yet to come!** 🚀

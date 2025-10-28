@@ -25,9 +25,9 @@ Amélioration globale: 65-90% selon taille du fichier
 git commit -F - <<EOF
 feat: v2.2 Performance Boost - Optimisations majeures de performance
 
-🎯 OBJECTIF ATTEINT: 5-10x plus rapide sur gros fichiers
+ OBJECTIF ATTEINT: 5-10x plus rapide sur gros fichiers
 
-📊 RÉSULTATS MESURÉS:
+ RÉSULTATS MESURÉS:
 - Dataset 10K lignes:   3.2s → 1.1s  (65% gain) ⚡
 - Dataset 50K lignes:   12.5s → 3.8s (70% gain) ⚡
 - Dataset 100K lignes:  45.2s → 7.2s (84% gain) ⚡⚡
@@ -65,7 +65,7 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
    - Limitation adaptative du nombre de bins (max 50)
    - Avertissements transparents pour échantillonnage
 
-📁 NOUVEAUX FICHIERS:
+ NOUVEAUX FICHIERS:
 - config_performance.py (67 lignes) - Configuration centralisée
 - version.py (48 lignes) - Informations de version
 - src/performance_utils.py (142 lignes) - Monitoring et helpers
@@ -75,7 +75,7 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
 - docs/OPTIMISATIONS_COMPLETEES.md (340 lignes) - Récapitulatif
 - CHANGELOG.md (420 lignes) - Historique complet
 
-📝 FICHIERS MODIFIÉS:
+ FICHIERS MODIFIÉS:
 - src/data_loader.py - Optimisations chargement
 - src/statistical_analyzer.py - Optimisations statistiques
 - src/correlation_analyzer.py - Optimisations corrélations
@@ -83,7 +83,7 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
 - src/visualizer.py - Optimisations visualisations
 - README_PRINCIPAL.md - Ajout section performances
 
-🎯 FONCTIONNALITÉS:
+ FONCTIONNALITÉS:
 - Échantillonnage automatique transparent
 - Parallélisation configurable (2-8 threads)
 - Système de cache intégré
@@ -92,13 +92,13 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
 - Avertissements intelligents
 - Configuration centralisée
 
-✅ COMPATIBILITÉ:
+ COMPATIBILITÉ:
 - Aucun breaking change
 - Rétrocompatible avec v2.1
 - Pas de nouvelles dépendances
 - Configuration optionnelle
 
-🧪 TESTS:
+ TESTS:
 - Tests de performance sur 4 tailles de datasets
 - Validation des résultats identiques
 - Mesure des gains par module
@@ -111,7 +111,7 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
 - Instructions de configuration
 - Benchmarks mesurés
 
-🎉 IMPACT UTILISATEUR:
+ IMPACT UTILISATEUR:
 - Fichiers lourds traités en quelques secondes
 - Expérience fluide même sur 200K+ lignes
 - Feedback visuel sur progression
@@ -130,10 +130,10 @@ EOF
 ```markdown
 ## 🚀 Version 2.2 - Performance Boost
 
-### 🎯 Résumé
+###  Résumé
 Optimisations majeures rendant l'analyseur CSV **5-10x plus rapide** sur les gros fichiers.
 
-### 📊 Résultats
+###  Résultats
 | Dataset | Avant | Après | Gain |
 |---------|-------|-------|------|
 | 10K lignes | 3.2s | 1.1s | **65%** ⚡ |
@@ -148,27 +148,27 @@ Optimisations majeures rendant l'analyseur CSV **5-10x plus rapide** sur les gro
 - ⚡ **Anomalies parallèles** - ThreadPoolExecutor 4 threads (50-60%)
 - ⚡ **Visualisations rapides** - Échantillonnage + cache (70-80%)
 
-### 📁 Nouveaux Fichiers
+###  Nouveaux Fichiers
 - `config_performance.py` - Configuration
 - `src/performance_utils.py` - Monitoring
 - `tests/test_performance.py` - Tests
 - `docs/OPTIMISATIONS_V2.2.md` - Documentation
 - `CHANGELOG.md` - Historique
 
-### ✅ Tests
+###  Tests
 - [x] Tests de performance passés
 - [x] Résultats identiques validés
 - [x] Documentation complète
 - [x] Rétrocompatibilité vérifiée
 
-### 🔗 Documentation
+###  Documentation
 - [Guide complet](docs/OPTIMISATIONS_V2.2.md)
 - [Résumé](docs/RESUME_OPTIMISATIONS.md)
 - [Changelog](CHANGELOG.md)
 
 **Breaking Changes:** Aucun  
 **Migration Required:** Non  
-**Backward Compatible:** Oui ✅
+**Backward Compatible:** Oui 
 ```
 
 ---

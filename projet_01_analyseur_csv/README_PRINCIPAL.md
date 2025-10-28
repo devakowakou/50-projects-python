@@ -1,4 +1,4 @@
-# 📊 Analyseur CSV Professionnel v2.2 🚀
+#  Analyseur CSV Professionnel v2.2 🚀
 
 > Projet 1 des "50 Projets Python" - Analyseur CSV ultra-rapide avec statistiques descriptives et rapports professionnels
 
@@ -10,26 +10,26 @@
 
 ---
 
-## 🎯 Description
+##  Description
 
 Application web interactive **ultra-optimisée** pour analyser des fichiers CSV/Excel volumineux :
 
 ### ✨ Fonctionnalités Principales
-- ✅ **Chargement intelligent** - Jusqu'à 500 MB avec chunks automatiques
-- ✅ **Statistiques descriptives avancées** - 15+ métriques en un seul passage
-- ✅ **Nettoyage et transformation** - 5 stratégies de nettoyage
-- ✅ **Détection d'anomalies parallélisée** - IQR, Z-Score, Isolation Forest
-- ✅ **Visualisations interactives** - 8+ types de graphiques Plotly
-- ✅ **Rapports professionnels** - PDF, DOCX, HTML avec graphiques
-- ✅ **Recommandations intelligentes** - Analyse automatique de la qualité
+-  **Chargement intelligent** - Jusqu'à 500 MB avec chunks automatiques
+-  **Statistiques descriptives avancées** - 15+ métriques en un seul passage
+-  **Nettoyage et transformation** - 5 stratégies de nettoyage
+-  **Détection d'anomalies parallélisée** - IQR, Z-Score, Isolation Forest
+-  **Visualisations interactives** - 8+ types de graphiques Plotly
+-  **Rapports professionnels** - PDF, DOCX, HTML avec graphiques
+-  **Recommandations intelligentes** - Analyse automatique de la qualité
 
 ### 🚀 Nouveautés v2.2 - Performance Boost
 - ⚡ **5-10x plus rapide** sur gros fichiers
-- 📊 **Échantillonnage intelligent** - Automatique pour datasets > 100K lignes
-- 🔄 **Parallélisation** - Détection d'anomalies sur 4 threads
+-  **Échantillonnage intelligent** - Automatique pour datasets > 100K lignes
+-  **Parallélisation** - Détection d'anomalies sur 4 threads
 - 💾 **Système de cache** - Évite recalculs inutiles
-- 📈 **Monitoring intégré** - Affichage temps et mémoire
-- 🎯 **Optimisations ciblées** - Chaque module optimisé individuellement
+-  **Monitoring intégré** - Affichage temps et mémoire
+-  **Optimisations ciblées** - Chaque module optimisé individuellement
 
 ---
 
@@ -69,7 +69,7 @@ projet_01_analyseur_csv/
 │   ├── RESUME_OPTIMISATIONS.md # ⚡ Résumé exécutif (NEW v2.2)
 │   └── ... (14 autres docs)
 │
-├── tests/                      # 🧪 Tests
+├── tests/                      #  Tests
 │   ├── README.md               # Guide des tests
 │   ├── test_rapports_corriges.py # Tests automatiques v2.1
 │   └── test_performance.py     # ⚡ Tests de performance (NEW v2.2)
@@ -133,10 +133,10 @@ L'application s'ouvrira automatiquement sur **http://localhost:8501**
 | Module | Technique d'optimisation | Amélioration |
 |--------|-------------------------|--------------|
 | 📥 **Chargement** | Chunks + échantillon encodage | 40-50% |
-| 📊 **Statistiques** | 1 passage (describe) au lieu de 11 | 80-90% |
-| 🔗 **Corrélations** | Échantillonnage + cache | 60-70% |
-| 🚨 **Anomalies** | Parallélisation (4 threads) | 50-60% |
-| 📉 **Visualisations** | Échantillonnage + cache stats | 70-80% |
+|  **Statistiques** | 1 passage (describe) au lieu de 11 | 80-90% |
+|  **Corrélations** | Échantillonnage + cache | 60-70% |
+|  **Anomalies** | Parallélisation (4 threads) | 50-60% |
+|  **Visualisations** | Échantillonnage + cache stats | 70-80% |
 
 ### Configuration Automatique
 
@@ -147,7 +147,7 @@ L'application détecte automatiquement la taille des fichiers et active les opti
 - **> 200K lignes** : Échantillonnage pour corrélations + visualisations
 - **> 10 MB** : Chargement par chunks
 
-🎯 **Résultat : 5-10x plus rapide** sur gros fichiers sans configuration manuelle !
+ **Résultat : 5-10x plus rapide** sur gros fichiers sans configuration manuelle !
 
 ### Tester les Performances
 
@@ -160,7 +160,7 @@ Voir détails : `docs/OPTIMISATIONS_V2.2.md`
 
 ---
 
-## 📊 Fonctionnalités
+##  Fonctionnalités
 
 ### 1. 📥 Chargement de Données
 - Support CSV (tous encodages avec détection auto)
@@ -168,37 +168,37 @@ Voir détails : `docs/OPTIMISATIONS_V2.2.md`
 - Validation automatique
 - Dataset exemple intégré
 
-### 2. 🧹 Nettoyage de Données
+### 2.  Nettoyage de Données
 - Suppression valeurs manquantes
 - Suppression duplicatas
 - Imputation (moyenne/médiane)
 - Normalisation (Min-Max, Z-Score)
 - Forward/Backward fill
 
-### 3. 📈 Analyses Statistiques
+### 3.  Analyses Statistiques
 - 15+ métriques descriptives
 - Statistiques par colonne
 - Analyse de distribution
 - Détection des types de données
 
-### 4. 🔗 Corrélations
+### 4.  Corrélations
 - Pearson, Spearman, Kendall
 - Matrice interactive
 - Heatmap colorée
 
-### 5. 🔍 Détection d'Anomalies
+### 5.  Détection d'Anomalies
 - Méthode IQR
 - Z-Score
 - Distance de Mahalanobis
 
-### 6. 📊 Visualisations
+### 6.  Visualisations
 - Histogrammes
 - Box plots
 - Scatter plots
 - Heatmaps
 - Et 4+ autres types
 
-### 7. 📄 Rapports Professionnels ⭐
+### 7.  Rapports Professionnels ⭐
 - **PDF** : Rapports avec tableaux stylisés
 - **DOCX** : Documents Word éditables
 - **HTML** : Pages web interactives
@@ -206,19 +206,19 @@ Voir détails : `docs/OPTIMISATIONS_V2.2.md`
 
 ---
 
-## 💡 Utilisation
+##  Utilisation
 
 ### Interface Streamlit
 
 L'application comporte 7 onglets :
 
-1. **📊 Aperçu** : Visualisation et informations générales
-2. **🧹 Nettoyage** : 5 stratégies de nettoyage
-3. **📈 Statistiques** : Analyses détaillées
-4. **🔗 Corrélations** : 3 méthodes de corrélation
-5. **🔍 Anomalies** : Détection des outliers
-6. **📊 Visualisations** : 8+ types de graphiques
-7. **📄 Rapports** : Génération PDF/DOCX/HTML
+1. ** Aperçu** : Visualisation et informations générales
+2. ** Nettoyage** : 5 stratégies de nettoyage
+3. ** Statistiques** : Analyses détaillées
+4. ** Corrélations** : 3 méthodes de corrélation
+5. ** Anomalies** : Détection des outliers
+6. ** Visualisations** : 8+ types de graphiques
+7. ** Rapports** : Génération PDF/DOCX/HTML
 
 ### Exemple Code Python
 
@@ -280,7 +280,7 @@ python tests/test_rapports_corriges.py
 
 ---
 
-## 🎓 Compétences Développées
+##  Compétences Développées
 
 ### Développement
 - Architecture modulaire
@@ -303,7 +303,7 @@ python tests/test_rapports_corriges.py
 
 ---
 
-## 📈 Statistiques du Projet
+##  Statistiques du Projet
 
 - **Lignes de code** : ~3,000+
 - **Modules Python** : 9
@@ -314,7 +314,7 @@ python tests/test_rapports_corriges.py
 
 ---
 
-## 🐛 Résolution de Problèmes
+##  Résolution de Problèmes
 
 ### Erreur : Module non trouvé
 ```bash
@@ -331,11 +331,11 @@ L'application détecte automatiquement l'encodage avec `chardet`.
 
 ---
 
-## 🔄 Versions
+##  Versions
 
 - **v1.0** - Projet initial complet
 - **v2.0** - Ajout rapports modernes (PDF, DOCX, HTML)
-- **v2.1** - Corrections tableaux et emojis ✅ **Current**
+- **v2.1** - Corrections tableaux et emojis  **Current**
 
 ---
 
@@ -366,15 +366,15 @@ python tests/test_rapports_corriges.py
 
 ---
 
-## 📄 License
+##  License
 
 MIT License - Voir le fichier LICENSE pour plus de détails.
 
 ---
 
-## 🎉 Statut
+##  Statut
 
-**✅ Production-Ready** - Le projet est complet et prêt pour une utilisation professionnelle.
+** Production-Ready** - Le projet est complet et prêt pour une utilisation professionnelle.
 
 **Dernière mise à jour** : 27 octobre 2025  
 **Version** : 2.1 (Corrections Appliquées)

@@ -1,44 +1,44 @@
-# 📊 Résumé des Optimisations v2.2
+#  Résumé des Optimisations v2.2
 
-## ✅ Optimisations Complétées
+##  Optimisations Complétées
 
 ### 1. **data_loader.py** - Chargement optimisé
-- ✅ Détection encodage sur échantillon (10 KB au lieu du fichier complet)
-- ✅ Chargement par chunks pour fichiers > 10 MB
-- ✅ Limite de taille fichier (500 MB max)
-- ✅ Évite double lecture du fichier
-- ✅ Affichage mémoire utilisée
+-  Détection encodage sur échantillon (10 KB au lieu du fichier complet)
+-  Chargement par chunks pour fichiers > 10 MB
+-  Limite de taille fichier (500 MB max)
+-  Évite double lecture du fichier
+-  Affichage mémoire utilisée
 - **Gain: 40-50% plus rapide**
 
 ### 2. **statistical_analyzer.py** - Statistiques en un passage
-- ✅ Utilisation de `describe()` (optimisé en C)
-- ✅ Réduction de 11 passages à 1 seul passage
-- ✅ Cache pour éviter recalculs
-- ✅ Calcul variance depuis std (évite var())
+-  Utilisation de `describe()` (optimisé en C)
+-  Réduction de 11 passages à 1 seul passage
+-  Cache pour éviter recalculs
+-  Calcul variance depuis std (évite var())
 - **Gain: 80-90% plus rapide**
 
 ### 3. **correlation_analyzer.py** - Corrélations optimisées
-- ✅ Cache de la matrice de corrélation
-- ✅ Échantillonnage automatique si > 100K lignes (50K échantillon)
-- ✅ Limitation à 50 colonnes max
-- ✅ Support multi-méthodes (pearson, spearman, kendall)
+-  Cache de la matrice de corrélation
+-  Échantillonnage automatique si > 100K lignes (50K échantillon)
+-  Limitation à 50 colonnes max
+-  Support multi-méthodes (pearson, spearman, kendall)
 - **Gain: 60-70% plus rapide**
 
 ### 4. **anomaly_detector.py** - Détection parallélisée
-- ✅ Parallélisation avec ThreadPoolExecutor (4 workers)
-- ✅ Traitement simultané de plusieurs colonnes
-- ✅ Utilisation de describe() pour IQR (évite quantile multiple)
-- ✅ Gestion d'erreurs robuste
+-  Parallélisation avec ThreadPoolExecutor (4 workers)
+-  Traitement simultané de plusieurs colonnes
+-  Utilisation de describe() pour IQR (évite quantile multiple)
+-  Gestion d'erreurs robuste
 - **Gain: 50-60% plus rapide**
 
 ### 5. **visualizer.py** - Visualisations optimisées
-- ✅ Échantillonnage si > 50K lignes (10K échantillon)
-- ✅ Cache des statistiques (mean, std, min, max)
-- ✅ Limitation du nombre de bins (max 50)
-- ✅ Avertissements quand échantillonnage actif
+-  Échantillonnage si > 50K lignes (10K échantillon)
+-  Cache des statistiques (mean, std, min, max)
+-  Limitation du nombre de bins (max 50)
+-  Avertissements quand échantillonnage actif
 - **Gain: 70-80% plus rapide**
 
-## 📁 Nouveaux Fichiers
+##  Nouveaux Fichiers
 
 ### 1. **config_performance.py**
 Configuration centralisée des optimisations:
@@ -72,7 +72,7 @@ Documentation complète:
 - Guide de configuration
 - Instructions de test
 
-## 📈 Gains de Performance Estimés
+##  Gains de Performance Estimés
 
 | Dataset | Lignes | Colonnes | Avant | Après | Amélioration |
 |---------|--------|----------|-------|-------|--------------|
@@ -86,12 +86,12 @@ Documentation complète:
 | Module | Technique | Gain |
 |--------|-----------|------|
 | 📥 Chargement | Chunks + échantillon encodage | 40-50% |
-| 📊 Statistiques | 1 passage (describe) | 80-90% |
-| 🔗 Corrélations | Échantillonnage + cache | 60-70% |
-| 🚨 Anomalies | Parallélisation (4 threads) | 50-60% |
-| 📉 Visualisations | Échantillonnage + cache | 70-80% |
+|  Statistiques | 1 passage (describe) | 80-90% |
+|  Corrélations | Échantillonnage + cache | 60-70% |
+|  Anomalies | Parallélisation (4 threads) | 50-60% |
+|  Visualisations | Échantillonnage + cache | 70-80% |
 
-## 🎯 Impact Global
+##  Impact Global
 
 **Pour un fichier de 200K lignes × 40 colonnes:**
 - ⏱️ Temps avant optimisations: ~120 secondes
@@ -122,7 +122,7 @@ MAX_FILE_SIZE_MB = 100
 SAMPLE_THRESHOLD_ROWS = 50_000
 ```
 
-## 🧪 Tests
+##  Tests
 
 Pour lancer les tests de performance:
 ```bash
@@ -136,7 +136,7 @@ Le script teste automatiquement:
 - Mesure des temps d'exécution
 - Calcul des gains de performance
 
-## 📝 Fichiers Modifiés
+##  Fichiers Modifiés
 
 ### Modules Core
 - `src/data_loader.py` - Version 2.2 optimisée
@@ -158,7 +158,7 @@ Le script teste automatiquement:
 - `docs/OPTIMISATIONS_V2.2.md` - Documentation complète
 - `docs/RESUME_OPTIMISATIONS.md` - Ce résumé
 
-## 🎉 Bénéfices Utilisateur
+##  Bénéfices Utilisateur
 
 1. **Chargement plus rapide** - Fichiers lourds chargent 2x plus vite
 2. **Analyses instantanées** - Statistiques calculées en un clin d'œil
@@ -168,7 +168,7 @@ Le script teste automatiquement:
 6. **Feedback visuel** - Indicateurs de progression et mémoire
 7. **Gestion intelligente** - Échantillonnage automatique transparent
 
-## ⚠️ Notes Importantes
+##  Notes Importantes
 
 1. **Échantillonnage**: Activé automatiquement pour datasets > 100K lignes
    - Résultats statistiquement valides
@@ -199,5 +199,5 @@ Le script teste automatiquement:
 
 **Version:** 2.2  
 **Date:** 28 octobre 2025  
-**Statut:** ✅ Production Ready  
+**Statut:**  Production Ready  
 **Performance:** 🚀 5-10x plus rapide

@@ -2,24 +2,24 @@
 
 Bienvenue dans mon challenge de 50 projets Python axés sur la data science, l'analyse de données et l'automatisation !
 
-## 📊 Vue d'Ensemble
+##  Vue d'Ensemble
 
 **Date de début**: 26 octobre 2025  
 **Objectif**: Compléter 50 projets pratiques en Python  
 **Focus**: Data Science, Analytics, Visualisation, Automatisation
 
-**Progression actuelle**: 1/50 (2%) ✅
+**Progression actuelle**: 2/50 (4%) 
 
 ```
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2%
+████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4%
 ```
 
 ---
 
-## 🎯 Projets Complétés
+##  Projets Complétés
 
-### ✅ Projet 1 : Analyseur CSV Professionnel
-**Status**: ✅ TERMINÉ | **Date**: 27 oct 2025 | **Dossier**: [`projet_01_analyseur_csv/`](./projet_01_analyseur_csv/)
+###  Projet 1 : Analyseur CSV Professionnel
+**Status**:  TERMINÉ | **Date**: 27 oct 2025 | **Dossier**: [`projet_01_analyseur_csv/`](./projet_01_analyseur_csv/)
 
 Application web complète avec Streamlit pour l'analyse approfondie de fichiers CSV.
 
@@ -30,17 +30,44 @@ Application web complète avec Streamlit pour l'analyse approfondie de fichiers 
 - Analyse: SciPy (statistiques)
 
 **Fonctionnalités**:
-- ✅ Chargement et validation CSV/Excel avec détection d'encodage
-- ✅ Nettoyage des données (5 stratégies d'imputation)
-- ✅ Statistiques descriptives complètes (15+ métriques)
-- ✅ Analyse de corrélations (Pearson, Spearman, Kendall)
-- ✅ Détection d'anomalies (IQR, Z-Score, Mahalanobis)
-- ✅ 8+ types de visualisations interactives
-- ✅ Génération de rapports (CSV, JSON, Markdown)
+-  Chargement et validation CSV/Excel avec détection d'encodage
+-  Nettoyage des données (5 stratégies d'imputation)
+-  Statistiques descriptives complètes (15+ métriques)
+-  Analyse de corrélations (Pearson, Spearman, Kendall)
+-  Détection d'anomalies (IQR, Z-Score, Mahalanobis)
+-  8+ types de visualisations interactives
+-  Génération de rapports (CSV, JSON, Markdown)
 
 **Chiffres**: ~2,384 lignes de code | 7 modules | Documentation complète
 
 [📖 Voir le README →](./projet_01_analyseur_csv/README.md)
+
+---
+
+###  Projet 2 : Dashboard de Suivi de Budget Personnel
+**Status**:  TERMINÉ | **Date**: 28 oct 2025 | **Dossier**: [`projet_02_budget_dashboard/`](./projet_02_budget_dashboard/)
+
+Application web de gestion de budget personnel avec analyses et visualisations interactives.
+
+**Stack Technique**:
+- Frontend: Streamlit
+- Data Processing: Pandas
+- Visualisation: Plotly
+- Stockage: JSON
+
+**Fonctionnalités**:
+-  CRUD complet des transactions (revenus/dépenses)
+-  Dashboard avec 4 métriques clés (solde, revenus, dépenses, économies)
+-  Graphiques interactifs (tendance, camembert, barres)
+-  Système d'alertes (dépassement budget)
+-  Filtres par période et catégorie
+-  État des budgets par catégorie
+-  Export CSV/JSON
+-  100 transactions exemple générées
+
+**Chiffres**: ~800 lignes de code | 3 modules | Interface intuitive
+
+[📖 Voir le README →](./projet_02_budget_dashboard/README.md)
 
 ---
 
@@ -54,8 +81,8 @@ Application web complète avec Streamlit pour l'analyse approfondie de fichiers 
 
 | # | Projet | Technologies Prévues | Priorité |
 |---|--------|---------------------|----------|
-| 2 | Dashboard de suivi de budget personnel | Streamlit, Plotly | 🔥 Haute |
-| 3 | Scraper de prix Amazon avec alertes | BeautifulSoup, Scrapy | 🔥 Haute |
+| 2 | ~~Dashboard de suivi de budget personnel~~ |  Streamlit, Plotly |  **TERMINÉ** |
+| 3 | Scraper de prix Amazon avec alertes | BeautifulSoup, Scrapy |  Haute |
 | 4 | Visualiseur de données COVID | Pandas, Plotly | Moyenne |
 | 5 | Calculatrice de ROI marketing | NumPy, Streamlit | Moyenne |
 | 6 | Tracker de cours d'actions | yfinance, Plotly | Moyenne |
@@ -64,13 +91,13 @@ Application web complète avec Streamlit pour l'analyse approfondie de fichiers 
 | 9 | Analyseur de logs web | Regex, Pandas | Basse |
 | 10 | Extracteur de données APIs publiques | Requests, FastAPI | Basse |
 
-[📋 Voir la liste complète des 50 projets →](./PROGRESSION.md)
+[ Voir la liste complète des 50 projets →](./PROGRESSION.md)
 
 ---
 
 ## 🛠️ Stack Technologique
 
-### Acquises ✅
+### Acquises 
 - **Data Processing**: Pandas, NumPy
 - **Visualisation**: Plotly, Streamlit
 - **Statistiques**: SciPy
@@ -87,36 +114,36 @@ Application web complète avec Streamlit pour l'analyse approfondie de fichiers 
 
 ---
 
-## 📈 Statistiques Globales
+##  Statistiques Globales
 
 | Métrique | Valeur |
 |----------|--------|
-| Projets terminés | 1 |
+| Projets terminés | 2 |
 | Projets en cours | 0 |
-| Jours actifs | 2 |
-| Lignes de code totales | 2,384 |
-| Technologies maîtrisées | 5 |
-| Documentation (pages) | 3 |
+| Jours actifs | 3 |
+| Lignes de code totales | 3,184 |
+| Technologies maîtrisées | 6 |
+| Documentation (pages) | 5 |
 
 ---
 
-## 🎓 Compétences Développées
+##  Compétences Développées
 
 ### Techniques
-- ✅ Architecture logicielle modulaire
-- ✅ Séparation des responsabilités (SoC)
-- ✅ Type hints et documentation
-- ✅ Gestion d'erreurs robuste
-- ✅ Interface utilisateur moderne
+-  Architecture logicielle modulaire
+-  Séparation des responsabilités (SoC)
+-  Type hints et documentation
+-  Gestion d'erreurs robuste
+-  Interface utilisateur moderne
 
 ### Data Science
-- ✅ Analyse exploratoire de données (EDA)
-- ✅ Nettoyage et preprocessing
-- ✅ Statistiques descriptives avancées
-- ✅ Tests d'hypothèses statistiques
-- ✅ Détection d'anomalies
-- ✅ Analyse de corrélations
-- ✅ Visualisation interactive
+-  Analyse exploratoire de données (EDA)
+-  Nettoyage et preprocessing
+-  Statistiques descriptives avancées
+-  Tests d'hypothèses statistiques
+-  Détection d'anomalies
+-  Analyse de corrélations
+-  Visualisation interactive
 
 ---
 
@@ -127,7 +154,7 @@ Application web complète avec Streamlit pour l'analyse approfondie de fichiers 
 ├── README.md                      # Ce fichier
 ├── PROGRESSION.md                 # Suivi détaillé
 │
-├── projet_01_analyseur_csv/       # ✅ TERMINÉ
+├── projet_01_analyseur_csv/       #  TERMINÉ
 │   ├── src/                       # 7 modules Python
 │   ├── app.py                     # Application Streamlit
 │   ├── config.py                  # Configuration
@@ -163,33 +190,33 @@ streamlit run app.py
 
 ---
 
-## 📝 Principes de Développement
+##  Principes de Développement
 
 ### Architecture
-✅ **Modularité**: Un module = une responsabilité  
-✅ **Réutilisabilité**: Code DRY (Don't Repeat Yourself)  
-✅ **Maintenabilité**: Documentation et type hints  
-✅ **Testabilité**: Modules indépendants
+ **Modularité**: Un module = une responsabilité  
+ **Réutilisabilité**: Code DRY (Don't Repeat Yourself)  
+ **Maintenabilité**: Documentation et type hints  
+ **Testabilité**: Modules indépendants
 
 ### Bonnes Pratiques
-✅ **PEP 8**: Style guide Python  
-✅ **Docstrings**: Documentation inline  
-✅ **Type Hints**: Annotations de types  
-✅ **Error Handling**: Gestion robuste des erreurs  
-✅ **Git**: Commits réguliers et descriptifs
+ **PEP 8**: Style guide Python  
+ **Docstrings**: Documentation inline  
+ **Type Hints**: Annotations de types  
+ **Error Handling**: Gestion robuste des erreurs  
+ **Git**: Commits réguliers et descriptifs
 
 ### Documentation
-✅ **README**: Guide utilisateur  
-✅ **Documentation Technique**: Architecture et concepts  
-✅ **Code Comments**: Explications inline  
-✅ **Examples**: Fichiers de données d'exemple
+ **README**: Guide utilisateur  
+ **Documentation Technique**: Architecture et concepts  
+ **Code Comments**: Explications inline  
+ **Examples**: Fichiers de données d'exemple
 
 ---
 
-## 🎯 Objectifs du Challenge
+##  Objectifs du Challenge
 
 ### Court Terme (1 mois)
-- [x] Projet 1 terminé ✅
+- [x] Projet 1 terminé 
 - [ ] 10 projets complétés (20%)
 - [ ] Maîtriser Streamlit et Plotly
 - [ ] Apprendre web scraping
@@ -201,14 +228,14 @@ streamlit run app.py
 - [ ] Contribuer à des projets open source
 
 ### Long Terme (6 mois)
-- [ ] 50 projets complétés (100%) 🎉
+- [ ] 50 projets complétés (100%) 
 - [ ] Portfolio complet de projets
 - [ ] Blog technique sur les apprentissages
 - [ ] Compétences professionnelles en Data Science
 
 ---
 
-## 💡 Leçons Apprises
+##  Leçons Apprises
 
 ### Projet 1
 1. **Architecture avant code** = gain de temps énorme
@@ -226,7 +253,7 @@ streamlit run app.py
 - [ ] 🥇 **Or** (40 projets - 80%)
 - [ ] 💎 **Diamant** (50 projets - 100%)
 
-**Progression actuelle**: En route vers le Bronze ! 🎯
+**Progression actuelle**: En route vers le Bronze ! 
 
 ---
 
@@ -260,19 +287,19 @@ Ce repository documente mon parcours d'apprentissage personnel. Cependant, sugge
 
 ---
 
-## 📄 Licence
+##  Licence
 
 MIT License - Libre d'utilisation et modification
 
 ---
 
-## 🔔 Mises à Jour
+##  Mises à Jour
 
 ### 27 octobre 2025
-- ✅ Projet 1 complété avec succès
-- 📊 2,384 lignes de code
+-  Projet 1 complété avec succès
+-  2,384 lignes de code
 - 📚 Documentation complète créée
-- 🎯 Prêt pour Projet 2
+-  Prêt pour Projet 2
 
 ---
 
@@ -284,6 +311,6 @@ MIT License - Libre d'utilisation et modification
 
 **Progression: 1/50** | **Suivez le parcours !** 🚀
 
-[🔝 Retour en haut](#-challenge-50-projets-python---data--analytics)
+[ Retour en haut](#-challenge-50-projets-python---data--analytics)
 
 </div>

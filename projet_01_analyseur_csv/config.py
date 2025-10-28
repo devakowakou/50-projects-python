@@ -3,8 +3,8 @@ Configuration globale pour l'analyseur CSV
 """
 
 # Paramètres de l'application
-APP_TITLE = "📊 Analyseur CSV Professionnel"
-APP_ICON = "📈"
+APP_TITLE = " Analyseur CSV Professionnel"
+APP_ICON = ""
 APP_LAYOUT = "wide"
 
 # Paramètres de chargement des données
@@ -38,16 +38,16 @@ MISSING_VALUE_STRATEGIES = {
 
 # Messages d'erreur
 ERROR_MESSAGES = {
-    "file_not_found": "❌ Fichier introuvable",
-    "invalid_format": "❌ Format de fichier non supporté",
-    "empty_file": "❌ Le fichier est vide",
-    "encoding_error": "❌ Erreur d'encodage du fichier",
-    "no_numeric_columns": "⚠️ Aucune colonne numérique détectée"
+    "file_not_found": " Fichier introuvable",
+    "invalid_format": " Format de fichier non supporté",
+    "empty_file": " Le fichier est vide",
+    "encoding_error": " Erreur d'encodage du fichier",
+    "no_numeric_columns": " Aucune colonne numérique détectée"
 }
 
 # Messages de succès
 SUCCESS_MESSAGES = {
-    "file_loaded": "✅ Fichier chargé avec succès",
-    "data_cleaned": "✅ Données nettoyées",
-    "analysis_complete": "✅ Analyse terminée"
+    "file_loaded": " Fichier chargé avec succès",
+    "data_cleaned": " Données nettoyées",
+    "analysis_complete": " Analyse terminée"
 }

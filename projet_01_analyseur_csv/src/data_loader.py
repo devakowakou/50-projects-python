@@ -51,7 +51,7 @@ class DataLoader:
         try:
             # Vérifier la taille du fichier
             if uploaded_file.size > self.MAX_FILE_SIZE:
-                return False, f"❌ Fichier trop volumineux ({uploaded_file.size / 1_000_000:.1f} MB). Maximum: {self.MAX_FILE_SIZE / 1_000_000:.0f} MB"
+                return False, f" Fichier trop volumineux ({uploaded_file.size / 1_000_000:.1f} MB). Maximum: {self.MAX_FILE_SIZE / 1_000_000:.0f} MB"
             
             # Lire le contenu du fichier UNE SEULE FOIS
             file_bytes = uploaded_file.read()
@@ -97,7 +97,7 @@ class DataLoader:
                 else:
                     self.df = pd.read_excel(file_io)
             else:
-                return False, f"❌ Format non supporté: {file_extension}"
+                return False, f" Format non supporté: {file_extension}"
             
             # Stocker les informations du fichier
             self.file_info = {
@@ -109,12 +109,12 @@ class DataLoader:
                 'memoire': f"{self.df.memory_usage(deep=True).sum() / 1024 / 1024:.2f} MB"
             }
             
-            return True, "✅ Fichier chargé avec succès"
+            return True, " Fichier chargé avec succès"
             
         except MemoryError:
-            return False, "❌ Mémoire insuffisante pour charger ce fichier"
+            return False, " Mémoire insuffisante pour charger ce fichier"
         except Exception as e:
-            return False, f"❌ Erreur lors du chargement: {str(e)}"
+            return False, f" Erreur lors du chargement: {str(e)}"
     
     def load_from_path(self, file_path: str, encoding: str = 'utf-8') -> Tuple[bool, str]:
         """
@@ -133,7 +133,7 @@ class DataLoader:
             elif file_path.endswith(('.xlsx', '.xls')):
                 self.df = pd.read_excel(file_path)
             else:
-                return False, "❌ Format non supporté"
+                return False, " Format non supporté"
             
             self.file_info = {
                 'nom': file_path.split('/')[-1],
@@ -142,12 +142,12 @@ class DataLoader:
                 'colonnes': len(self.df.columns)
             }
             
-            return True, "✅ Fichier chargé avec succès"
+            return True, " Fichier chargé avec succès"
             
         except FileNotFoundError:
-            return False, "❌ Fichier introuvable"
+            return False, " Fichier introuvable"
         except Exception as e:
-            return False, f"❌ Erreur: {str(e)}"
+            return False, f" Erreur: {str(e)}"
     
     def validate_data(self) -> Tuple[bool, list]:
         """
@@ -178,7 +178,7 @@ class DataLoader:
         # Vérifier les colonnes numériques
         numeric_cols = self.df.select_dtypes(include=['number']).columns
         if len(numeric_cols) == 0:
-            warnings.append("⚠️ Aucune colonne numérique détectée")
+            warnings.append(" Aucune colonne numérique détectée")
         
         return True, warnings
     

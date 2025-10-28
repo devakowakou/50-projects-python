@@ -1,6 +1,6 @@
-# 📊 Projet 1 : Analyseur CSV Professionnel
+#  Projet 1 : Analyseur CSV Professionnel
 
-## 🎯 Description
+##  Description
 
 Application web interactive pour l'analyse approfondie de fichiers CSV avec statistiques descriptives, analyse de corrélations, détection d'anomalies et visualisations dynamiques.
 
@@ -12,35 +12,35 @@ Application web interactive pour l'analyse approfondie de fichiers CSV avec stat
 - Support de fichiers jusqu'à 200 MB
 - Validation automatique des données
 
-### 🧹 Nettoyage des Données
+###  Nettoyage des Données
 - Traitement des valeurs manquantes (suppression, imputation)
 - Détection et suppression des duplicatas
 - Conversion de types de colonnes
 - Normalisation des noms de colonnes
 - Détection et traitement des outliers
 
-### 📊 Analyses Statistiques
+###  Analyses Statistiques
 - **Statistiques descriptives** : moyenne, médiane, écart-type, variance
 - **Mesures de position** : quartiles, percentiles, min, max
 - **Mesures de forme** : skewness, kurtosis
 - **Tests de normalité** : Shapiro-Wilk, Kolmogorov-Smirnov
 - **Analyses par catégorie** : groupement et agrégation
 
-### 🔗 Analyse de Corrélations
+###  Analyse de Corrélations
 - Matrices de corrélation (Pearson, Spearman, Kendall)
 - Tests de significativité statistique
 - Identification des variables fortement corrélées
 - Détection de multicolinéarité
 - Corrélations partielles
 
-### 🚨 Détection d'Anomalies
+###  Détection d'Anomalies
 - **Méthode IQR** (Interquartile Range)
 - **Méthode Z-Score**
 - Détection d'outliers multivariés (distance de Mahalanobis)
 - Comparaison des méthodes
 - Suggestions de traitement
 
-### 📈 Visualisations Interactives (Plotly)
+###  Visualisations Interactives (Plotly)
 - Histogrammes avec courbe de distribution
 - Box plots pour détection d'outliers
 - Scatter plots avec lignes de tendance
@@ -49,7 +49,7 @@ Application web interactive pour l'analyse approfondie de fichiers CSV avec stat
 - Bar charts et Pie charts
 - Graphiques personnalisables
 
-### 📄 Génération de Rapports
+###  Génération de Rapports
 - Export CSV des données nettoyées
 - Export JSON des statistiques
 - Rapports Markdown formatés
@@ -84,7 +84,7 @@ projet_01_analyseur_csv/
 - **Analyse Statistique** : SciPy
 - **Gestion des fichiers** : openpyxl, chardet
 
-## 📦 Installation
+##  Installation
 
 ### 1. Cloner le projet
 ```bash
@@ -140,7 +140,7 @@ L'application s'ouvrira automatiquement dans votre navigateur à l'adresse : `ht
    - Onglet "Rapports" : télécharger les résultats
    - CSV, JSON, Markdown disponibles
 
-## 📊 Exemple de Données
+##  Exemple de Données
 
 Le fichier `data/exemple_ventes.csv` contient des données de ventes avec :
 - Dates de transaction
@@ -154,7 +154,7 @@ Parfait pour tester toutes les fonctionnalités !
 
 *(L'application génère automatiquement des visualisations interactives)*
 
-## 🧪 Tests
+##  Tests
 
 Pour tester l'application avec vos propres données :
 1. Préparez un fichier CSV avec des colonnes numériques et catégoriques
@@ -162,7 +162,7 @@ Pour tester l'application avec vos propres données :
 3. Uploadez votre fichier
 4. Explorez les différents onglets
 
-## 📝 Fonctionnalités Avancées
+##  Fonctionnalités Avancées
 
 ### Détection d'Anomalies
 - **IQR** : Détecte les valeurs hors de [Q1 - 1.5×IQR, Q3 + 1.5×IQR]
@@ -191,7 +191,7 @@ Ce projet fait partie du défi "50 Projets Python". Suggestions et amélioration
 - [Documentation Pandas](https://pandas.pydata.org/)
 - [Documentation SciPy](https://docs.scipy.org/)
 
-## 📄 Licence
+##  Licence
 
 MIT License - Libre d'utilisation et de modification
 

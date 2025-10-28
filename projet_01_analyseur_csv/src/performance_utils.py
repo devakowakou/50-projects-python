@@ -38,7 +38,7 @@ class PerformanceMonitor:
             
             # Logger si lent
             if perf_config.LOG_SLOW_OPERATIONS and elapsed_time > perf_config.SLOW_OPERATION_THRESHOLD:
-                st.warning(f"⚠️ Opération lente : {func_name} ({elapsed_time:.2f}s)")
+                st.warning(f" Opération lente : {func_name} ({elapsed_time:.2f}s)")
             
             # Afficher si activé
             if perf_config.SHOW_PERFORMANCE_METRICS:
@@ -86,14 +86,14 @@ def show_dataset_info(df, file_info: dict = None):
         
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            st.metric("📏 Lignes", f"{len(df):,}")
+            st.metric(" Lignes", f"{len(df):,}")
         with col2:
-            st.metric("📊 Colonnes", len(df.columns))
+            st.metric(" Colonnes", len(df.columns))
         with col3:
             st.metric("💾 Mémoire", format_memory_size(memory_usage))
         with col4:
             if file_info and 'taille' in file_info:
-                st.metric("📁 Taille fichier", file_info['taille'])
+                st.metric(" Taille fichier", file_info['taille'])
         
         # Avertissement si gros dataset
         if len(df) > perf_config.SAMPLE_THRESHOLD_ROWS:

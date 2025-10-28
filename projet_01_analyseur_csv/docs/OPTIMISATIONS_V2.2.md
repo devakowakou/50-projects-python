@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Table des matières
+##  Table des matières
 
 1. [Vue d'ensemble](#vue-densemble)
 2. [Problèmes identifiés](#problèmes-identifiés)
@@ -73,7 +73,7 @@ Optimisations multi-niveaux réduisant le temps à **5-10 secondes** pour les m�
 
 ## Solutions implémentées
 
-### 1. Chargement optimisé ✅
+### 1. Chargement optimisé 
 
 **Fichier:** `src/data_loader.py`
 
@@ -90,9 +90,9 @@ if file_size > 10_MB:
 **Gains:**
 - ⚡ 40-50% plus rapide
 - 💾 Économie mémoire
-- 📏 Limite 500 MB max
+-  Limite 500 MB max
 
-### 2. Statistiques en un passage ✅
+### 2. Statistiques en un passage 
 
 **Fichier:** `src/statistical_analyzer.py`
 
@@ -113,10 +113,10 @@ self._stats_cache = {}
 
 **Gains:**
 - ⚡ 80-90% plus rapide
-- 🔄 De 11 passages à 1 passage
+-  De 11 passages à 1 passage
 - 💾 Cache des résultats
 
-### 3. Corrélations avec échantillonnage ✅
+### 3. Corrélations avec échantillonnage 
 
 **Fichier:** `src/correlation_analyzer.py`
 
@@ -136,10 +136,10 @@ self._corr_cache = {}
 
 **Gains:**
 - ⚡ 60-70% plus rapide
-- 📊 Résultats statistiquement valides
+-  Résultats statistiquement valides
 - 💾 Cache de la matrice
 
-### 4. Détection parallèle d'anomalies ✅
+### 4. Détection parallèle d'anomalies 
 
 **Fichier:** `src/anomaly_detector.py`
 
@@ -161,10 +161,10 @@ with ThreadPoolExecutor(max_workers=4) as executor:
 
 **Gains:**
 - ⚡ 50-60% plus rapide
-- 🔄 4 colonnes traitées simultanément
-- 🎯 Utilisation optimale du CPU
+-  4 colonnes traitées simultanément
+-  Utilisation optimale du CPU
 
-### 5. Visualisations avec échantillonnage ✅
+### 5. Visualisations avec échantillonnage 
 
 **Fichier:** `src/visualizer.py`
 
@@ -186,10 +186,10 @@ def create_histogram(column):
 
 **Gains:**
 - ⚡ 70-80% plus rapide
-- 📉 Rendering instantané
+-  Rendering instantané
 - 💾 Cache mean/std
 
-### 6. Configuration centralisée ✅
+### 6. Configuration centralisée 
 
 **Fichier:** `config_performance.py`
 
@@ -202,7 +202,7 @@ ENABLE_CACHE = True
 SHOW_PERFORMANCE_METRICS = True
 ```
 
-### 7. Monitoring de performance ✅
+### 7. Monitoring de performance 
 
 **Fichier:** `src/performance_utils.py`
 
@@ -245,7 +245,7 @@ show_sampling_warning(total_rows, sample_size)
 
 ### Impact global
 
-🎯 **Amélioration moyenne: 5-10x plus rapide**
+ **Amélioration moyenne: 5-10x plus rapide**
 
 Pour un fichier de **200K lignes × 40 colonnes:**
 - ⏱️ Avant: ~2 minutes
@@ -314,7 +314,7 @@ Dataset Grand: 100,000 lignes × 30 colonnes
 
 TEMPS TOTAL: 7.18s
 
-✅ Amélioration: 84% plus rapide qu'avant
+ Amélioration: 84% plus rapide qu'avant
 ```
 
 ---
@@ -325,7 +325,7 @@ TEMPS TOTAL: 7.18s
 - ✨ `config_performance.py` - Configuration centralisée
 - ✨ `src/performance_utils.py` - Monitoring et helpers
 - ✨ `tests/test_performance.py` - Tests de performance
-- 📝 `docs/OPTIMISATIONS_V2.2.md` - Cette documentation
+-  `docs/OPTIMISATIONS_V2.2.md` - Cette documentation
 
 ### Fichiers optimisés
 - ⚡ `src/data_loader.py` - Chargement par chunks
@@ -364,4 +364,4 @@ Pour questions ou suggestions d'optimisation :
 
 **Version:** 2.2  
 **Date:** 28 octobre 2025  
-**Statut:** ✅ Production Ready
+**Statut:**  Production Ready

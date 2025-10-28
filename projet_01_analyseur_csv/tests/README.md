@@ -1,10 +1,10 @@
-# 🧪 Tests du Projet
+#  Tests du Projet
 
 Ce dossier contient tous les scripts de test pour l'Analyseur CSV.
 
 ---
 
-## 📁 Fichiers de Test
+##  Fichiers de Test
 
 ### test_rapports_corriges.py
 
@@ -48,7 +48,7 @@ TESTS TERMINES - 100% REUSSIS
 
 ---
 
-## 🎯 Tests à Effectuer
+##  Tests à Effectuer
 
 ### Tests Automatiques
 - [x] Génération PDF sans erreur
@@ -86,7 +86,7 @@ python -m tests.test_rapports_corriges
 
 ---
 
-## 📊 Fichiers Générés
+##  Fichiers Générés
 
 Les tests génèrent des fichiers dans `outputs/reports/` :
 
@@ -99,29 +99,29 @@ outputs/reports/
 
 ---
 
-## ✅ Critères de Réussite
+##  Critères de Réussite
 
 ### PDF
-- ✅ Fichier généré sans erreur
-- ✅ Tableaux avec largeurs adaptées (4in + 2.5in)
-- ✅ Pas d'emojis (texte ASCII)
-- ✅ Recommandations lisibles
+-  Fichier généré sans erreur
+-  Tableaux avec largeurs adaptées (4in + 2.5in)
+-  Pas d'emojis (texte ASCII)
+-  Recommandations lisibles
 
 ### DOCX
-- ✅ Fichier généré sans erreur
-- ✅ Colonnes avec largeurs définies (3.5in + 2.5in)
-- ✅ Pas d'emojis dans les titres
-- ✅ Éditable dans Word
+-  Fichier généré sans erreur
+-  Colonnes avec largeurs définies (3.5in + 2.5in)
+-  Pas d'emojis dans les titres
+-  Éditable dans Word
 
 ### HTML
-- ✅ Fichier généré sans erreur
-- ✅ Design moderne
-- ✅ Emojis conservés (supportés en HTML)
-- ✅ Responsive
+-  Fichier généré sans erreur
+-  Design moderne
+-  Emojis conservés (supportés en HTML)
+-  Responsive
 
 ---
 
-## 🐛 En Cas d'Échec
+##  En Cas d'Échec
 
 ### Erreur : Module non trouvé
 ```bash
@@ -143,7 +143,7 @@ chmod +x tests/test_rapports_corriges.py
 
 ---
 
-## 📝 Ajouter de Nouveaux Tests
+##  Ajouter de Nouveaux Tests
 
 Pour créer un nouveau test :
 
@@ -165,7 +165,7 @@ if __name__ == "__main__":
 
 ---
 
-## 🔄 Tests Futurs Prévus
+##  Tests Futurs Prévus
 
 - [ ] Test de performance (grands datasets)
 - [ ] Test d'intégration complète

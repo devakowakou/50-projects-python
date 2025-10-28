@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "2dc20fef-a535-4b77-bbfe-9e08fc6e5e82",
+    "date": "2025-10-28",
+    "type": "depense",
+    "montant": 43.86,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955162"
+  },
+  {
+    "id": "9866db7f-3bdb-4b8c-aecc-9c2b13826161",
+    "date": "2025-10-28",
+    "type": "depense",
+    "montant": 94.83,
+    "categorie": " Éducation",
+    "description": "Cours en ligne",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955211"
+  },
+  {
+    "id": "4c5e33ab-87df-4438-bf94-017fad810b5b",
+    "date": "2025-10-27",
+    "type": "depense",
+    "montant": 11.64,
+    "categorie": " Alimentation",
+    "description": "Restaurant",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955889"
+  },
+  {
+    "id": "1f618f4a-f435-40d0-b6f7-dabb4439d120",
+    "date": "2025-10-25",
+    "type": "depense",
+    "montant": 793.19,
+    "categorie": " Logement",
+    "description": "Assurance habitation",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956122"
+  },
+  {
+    "id": "5e1300ce-9273-40c6-9378-2c759192f5ad",
+    "date": "2025-10-25",
+    "type": "revenu",
+    "montant": 33.89,
+    "categorie": " Autres",
+    "description": "Autre revenu",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956573"
+  },
+  {
+    "id": "be24bf0a-feac-4ac8-9ccd-7b1574caeb2d",
+    "date": "2025-10-24",
+    "type": "depense",
+    "montant": 14.94,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955746"
+  },
+  {
+    "id": "6319289a-f4eb-4c80-a73c-7c103afb997a",
+    "date": "2025-10-24",
+    "type": "depense",
+    "montant": 123.59,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955801"
+  },
+  {
+    "id": "96e16063-05d8-4f10-a167-12b92ee3f814",
+    "date": "2025-10-24",
+    "type": "depense",
+    "montant": 99.64,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956387"
+  },
+  {
+    "id": "a711242b-3b58-4ebf-a422-eb101e2461d3",
+    "date": "2025-10-23",
+    "type": "depense",
+    "montant": 78.25,
+    "categorie": " Transport",
+    "description": "Parking",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956168"
+  },
+  {
+    "id": "dcbcb2fb-b22d-49fb-83ff-ad61ee854b9f",
+    "date": "2025-10-21",
+    "type": "depense",
+    "montant": 50.01,
+    "categorie": " Alimentation",
+    "description": "Courses Carrefour",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.954967"
+  },
+  {
+    "id": "806b9754-fa87-4d3c-9efa-821129420949",
+    "date": "2025-10-20",
+    "type": "depense",
+    "montant": 803.83,
+    "categorie": " Logement",
+    "description": "Charges",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955852"
+  },
+  {
+    "id": "0b9660ea-faca-4d01-801b-96f891723afa",
+    "date": "2025-10-18",
+    "type": "depense",
+    "montant": 52.16,
+    "categorie": " Shopping",
+    "description": "Amazon",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956353"
+  },
+  {
+    "id": "b0b122ee-4b61-4095-9cae-5f45e06885b9",
+    "date": "2025-10-16",
+    "type": "depense",
+    "montant": 70.21,
+    "categorie": " Autres",
+    "description": "Divers",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955762"
+  },
+  {
+    "id": "72dbccff-7342-4fc2-875b-ade6420d7113",
+    "date": "2025-10-11",
+    "type": "depense",
+    "montant": 54.58,
+    "categorie": " Santé",
+    "description": "Dentiste",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.956137"
+  },
+  {
+    "id": "f37ed3dc-03d4-4b7b-8026-331b559fd061",
+    "date": "2025-10-08",
+    "type": "depense",
+    "montant": 45.7,
+    "categorie": " Transport",
+    "description": "Péage",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955370"
+  },
+  {
+    "id": "5695b4e6-0c8c-41ce-8235-f3eba5bce0c4",
+    "date": "2025-10-05",
+    "type": "depense",
+    "montant": 10.11,
+    "categorie": " Loisirs",
+    "description": "Bar",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.956183"
+  },
+  {
+    "id": "cfc71e28-4af0-4968-b008-362f284b0516",
+    "date": "2025-10-04",
+    "type": "depense",
+    "montant": 194.08,
+    "categorie": " Shopping",
+    "description": "Vêtements",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.956152"
+  },
+  {
+    "id": "9ef303f5-08e5-4ea4-a255-304cfc095522",
+    "date": "2025-10-04",
+    "type": "depense",
+    "montant": 51.4,
+    "categorie": " Éducation",
+    "description": "Formation",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.956214"
+  },
+  {
+    "id": "36b13b92-809d-4a6a-916f-a5933ed8ea85",
+    "date": "2025-10-02",
+    "type": "depense",
+    "montant": 25.09,
+    "categorie": " Shopping",
+    "description": "Chaussures",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955178"
+  },
+  {
+    "id": "85e5aea4-808f-4845-b917-aae1a919c241",
+    "date": "2025-10-01",
+    "type": "depense",
+    "montant": 71.69,
+    "categorie": " Autres",
+    "description": "Frais bancaires",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955626"
+  },
+  {
+    "id": "88ced1c7-7116-496f-91aa-a1f133724a9d",
+    "date": "2025-10-01",
+    "type": "revenu",
+    "montant": 3003.79,
+    "categorie": " Salaire",
+    "description": "Salaire mensuel",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956523"
+  },
+  {
+    "id": "dca19d64-670c-41c4-b9db-03a8b4f7de65",
+    "date": "2025-10-01",
+    "type": "revenu",
+    "montant": 3469.09,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956662"
+  },
+  {
+    "id": "da7b7f78-25f6-4bfc-adfe-f00e25914362",
+    "date": "2025-09-30",
+    "type": "depense",
+    "montant": 21.02,
+    "categorie": " Alimentation",
+    "description": "Marché",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955385"
+  },
+  {
+    "id": "84e743ae-5f83-4646-946a-e0a50a92e50d",
+    "date": "2025-09-28",
+    "type": "depense",
+    "montant": 76.07,
+    "categorie": " Factures",
+    "description": "Téléphone",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955498"
+  },
+  {
+    "id": "db97365c-dea3-41e9-9fed-7ba7d7cb27c9",
+    "date": "2025-09-27",
+    "type": "depense",
+    "montant": 9.95,
+    "categorie": " Transport",
+    "description": "Essence",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955292"
+  },
+  {
+    "id": "d1d37ccc-ca34-4a12-9c60-1c1c7e655397",
+    "date": "2025-09-25",
+    "type": "depense",
+    "montant": 146.92,
+    "categorie": " Shopping",
+    "description": "Amazon",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955277"
+  },
+  {
+    "id": "f63097c1-e956-44a5-b32a-bc4a6e877a55",
+    "date": "2025-09-24",
+    "type": "depense",
+    "montant": 52.57,
+    "categorie": " Transport",
+    "description": "Péage",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955403"
+  },
+  {
+    "id": "4cf7206e-9f56-4e89-810c-5e05ae77e75a",
+    "date": "2025-09-24",
+    "type": "depense",
+    "montant": 46.19,
+    "categorie": " Santé",
+    "description": "Pharmacie",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955817"
+  },
+  {
+    "id": "dd68390c-a2c6-4c45-9570-2dcfec170037",
+    "date": "2025-09-24",
+    "type": "depense",
+    "montant": 30.61,
+    "categorie": " Loisirs",
+    "description": "Concert",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955905"
+  },
+  {
+    "id": "cc601817-49ec-4747-8406-53f3f2c62849",
+    "date": "2025-09-22",
+    "type": "depense",
+    "montant": 67.65,
+    "categorie": " Transport",
+    "description": "Péage",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955195"
+  },
+  {
+    "id": "88f52e3f-243c-496d-ad6b-88386c9f4158",
+    "date": "2025-09-20",
+    "type": "depense",
+    "montant": 663.85,
+    "categorie": " Logement",
+    "description": "Loyer",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955326"
+  },
+  {
+    "id": "8dc8b27e-a163-4d62-8927-fc15e8bfbb21",
+    "date": "2025-09-20",
+    "type": "depense",
+    "montant": 163.6,
+    "categorie": " Shopping",
+    "description": "Chaussures",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955641"
+  },
+  {
+    "id": "b548d983-01ef-4953-8771-81037ac06d16",
+    "date": "2025-09-19",
+    "type": "depense",
+    "montant": 85.51,
+    "categorie": " Factures",
+    "description": "Internet Orange",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955921"
+  },
+  {
+    "id": "dda6ed29-2e18-4d70-9789-fe9995ccd762",
+    "date": "2025-09-18",
+    "type": "depense",
+    "montant": 957.83,
+    "categorie": " Logement",
+    "description": "Loyer",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955956"
+  },
+  {
+    "id": "c3858660-d2dd-49cf-93a4-9e6d8bce97a4",
+    "date": "2025-09-16",
+    "type": "depense",
+    "montant": 29.11,
+    "categorie": " Loisirs",
+    "description": "Concert",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955340"
+  },
+  {
+    "id": "39491586-6dcd-44be-9e60-46a0c4b65ca4",
+    "date": "2025-09-16",
+    "type": "depense",
+    "montant": 133.65,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955612"
+  },
+  {
+    "id": "b6421061-42fb-432d-b3c8-c55f5d62642b",
+    "date": "2025-09-16",
+    "type": "depense",
+    "montant": 49.61,
+    "categorie": " Loisirs",
+    "description": "Bar",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.956107"
+  },
+  {
+    "id": "067690d5-5f9c-4ca0-b96b-3f6fc4bb93c5",
+    "date": "2025-09-15",
+    "type": "depense",
+    "montant": 32.47,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.954999"
+  },
+  {
+    "id": "2e35d3f9-33d3-4427-96ff-569f9bef72e2",
+    "date": "2025-09-15",
+    "type": "depense",
+    "montant": 76.82,
+    "categorie": " Loisirs",
+    "description": "Cinéma",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.956091"
+  },
+  {
+    "id": "6a206b2e-e881-4f17-90e6-442c3561bd12",
+    "date": "2025-09-14",
+    "type": "revenu",
+    "montant": 644.2,
+    "categorie": " Freelance",
+    "description": "Projet client",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956677"
+  },
+  {
+    "id": "946ed047-7027-4d4d-afa4-1b9eee0c9054",
+    "date": "2025-09-13",
+    "type": "depense",
+    "montant": 63.86,
+    "categorie": " Autres",
+    "description": "Frais bancaires",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955972"
+  },
+  {
+    "id": "e6222a13-7f38-42db-9c2a-5ea3fbfd5346",
+    "date": "2025-09-11",
+    "type": "depense",
+    "montant": 116.52,
+    "categorie": " Shopping",
+    "description": "Chaussures",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955672"
+  },
+  {
+    "id": "40f4701b-5cde-459e-ba71-848b6752623a",
+    "date": "2025-09-11",
+    "type": "depense",
+    "montant": 77.51,
+    "categorie": " Autres",
+    "description": "Frais bancaires",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955780"
+  },
+  {
+    "id": "ac8e1391-fb9e-4d4e-aca4-709bb4363c0e",
+    "date": "2025-09-11",
+    "type": "depense",
+    "montant": 113.69,
+    "categorie": " Épargne",
+    "description": "PEL",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956337"
+  },
+  {
+    "id": "01fe6769-51eb-4025-a8ad-51853351d19b",
+    "date": "2025-09-10",
+    "type": "depense",
+    "montant": 110.92,
+    "categorie": " Alimentation",
+    "description": "Restaurant",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955685"
+  },
+  {
+    "id": "5a5a17cd-cc6d-46d4-92dd-fdb9a7dd076b",
+    "date": "2025-09-09",
+    "type": "depense",
+    "montant": 36.12,
+    "categorie": " Alimentation",
+    "description": "Restaurant",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955527"
+  },
+  {
+    "id": "45cc7308-6396-4052-8069-429df7507bb5",
+    "date": "2025-09-09",
+    "type": "depense",
+    "montant": 85.55,
+    "categorie": " Loisirs",
+    "description": "Bar",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956371"
+  },
+  {
+    "id": "d57ec04a-9119-4b43-9ee6-ce5f63c59268",
+    "date": "2025-09-08",
+    "type": "depense",
+    "montant": 127.71,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955482"
+  },
+  {
+    "id": "83ebc625-f549-4d6e-b026-f3c270d3e9af",
+    "date": "2025-09-07",
+    "type": "depense",
+    "montant": 89.44,
+    "categorie": " Éducation",
+    "description": "Formation",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.956403"
+  },
+  {
+    "id": "9b74e160-25f8-44ea-b359-d3554ee91a4b",
+    "date": "2025-09-06",
+    "type": "depense",
+    "montant": 168.69,
+    "categorie": " Shopping",
+    "description": "Chaussures",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.956073"
+  },
+  {
+    "id": "94247171-9535-4ce4-9f18-e94c28f6b982",
+    "date": "2025-09-04",
+    "type": "depense",
+    "montant": 226.72,
+    "categorie": " Épargne",
+    "description": "Livret A",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956295"
+  },
+  {
+    "id": "e09c01a5-2506-4dad-aec1-386bf3b1657b",
+    "date": "2025-09-03",
+    "type": "depense",
+    "montant": 859.38,
+    "categorie": " Logement",
+    "description": "Loyer",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955073"
+  },
+  {
+    "id": "7b10467e-e52d-45d6-b557-6549fb7f7854",
+    "date": "2025-09-03",
+    "type": "depense",
+    "montant": 55.11,
+    "categorie": " Factures",
+    "description": "Internet Orange",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.956005"
+  },
+  {
+    "id": "a01c08ea-23a5-42a5-b6d0-785fa1ebaea2",
+    "date": "2025-09-03",
+    "type": "depense",
+    "montant": 9.56,
+    "categorie": " Transport",
+    "description": "Essence",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.956316"
+  },
+  {
+    "id": "2bbcd29e-3950-419d-b7b7-66bb321b50bc",
+    "date": "2025-09-01",
+    "type": "depense",
+    "montant": 61.13,
+    "categorie": " Loisirs",
+    "description": "Concert",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955512"
+  },
+  {
+    "id": "cef6c5bf-1d90-474b-959d-bc0e14ce48ba",
+    "date": "2025-09-01",
+    "type": "depense",
+    "montant": 396.47,
+    "categorie": " Épargne",
+    "description": "PEL",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956049"
+  },
+  {
+    "id": "b6ff64e1-9e37-4903-a0aa-90a0ee6d2b48",
+    "date": "2025-09-01",
+    "type": "revenu",
+    "montant": 2874.15,
+    "categorie": " Salaire",
+    "description": "Salaire mensuel",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956442"
+  },
+  {
+    "id": "0814ce9a-2293-456f-af11-569f74946da0",
+    "date": "2025-09-01",
+    "type": "revenu",
+    "montant": 2490.44,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956468"
+  },
+  {
+    "id": "0bb8c413-d225-46f0-adac-8daf6a68da9c",
+    "date": "2025-09-01",
+    "type": "revenu",
+    "montant": 2106.04,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956541"
+  },
+  {
+    "id": "1d752776-b003-42bd-9809-7c303f743139",
+    "date": "2025-09-01",
+    "type": "revenu",
+    "montant": 3170.55,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956608"
+  },
+  {
+    "id": "815d39dd-c113-4621-9528-94cb1f269742",
+    "date": "2025-09-01",
+    "type": "revenu",
+    "montant": 2868.44,
+    "categorie": " Salaire",
+    "description": "Salaire mensuel",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956645"
+  },
+  {
+    "id": "75659d03-4505-4e82-ac19-f20698f4823b",
+    "date": "2025-08-28",
+    "type": "depense",
+    "montant": 68.97,
+    "categorie": " Loisirs",
+    "description": "Restaurant",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955145"
+  },
+  {
+    "id": "b263cd51-8e72-4c52-9a0e-e7fdd1ddacb0",
+    "date": "2025-08-28",
+    "type": "depense",
+    "montant": 95.16,
+    "categorie": " Factures",
+    "description": "EDF",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955355"
+  },
+  {
+    "id": "1cdc8be0-4c87-4b09-88cc-c3a3a522cda4",
+    "date": "2025-08-27",
+    "type": "depense",
+    "montant": 44.11,
+    "categorie": " Shopping",
+    "description": "Vêtements",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955262"
+  },
+  {
+    "id": "46ade2db-1d25-42af-9bda-a08f30149792",
+    "date": "2025-08-26",
+    "type": "depense",
+    "montant": 43.25,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955868"
+  },
+  {
+    "id": "d249958b-2f0a-4e26-83ce-7c7e0d533e50",
+    "date": "2025-08-25",
+    "type": "depense",
+    "montant": 121.22,
+    "categorie": " Factures",
+    "description": "EDF",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.956228"
+  },
+  {
+    "id": "c5c21216-efc7-4a30-9c29-568c456bdf89",
+    "date": "2025-08-24",
+    "type": "depense",
+    "montant": 610.85,
+    "categorie": " Logement",
+    "description": "Charges",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955093"
+  },
+  {
+    "id": "7c65b988-7b39-46aa-b18e-3966b2b84950",
+    "date": "2025-08-24",
+    "type": "depense",
+    "montant": 16.87,
+    "categorie": " Alimentation",
+    "description": "Boulangerie",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955450"
+  },
+  {
+    "id": "bf7d6734-57d7-4144-9433-27f95bae384b",
+    "date": "2025-08-24",
+    "type": "depense",
+    "montant": 67.67,
+    "categorie": " Shopping",
+    "description": "Accessoires",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955700"
+  },
+  {
+    "id": "7bc7e050-c10d-4363-81d2-8a877390d192",
+    "date": "2025-08-23",
+    "type": "depense",
+    "montant": 50.28,
+    "categorie": " Alimentation",
+    "description": "Auchan",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955989"
+  },
+  {
+    "id": "2d68eaef-5af0-4eb2-af25-7c94932b7e86",
+    "date": "2025-08-23",
+    "type": "depense",
+    "montant": 215.23,
+    "categorie": " Épargne",
+    "description": "Assurance-vie",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956264"
+  },
+  {
+    "id": "b3f89769-029f-4c06-822b-bdbc8702b0dd",
+    "date": "2025-08-22",
+    "type": "depense",
+    "montant": 102.2,
+    "categorie": " Alimentation",
+    "description": "Courses Carrefour",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955310"
+  },
+  {
+    "id": "102b85fb-74b4-4c90-b48b-f08fe58d5e00",
+    "date": "2025-08-20",
+    "type": "depense",
+    "montant": 25.57,
+    "categorie": " Transport",
+    "description": "Parking",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.955466"
+  },
+  {
+    "id": "c4eb9c1b-20ee-4125-835b-8953734d5b7c",
+    "date": "2025-08-19",
+    "type": "depense",
+    "montant": 42.19,
+    "categorie": " Transport",
+    "description": "Péage",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955418"
+  },
+  {
+    "id": "17369b2f-5e9c-4582-9e7a-35fd38e42456",
+    "date": "2025-08-19",
+    "type": "depense",
+    "montant": 66.22,
+    "categorie": " Transport",
+    "description": "Péage",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955435"
+  },
+  {
+    "id": "3121da98-0899-4d6d-a375-e5f0ea08f5e3",
+    "date": "2025-08-19",
+    "type": "revenu",
+    "montant": 587.1,
+    "categorie": " Prime/Bonus",
+    "description": "13ème mois",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956486"
+  },
+  {
+    "id": "1c13c32d-719d-4136-a252-cb5b9d112c9e",
+    "date": "2025-08-17",
+    "type": "depense",
+    "montant": 88.18,
+    "categorie": " Alimentation",
+    "description": "Courses Carrefour",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955247"
+  },
+  {
+    "id": "4af11a73-1d1d-4291-999a-258685f29b45",
+    "date": "2025-08-16",
+    "type": "depense",
+    "montant": 54.38,
+    "categorie": " Transport",
+    "description": "Uber",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955729"
+  },
+  {
+    "id": "b5f43c9d-6c26-4118-858b-f3d161a19ff6",
+    "date": "2025-08-16",
+    "type": "depense",
+    "montant": 664.9,
+    "categorie": " Logement",
+    "description": "Loyer",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956032"
+  },
+  {
+    "id": "83380d3c-5b5f-4f61-afcd-41f20f61c95a",
+    "date": "2025-08-14",
+    "type": "depense",
+    "montant": 78.73,
+    "categorie": " Shopping",
+    "description": "Amazon",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956280"
+  },
+  {
+    "id": "4d6c1854-181a-4607-84ae-8bd7410818b9",
+    "date": "2025-08-12",
+    "type": "depense",
+    "montant": 5.46,
+    "categorie": " Alimentation",
+    "description": "Restaurant",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955227"
+  },
+  {
+    "id": "5037d234-1eaa-48ac-ad7d-925fc62fab99",
+    "date": "2025-08-11",
+    "type": "depense",
+    "montant": 53.33,
+    "categorie": " Éducation",
+    "description": "Livres",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.954915"
+  },
+  {
+    "id": "ab524a40-6dfe-447f-afe8-025e87447105",
+    "date": "2025-08-10",
+    "type": "depense",
+    "montant": 74.98,
+    "categorie": " Transport",
+    "description": "Essence",
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-28T12:55:26.955042"
+  },
+  {
+    "id": "9cdea427-3636-4429-a229-bf96917f4921",
+    "date": "2025-08-10",
+    "type": "depense",
+    "montant": 72.41,
+    "categorie": " Autres",
+    "description": "Divers",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955594"
+  },
+  {
+    "id": "78a1fc3e-2284-4a63-b47b-e036afa17143",
+    "date": "2025-08-09",
+    "type": "depense",
+    "montant": 35.9,
+    "categorie": " Alimentation",
+    "description": "Lidl",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955561"
+  },
+  {
+    "id": "014553ec-1e0e-45ae-884c-81f4cb69a737",
+    "date": "2025-08-08",
+    "type": "depense",
+    "montant": 123.28,
+    "categorie": " Factures",
+    "description": "Téléphone",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955578"
+  },
+  {
+    "id": "8a6cf84d-1165-4e27-b753-31a9a5e26d21",
+    "date": "2025-08-08",
+    "type": "depense",
+    "montant": 41.29,
+    "categorie": " Alimentation",
+    "description": "Restaurant",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955940"
+  },
+  {
+    "id": "308ebec4-4a19-4ddb-a913-8529102ee58a",
+    "date": "2025-08-07",
+    "type": "depense",
+    "montant": 96.77,
+    "categorie": " Factures",
+    "description": "Netflix",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955112"
+  },
+  {
+    "id": "365132e4-9f8f-48a8-b885-1325f2f1a580",
+    "date": "2025-08-07",
+    "type": "depense",
+    "montant": 27.23,
+    "categorie": " Éducation",
+    "description": "Cours en ligne",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955129"
+  },
+  {
+    "id": "49b74de1-4e9e-458f-9152-cf14d4685b24",
+    "date": "2025-08-06",
+    "type": "depense",
+    "montant": 144.13,
+    "categorie": " Shopping",
+    "description": "Amazon",
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-28T12:55:26.955657"
+  },
+  {
+    "id": "3230fa43-d50b-4f51-ad66-deaceeda3906",
+    "date": "2025-08-06",
+    "type": "depense",
+    "montant": 87.93,
+    "categorie": " Shopping",
+    "description": "Accessoires",
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-28T12:55:26.956242"
+  },
+  {
+    "id": "eb66e610-e367-4eea-abd7-7ff6c7f5b3b7",
+    "date": "2025-08-04",
+    "type": "depense",
+    "montant": 42.42,
+    "categorie": " Shopping",
+    "description": "Accessoires",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.955544"
+  },
+  {
+    "id": "df3bb837-6cf3-41f2-8710-104bab580c1f",
+    "date": "2025-08-04",
+    "type": "depense",
+    "montant": 701.08,
+    "categorie": " Logement",
+    "description": "Assurance habitation",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955833"
+  },
+  {
+    "id": "4c96c2de-3d3b-4807-921e-212306e12960",
+    "date": "2025-08-03",
+    "type": "depense",
+    "montant": 457.72,
+    "categorie": " Épargne",
+    "description": "Livret A",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.956198"
+  },
+  {
+    "id": "782a8ea3-1988-410f-a7c7-a627b6f9dc54",
+    "date": "2025-08-03",
+    "type": "revenu",
+    "montant": 268.29,
+    "categorie": " Investissements",
+    "description": "Plus-value",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956590"
+  },
+  {
+    "id": "4d449cec-a334-4c11-a007-106196d03566",
+    "date": "2025-08-01",
+    "type": "depense",
+    "montant": 40.23,
+    "categorie": " Éducation",
+    "description": "Cours en ligne",
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-28T12:55:26.955714"
+  },
+  {
+    "id": "2ca3c0ca-f4de-4b29-abad-1f81d66ea061",
+    "date": "2025-08-01",
+    "type": "revenu",
+    "montant": 3069.86,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956505"
+  },
+  {
+    "id": "19db0d24-33e0-458d-9396-195dab8548a2",
+    "date": "2025-08-01",
+    "type": "revenu",
+    "montant": 3407.15,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956558"
+  },
+  {
+    "id": "dabd3dac-84ce-4991-863e-cd0c7a929795",
+    "date": "2025-08-01",
+    "type": "revenu",
+    "montant": 3257.0,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956626"
+  },
+  {
+    "id": "afab4d31-cb6d-4601-9c51-d4b2476e7e1c",
+    "date": "2025-08-01",
+    "type": "revenu",
+    "montant": 2891.19,
+    "categorie": " Salaire",
+    "description": "Salaire",
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-28T12:55:26.956693"
+  }
+]

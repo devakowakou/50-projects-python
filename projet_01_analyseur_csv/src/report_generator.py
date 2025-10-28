@@ -78,13 +78,13 @@ class ReportGenerator:
         Returns:
             Contenu du rapport en Markdown
         """
-        report = f"""# 📊 Rapport d'Analyse CSV
+        report = f"""#  Rapport d'Analyse CSV
         
 **Date de génération:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
 ---
 
-## 📈 Informations Générales
+##  Informations Générales
 
 - **Nombre de lignes:** {len(self.df):,}
 - **Nombre de colonnes:** {len(self.df.columns)}
@@ -93,33 +93,33 @@ class ReportGenerator:
 
 ---
 
-## 🔍 Qualité des Données
+##  Qualité des Données
 
 """
         
         # Valeurs manquantes
         missing = self.df.isnull().sum()
         if missing.sum() > 0:
-            report += "### ⚠️ Valeurs Manquantes\n\n"
+            report += "###  Valeurs Manquantes\n\n"
             missing_df = missing[missing > 0].sort_values(ascending=False)
             for col, count in missing_df.items():
                 percent = (count / len(self.df) * 100)
                 report += f"- **{col}:** {count} ({percent:.2f}%)\n"
         else:
-            report += "### ✅ Aucune valeur manquante\n\n"
+            report += "###  Aucune valeur manquante\n\n"
         
         report += "\n---\n\n"
         
         # Duplicatas
         duplicates = self.df.duplicated().sum()
-        report += f"### 🔄 Lignes Dupliquées: {duplicates}\n\n"
+        report += f"###  Lignes Dupliquées: {duplicates}\n\n"
         
         report += "---\n\n"
         
         # Statistiques descriptives pour colonnes numériques
         numeric_cols = self.df.select_dtypes(include=['number']).columns
         if len(numeric_cols) > 0:
-            report += "## 📊 Statistiques Descriptives\n\n"
+            report += "##  Statistiques Descriptives\n\n"
             
             for col in numeric_cols[:5]:  # Limiter à 5 colonnes
                 report += f"### {col}\n\n"
