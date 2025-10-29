@@ -4,2029 +4,999 @@
     "date": "2025-10-28",
     "type": "depense",
     "montant": 43.86,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.534388"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.063317"
   },
   {
     "id": "9866db7f-3bdb-4b8c-aecc-9c2b13826161",
     "date": "2025-10-28",
     "type": "depense",
     "montant": 94.83,
-    "categorie": "🎓 Éducation",
+    "categorie": " Éducation",
     "description": "Cours en ligne",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.537136"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.063904"
   },
   {
     "id": "4c5e33ab-87df-4438-bf94-017fad810b5b",
     "date": "2025-10-27",
     "type": "depense",
     "montant": 11.64,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Restaurant",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.540907"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.064869"
   },
   {
     "id": "1f618f4a-f435-40d0-b6f7-dabb4439d120",
     "date": "2025-10-25",
     "type": "depense",
     "montant": 793.19,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Assurance habitation",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.541306"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.065506"
   },
   {
     "id": "5e1300ce-9273-40c6-9378-2c759192f5ad",
     "date": "2025-10-25",
     "type": "revenu",
     "montant": 33.89,
-    "categorie": "🎰 Autres",
+    "categorie": " Autres",
     "description": "Autre revenu",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.541747"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.066371"
   },
   {
     "id": "be24bf0a-feac-4ac8-9ccd-7b1574caeb2d",
     "date": "2025-10-24",
     "type": "depense",
     "montant": 14.94,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.541888"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.067017"
   },
   {
     "id": "6319289a-f4eb-4c80-a73c-7c103afb997a",
     "date": "2025-10-24",
     "type": "depense",
     "montant": 123.59,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.542033"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.067754"
   },
   {
     "id": "96e16063-05d8-4f10-a167-12b92ee3f814",
     "date": "2025-10-24",
     "type": "depense",
     "montant": 99.64,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.542713"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.069431"
   },
   {
     "id": "a711242b-3b58-4ebf-a422-eb101e2461d3",
     "date": "2025-10-23",
     "type": "depense",
     "montant": 78.25,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Parking",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.543178"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.071256"
   },
   {
     "id": "dcbcb2fb-b22d-49fb-83ff-ad61ee854b9f",
     "date": "2025-10-21",
     "type": "depense",
     "montant": 50.01,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Courses Carrefour",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.543737"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.073284"
   },
   {
     "id": "806b9754-fa87-4d3c-9efa-821129420949",
     "date": "2025-10-20",
     "type": "depense",
     "montant": 803.83,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Charges",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.544110"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.075163"
   },
   {
     "id": "0b9660ea-faca-4d01-801b-96f891723afa",
     "date": "2025-10-18",
     "type": "depense",
     "montant": 52.16,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Amazon",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.544501"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.077612"
   },
   {
     "id": "b0b122ee-4b61-4095-9cae-5f45e06885b9",
     "date": "2025-10-16",
     "type": "depense",
     "montant": 70.21,
-    "categorie": "📦 Autres",
+    "categorie": " Autres",
     "description": "Divers",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.544847"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.081754"
   },
   {
     "id": "72dbccff-7342-4fc2-875b-ade6420d7113",
     "date": "2025-10-11",
     "type": "depense",
     "montant": 54.58,
-    "categorie": "🏥 Santé",
+    "categorie": " Santé",
     "description": "Dentiste",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.545700"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.083315"
   },
   {
     "id": "f37ed3dc-03d4-4b7b-8026-331b559fd061",
     "date": "2025-10-08",
     "type": "depense",
     "montant": 45.7,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Péage",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.546404"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.085684"
   },
   {
     "id": "5695b4e6-0c8c-41ce-8235-f3eba5bce0c4",
     "date": "2025-10-05",
     "type": "depense",
     "montant": 10.11,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Bar",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.547367"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.087539"
   },
   {
     "id": "cfc71e28-4af0-4968-b008-362f284b0516",
     "date": "2025-10-04",
     "type": "depense",
     "montant": 194.08,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Vêtements",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.548084"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.088924"
   },
   {
     "id": "9ef303f5-08e5-4ea4-a255-304cfc095522",
     "date": "2025-10-04",
     "type": "depense",
     "montant": 51.4,
-    "categorie": "🎓 Éducation",
+    "categorie": " Éducation",
     "description": "Formation",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.548768"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.090380"
   },
   {
     "id": "36b13b92-809d-4a6a-916f-a5933ed8ea85",
     "date": "2025-10-02",
     "type": "depense",
     "montant": 25.09,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Chaussures",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.549575"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.092425"
   },
   {
     "id": "85e5aea4-808f-4845-b917-aae1a919c241",
     "date": "2025-10-01",
     "type": "depense",
     "montant": 71.69,
-    "categorie": "📦 Autres",
+    "categorie": " Autres",
     "description": "Frais bancaires",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.550318"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.094150"
   },
   {
     "id": "88ced1c7-7116-496f-91aa-a1f133724a9d",
     "date": "2025-10-01",
     "type": "revenu",
     "montant": 3003.79,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire mensuel",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.551307"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.095399"
   },
   {
     "id": "dca19d64-670c-41c4-b9db-03a8b4f7de65",
     "date": "2025-10-01",
     "type": "revenu",
     "montant": 3469.09,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.552385"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.097262"
   },
   {
     "id": "da7b7f78-25f6-4bfc-adfe-f00e25914362",
     "date": "2025-09-30",
     "type": "depense",
     "montant": 21.02,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Marché",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.553234"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.098017"
   },
   {
     "id": "84e743ae-5f83-4646-946a-e0a50a92e50d",
     "date": "2025-09-28",
     "type": "depense",
     "montant": 76.07,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "Téléphone",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.554098"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.101728"
   },
   {
     "id": "db97365c-dea3-41e9-9fed-7ba7d7cb27c9",
     "date": "2025-09-27",
     "type": "depense",
     "montant": 9.95,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Essence",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.554868"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.105276"
   },
   {
     "id": "d1d37ccc-ca34-4a12-9c60-1c1c7e655397",
     "date": "2025-09-25",
     "type": "depense",
     "montant": 146.92,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Amazon",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.556472"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.106366"
   },
   {
     "id": "f63097c1-e956-44a5-b32a-bc4a6e877a55",
     "date": "2025-09-24",
     "type": "depense",
     "montant": 52.57,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Péage",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.557750"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.107251"
   },
   {
     "id": "4cf7206e-9f56-4e89-810c-5e05ae77e75a",
     "date": "2025-09-24",
     "type": "depense",
     "montant": 46.19,
-    "categorie": "🏥 Santé",
+    "categorie": " Santé",
     "description": "Pharmacie",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.558615"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.107952"
   },
   {
     "id": "dd68390c-a2c6-4c45-9570-2dcfec170037",
     "date": "2025-09-24",
     "type": "depense",
     "montant": 30.61,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Concert",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.559538"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.108597"
   },
   {
     "id": "cc601817-49ec-4747-8406-53f3f2c62849",
     "date": "2025-09-22",
     "type": "depense",
     "montant": 67.65,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Péage",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.560463"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.109431"
   },
   {
     "id": "88f52e3f-243c-496d-ad6b-88386c9f4158",
     "date": "2025-09-20",
     "type": "depense",
     "montant": 663.85,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Loyer",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.561371"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.110283"
   },
   {
     "id": "8dc8b27e-a163-4d62-8927-fc15e8bfbb21",
     "date": "2025-09-20",
     "type": "depense",
     "montant": 163.6,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Chaussures",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.562363"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.111292"
   },
   {
     "id": "b548d983-01ef-4953-8771-81037ac06d16",
     "date": "2025-09-19",
     "type": "depense",
     "montant": 85.51,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "Internet Orange",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.563373"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.112345"
   },
   {
     "id": "dda6ed29-2e18-4d70-9789-fe9995ccd762",
     "date": "2025-09-18",
     "type": "depense",
     "montant": 957.83,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Loyer",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.564204"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.113674"
   },
   {
     "id": "c3858660-d2dd-49cf-93a4-9e6d8bce97a4",
     "date": "2025-09-16",
     "type": "depense",
     "montant": 29.11,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Concert",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.565258"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.115044"
   },
   {
     "id": "39491586-6dcd-44be-9e60-46a0c4b65ca4",
     "date": "2025-09-16",
     "type": "depense",
     "montant": 133.65,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.566269"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.116236"
   },
   {
     "id": "b6421061-42fb-432d-b3c8-c55f5d62642b",
     "date": "2025-09-16",
     "type": "depense",
     "montant": 49.61,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Bar",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.567272"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.117307"
   },
   {
     "id": "067690d5-5f9c-4ca0-b96b-3f6fc4bb93c5",
     "date": "2025-09-15",
     "type": "depense",
     "montant": 32.47,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.568506"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.118586"
   },
   {
     "id": "2e35d3f9-33d3-4427-96ff-569f9bef72e2",
     "date": "2025-09-15",
     "type": "depense",
     "montant": 76.82,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Cinéma",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.569686"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.120070"
   },
   {
     "id": "6a206b2e-e881-4f17-90e6-442c3561bd12",
     "date": "2025-09-14",
     "type": "revenu",
     "montant": 644.2,
-    "categorie": "💵 Freelance",
+    "categorie": " Freelance",
     "description": "Projet client",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.570978"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.121289"
   },
   {
     "id": "946ed047-7027-4d4d-afa4-1b9eee0c9054",
     "date": "2025-09-13",
     "type": "depense",
     "montant": 63.86,
-    "categorie": "📦 Autres",
+    "categorie": " Autres",
     "description": "Frais bancaires",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.572084"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.122991"
   },
   {
     "id": "e6222a13-7f38-42db-9c2a-5ea3fbfd5346",
     "date": "2025-09-11",
     "type": "depense",
     "montant": 116.52,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Chaussures",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.573084"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.124937"
   },
   {
     "id": "40f4701b-5cde-459e-ba71-848b6752623a",
     "date": "2025-09-11",
     "type": "depense",
     "montant": 77.51,
-    "categorie": "📦 Autres",
+    "categorie": " Autres",
     "description": "Frais bancaires",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.574116"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.126730"
   },
   {
     "id": "ac8e1391-fb9e-4d4e-aca4-709bb4363c0e",
     "date": "2025-09-11",
     "type": "depense",
     "montant": 113.69,
-    "categorie": "💰 Épargne",
+    "categorie": " Épargne",
     "description": "PEL",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.575150"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.128420"
   },
   {
     "id": "01fe6769-51eb-4025-a8ad-51853351d19b",
     "date": "2025-09-10",
     "type": "depense",
     "montant": 110.92,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Restaurant",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.576327"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.129714"
   },
   {
     "id": "5a5a17cd-cc6d-46d4-92dd-fdb9a7dd076b",
     "date": "2025-09-09",
     "type": "depense",
     "montant": 36.12,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Restaurant",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.577393"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.131278"
   },
   {
     "id": "45cc7308-6396-4052-8069-429df7507bb5",
     "date": "2025-09-09",
     "type": "depense",
     "montant": 85.55,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Bar",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.578531"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.133834"
   },
   {
     "id": "d57ec04a-9119-4b43-9ee6-ce5f63c59268",
     "date": "2025-09-08",
     "type": "depense",
     "montant": 127.71,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.579674"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.135651"
   },
   {
     "id": "83ebc625-f549-4d6e-b026-f3c270d3e9af",
     "date": "2025-09-07",
     "type": "depense",
     "montant": 89.44,
-    "categorie": "🎓 Éducation",
+    "categorie": " Éducation",
     "description": "Formation",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.580839"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.137621"
   },
   {
     "id": "9b74e160-25f8-44ea-b359-d3554ee91a4b",
     "date": "2025-09-06",
     "type": "depense",
     "montant": 168.69,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Chaussures",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.582112"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.139209"
   },
   {
     "id": "94247171-9535-4ce4-9f18-e94c28f6b982",
     "date": "2025-09-04",
     "type": "depense",
     "montant": 226.72,
-    "categorie": "💰 Épargne",
+    "categorie": " Épargne",
     "description": "Livret A",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.583240"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.140867"
   },
   {
     "id": "e09c01a5-2506-4dad-aec1-386bf3b1657b",
     "date": "2025-09-03",
     "type": "depense",
     "montant": 859.38,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Loyer",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.584383"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.142390"
   },
   {
     "id": "7b10467e-e52d-45d6-b557-6549fb7f7854",
     "date": "2025-09-03",
     "type": "depense",
     "montant": 55.11,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "Internet Orange",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.585676"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.143501"
   },
   {
     "id": "a01c08ea-23a5-42a5-b6d0-785fa1ebaea2",
     "date": "2025-09-03",
     "type": "depense",
     "montant": 9.56,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Essence",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.586933"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.144305"
   },
   {
     "id": "2bbcd29e-3950-419d-b7b7-66bb321b50bc",
     "date": "2025-09-01",
     "type": "depense",
     "montant": 61.13,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Concert",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.588154"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.145392"
   },
   {
     "id": "cef6c5bf-1d90-474b-959d-bc0e14ce48ba",
     "date": "2025-09-01",
     "type": "depense",
     "montant": 396.47,
-    "categorie": "💰 Épargne",
+    "categorie": " Épargne",
     "description": "PEL",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.589425"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.146127"
   },
   {
     "id": "b6ff64e1-9e37-4903-a0aa-90a0ee6d2b48",
     "date": "2025-09-01",
     "type": "revenu",
     "montant": 2874.15,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire mensuel",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.590772"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.146990"
   },
   {
     "id": "0814ce9a-2293-456f-af11-569f74946da0",
     "date": "2025-09-01",
     "type": "revenu",
     "montant": 2490.44,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.592212"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.147702"
   },
   {
     "id": "0bb8c413-d225-46f0-adac-8daf6a68da9c",
     "date": "2025-09-01",
     "type": "revenu",
     "montant": 2106.04,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.594014"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.148399"
   },
   {
     "id": "1d752776-b003-42bd-9809-7c303f743139",
     "date": "2025-09-01",
     "type": "revenu",
     "montant": 3170.55,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.596114"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.150643"
   },
   {
     "id": "815d39dd-c113-4621-9528-94cb1f269742",
     "date": "2025-09-01",
     "type": "revenu",
     "montant": 2868.44,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire mensuel",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.598761"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.152353"
   },
   {
     "id": "75659d03-4505-4e82-ac19-f20698f4823b",
     "date": "2025-08-28",
     "type": "depense",
     "montant": 68.97,
-    "categorie": "🎉 Loisirs",
+    "categorie": " Loisirs",
     "description": "Restaurant",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.600624"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.154591"
   },
   {
     "id": "b263cd51-8e72-4c52-9a0e-e7fdd1ddacb0",
     "date": "2025-08-28",
     "type": "depense",
     "montant": 95.16,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "EDF",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.601584"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.155664"
   },
   {
     "id": "1cdc8be0-4c87-4b09-88cc-c3a3a522cda4",
     "date": "2025-08-27",
     "type": "depense",
     "montant": 44.11,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Vêtements",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.602578"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.156939"
   },
   {
     "id": "46ade2db-1d25-42af-9bda-a08f30149792",
     "date": "2025-08-26",
     "type": "depense",
     "montant": 43.25,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.603705"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.159673"
   },
   {
     "id": "d249958b-2f0a-4e26-83ce-7c7e0d533e50",
     "date": "2025-08-25",
     "type": "depense",
     "montant": 121.22,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "EDF",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.605369"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.162666"
   },
   {
     "id": "c5c21216-efc7-4a30-9c29-568c456bdf89",
     "date": "2025-08-24",
     "type": "depense",
     "montant": 610.85,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Charges",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.607519"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.164415"
   },
   {
     "id": "7c65b988-7b39-46aa-b18e-3966b2b84950",
     "date": "2025-08-24",
     "type": "depense",
     "montant": 16.87,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Boulangerie",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.609558"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.165982"
   },
   {
     "id": "bf7d6734-57d7-4144-9433-27f95bae384b",
     "date": "2025-08-24",
     "type": "depense",
     "montant": 67.67,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Accessoires",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.611275"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.169209"
   },
   {
     "id": "7bc7e050-c10d-4363-81d2-8a877390d192",
     "date": "2025-08-23",
     "type": "depense",
     "montant": 50.28,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Auchan",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.613084"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.172292"
   },
   {
     "id": "2d68eaef-5af0-4eb2-af25-7c94932b7e86",
     "date": "2025-08-23",
     "type": "depense",
     "montant": 215.23,
-    "categorie": "💰 Épargne",
+    "categorie": " Épargne",
     "description": "Assurance-vie",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.614591"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.174146"
   },
   {
     "id": "b3f89769-029f-4c06-822b-bdbc8702b0dd",
     "date": "2025-08-22",
     "type": "depense",
     "montant": 102.2,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Courses Carrefour",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.616626"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.176066"
   },
   {
     "id": "102b85fb-74b4-4c90-b48b-f08fe58d5e00",
     "date": "2025-08-20",
     "type": "depense",
     "montant": 25.57,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Parking",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.618223"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.177404"
   },
   {
     "id": "c4eb9c1b-20ee-4125-835b-8953734d5b7c",
     "date": "2025-08-19",
     "type": "depense",
     "montant": 42.19,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Péage",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.619974"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.178561"
   },
   {
     "id": "17369b2f-5e9c-4582-9e7a-35fd38e42456",
     "date": "2025-08-19",
     "type": "depense",
     "montant": 66.22,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Péage",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.621817"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.181314"
   },
   {
     "id": "3121da98-0899-4d6d-a375-e5f0ea08f5e3",
     "date": "2025-08-19",
     "type": "revenu",
     "montant": 587.1,
-    "categorie": "🎁 Prime/Bonus",
+    "categorie": " Prime/Bonus",
     "description": "13ème mois",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.623733"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.182510"
   },
   {
     "id": "1c13c32d-719d-4136-a252-cb5b9d112c9e",
     "date": "2025-08-17",
     "type": "depense",
     "montant": 88.18,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Courses Carrefour",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.625105"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.184554"
   },
   {
     "id": "4af11a73-1d1d-4291-999a-258685f29b45",
     "date": "2025-08-16",
     "type": "depense",
     "montant": 54.38,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Uber",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.626652"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.186916"
   },
   {
     "id": "b5f43c9d-6c26-4118-858b-f3d161a19ff6",
     "date": "2025-08-16",
     "type": "depense",
     "montant": 664.9,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Loyer",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.627965"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.188403"
   },
   {
     "id": "83380d3c-5b5f-4f61-afcd-41f20f61c95a",
     "date": "2025-08-14",
     "type": "depense",
     "montant": 78.73,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Amazon",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.629249"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.189561"
   },
   {
     "id": "4d6c1854-181a-4607-84ae-8bd7410818b9",
     "date": "2025-08-12",
     "type": "depense",
     "montant": 5.46,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Restaurant",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.630685"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.193010"
   },
   {
     "id": "5037d234-1eaa-48ac-ad7d-925fc62fab99",
     "date": "2025-08-11",
     "type": "depense",
     "montant": 53.33,
-    "categorie": "🎓 Éducation",
+    "categorie": " Éducation",
     "description": "Livres",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.632029"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.195783"
   },
   {
     "id": "ab524a40-6dfe-447f-afe8-025e87447105",
     "date": "2025-08-10",
     "type": "depense",
     "montant": 74.98,
-    "categorie": "🚗 Transport",
+    "categorie": " Transport",
     "description": "Essence",
-    "mode_paiement": "💳 Carte Bancaire",
-    "created_at": "2025-10-28T13:21:13.633918"
+    "mode_paiement": " Carte Bancaire",
+    "created_at": "2025-10-29T11:32:39.197807"
   },
   {
     "id": "9cdea427-3636-4429-a229-bf96917f4921",
     "date": "2025-08-10",
     "type": "depense",
     "montant": 72.41,
-    "categorie": "📦 Autres",
+    "categorie": " Autres",
     "description": "Divers",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.635650"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.200008"
   },
   {
     "id": "78a1fc3e-2284-4a63-b47b-e036afa17143",
     "date": "2025-08-09",
     "type": "depense",
     "montant": 35.9,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Lidl",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.637097"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.202312"
   },
   {
     "id": "014553ec-1e0e-45ae-884c-81f4cb69a737",
     "date": "2025-08-08",
     "type": "depense",
     "montant": 123.28,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "Téléphone",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.638506"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.204936"
   },
   {
     "id": "8a6cf84d-1165-4e27-b753-31a9a5e26d21",
     "date": "2025-08-08",
     "type": "depense",
     "montant": 41.29,
-    "categorie": "🍔 Alimentation",
+    "categorie": " Alimentation",
     "description": "Restaurant",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.639531"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.206443"
   },
   {
     "id": "308ebec4-4a19-4ddb-a913-8529102ee58a",
     "date": "2025-08-07",
     "type": "depense",
     "montant": 96.77,
-    "categorie": "💡 Factures",
+    "categorie": " Factures",
     "description": "Netflix",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.640584"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.207907"
   },
   {
     "id": "365132e4-9f8f-48a8-b885-1325f2f1a580",
     "date": "2025-08-07",
     "type": "depense",
     "montant": 27.23,
-    "categorie": "🎓 Éducation",
+    "categorie": " Éducation",
     "description": "Cours en ligne",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.641659"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.209589"
   },
   {
     "id": "49b74de1-4e9e-458f-9152-cf14d4685b24",
     "date": "2025-08-06",
     "type": "depense",
     "montant": 144.13,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Amazon",
-    "mode_paiement": "🔄 Prélèvement Automatique",
-    "created_at": "2025-10-28T13:21:13.642775"
+    "mode_paiement": " Prélèvement Automatique",
+    "created_at": "2025-10-29T11:32:39.212168"
   },
   {
     "id": "3230fa43-d50b-4f51-ad66-deaceeda3906",
     "date": "2025-08-06",
     "type": "depense",
     "montant": 87.93,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Accessoires",
-    "mode_paiement": "💵 Espèces",
-    "created_at": "2025-10-28T13:21:13.643791"
+    "mode_paiement": " Espèces",
+    "created_at": "2025-10-29T11:32:39.214442"
   },
   {
     "id": "eb66e610-e367-4eea-abd7-7ff6c7f5b3b7",
     "date": "2025-08-04",
     "type": "depense",
     "montant": 42.42,
-    "categorie": "👕 Shopping",
+    "categorie": " Shopping",
     "description": "Accessoires",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.644890"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.216357"
   },
   {
     "id": "df3bb837-6cf3-41f2-8710-104bab580c1f",
     "date": "2025-08-04",
     "type": "depense",
     "montant": 701.08,
-    "categorie": "🏠 Logement",
+    "categorie": " Logement",
     "description": "Assurance habitation",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.645918"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.218106"
   },
   {
     "id": "4c96c2de-3d3b-4807-921e-212306e12960",
     "date": "2025-08-03",
     "type": "depense",
     "montant": 457.72,
-    "categorie": "💰 Épargne",
+    "categorie": " Épargne",
     "description": "Livret A",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.647552"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.220256"
   },
   {
     "id": "782a8ea3-1988-410f-a7c7-a627b6f9dc54",
     "date": "2025-08-03",
     "type": "revenu",
     "montant": 268.29,
-    "categorie": "📈 Investissements",
+    "categorie": " Investissements",
     "description": "Plus-value",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.649589"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.222333"
   },
   {
     "id": "4d449cec-a334-4c11-a007-106196d03566",
     "date": "2025-08-01",
     "type": "depense",
     "montant": 40.23,
-    "categorie": "🎓 Éducation",
+    "categorie": " Éducation",
     "description": "Cours en ligne",
-    "mode_paiement": "📱 Mobile Payment",
-    "created_at": "2025-10-28T13:21:13.652265"
+    "mode_paiement": " Mobile Payment",
+    "created_at": "2025-10-29T11:32:39.224165"
   },
   {
     "id": "2ca3c0ca-f4de-4b29-abad-1f81d66ea061",
     "date": "2025-08-01",
     "type": "revenu",
     "montant": 3069.86,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.654316"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.226590"
   },
   {
     "id": "19db0d24-33e0-458d-9396-195dab8548a2",
     "date": "2025-08-01",
     "type": "revenu",
     "montant": 3407.15,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.655998"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.229763"
   },
   {
     "id": "dabd3dac-84ce-4991-863e-cd0c7a929795",
     "date": "2025-08-01",
     "type": "revenu",
     "montant": 3257.0,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.657728"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.232401"
   },
   {
     "id": "afab4d31-cb6d-4601-9c51-d4b2476e7e1c",
     "date": "2025-08-01",
     "type": "revenu",
     "montant": 2891.19,
-    "categorie": "💼 Salaire",
+    "categorie": " Salaire",
     "description": "Salaire",
-    "mode_paiement": "🏦 Virement",
-    "created_at": "2025-10-28T13:21:13.659343"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "7c335f7e-c3de-433b-8cf6-ca3eccaf2c4c",
-    "created_at": "2025-10-28T13:26:50.187412"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "748229eb-21d0-422b-beac-16d2a5c9b815",
-    "created_at": "2025-10-28T13:26:50.232383"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "f1f29bd4-a9b5-43d3-b250-0c141470cf47",
-    "created_at": "2025-10-28T13:26:50.275706"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "49a0c32c-3c55-4320-a563-6da509ea803e",
-    "created_at": "2025-10-28T13:26:50.325710"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1f66d402-4db0-4009-9016-c8cc2e149b28",
-    "created_at": "2025-10-28T13:26:50.366561"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "ce36abf8-e9b2-450a-b697-5c540abb62e8",
-    "created_at": "2025-10-28T13:26:50.402897"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "5d4fc0c0-546f-407b-8b2a-8929beac353d",
-    "created_at": "2025-10-28T13:26:50.442958"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "f927f7a5-9fb3-415e-974b-1da2399d0b43",
-    "created_at": "2025-10-28T13:26:50.484975"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "9e80584a-e7be-4101-9948-d9a12185a57b",
-    "created_at": "2025-10-28T13:26:50.525911"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b647ee34-a57d-4981-a58e-fd0189f55b98",
-    "created_at": "2025-10-28T13:26:50.566715"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1dff644e-5d50-4522-9caf-154506d0eb6a",
-    "created_at": "2025-10-28T13:26:50.600344"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "c5433781-d4d1-43dc-ad41-574ee40fb2d6",
-    "created_at": "2025-10-28T13:26:50.635921"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "602ff02f-2008-4f2e-83ed-9362bd24fb40",
-    "created_at": "2025-10-28T13:26:50.669451"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "0570ed76-358a-4d04-a547-85b036d62083",
-    "created_at": "2025-10-28T13:26:50.711384"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "166e4679-e6e1-4a63-86cc-6478dd9a9456",
-    "created_at": "2025-10-28T13:26:50.749059"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "fa7f32a8-4071-4a2c-8ac4-4875b0567127",
-    "created_at": "2025-10-28T13:26:50.792097"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b8358116-da63-47e6-84d5-a9c77d94c936",
-    "created_at": "2025-10-28T13:26:50.838044"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "2eda740f-ab98-4d04-b08e-7efdbc406fb3",
-    "created_at": "2025-10-28T13:26:50.883137"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "89d3ebc7-eb3e-4219-a1a2-9b23ad54dfa3",
-    "created_at": "2025-10-28T13:26:50.927190"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "c9721bc5-1568-4d5a-87c4-a371d7148e4b",
-    "created_at": "2025-10-28T13:26:50.969431"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "39cd15ae-acd2-4b4a-945d-03505ccbdc6a",
-    "created_at": "2025-10-28T13:26:51.013994"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "6feddf39-72e2-439e-a11b-38fed318766c",
-    "created_at": "2025-10-28T13:26:51.056678"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "35f0050e-81c3-48d0-874a-728618379189",
-    "created_at": "2025-10-28T13:26:51.100475"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "814fe84a-2ade-4d1e-8051-b59309f6381a",
-    "created_at": "2025-10-28T13:26:51.145395"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "67617e02-80e4-4089-8774-4a637eff2a2e",
-    "created_at": "2025-10-28T13:26:51.186353"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b03bf3a7-e574-4691-82c4-228c47800d09",
-    "created_at": "2025-10-28T13:26:51.231028"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "fc0349f9-3a6d-4a8d-82dd-d09629866439",
-    "created_at": "2025-10-28T13:26:51.273059"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "9d7dc67d-097d-4c8b-9be9-e510fbf9acff",
-    "created_at": "2025-10-28T13:26:51.316361"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "df189e4e-b14e-4ae5-9f44-7526b5fca724",
-    "created_at": "2025-10-28T13:26:51.359456"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "ea9a2f0d-6851-4bfd-ade6-5234153135f7",
-    "created_at": "2025-10-28T13:26:51.397365"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "fbe67723-df7b-481a-8f9b-fb0a9716c9d6",
-    "created_at": "2025-10-28T13:26:51.441796"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "fa16b790-abec-4af9-8341-c22661afa2b5",
-    "created_at": "2025-10-28T13:26:51.487974"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "41490635-87bc-4217-bf37-8624a032282b",
-    "created_at": "2025-10-28T13:26:51.530569"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "01389f10-3b63-4b35-91a1-91f61d6169da",
-    "created_at": "2025-10-28T13:26:51.576102"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1c220908-7fdc-40a6-8ba9-2a239595d5c4",
-    "created_at": "2025-10-28T13:26:51.616848"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "5c321af3-445a-417d-9cba-1849831a7499",
-    "created_at": "2025-10-28T13:26:51.659053"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b3713a49-c352-45f5-a4e6-ec90f97224e1",
-    "created_at": "2025-10-28T13:26:51.703271"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b9dd1475-fa2d-437b-aa6e-873b2ceb469c",
-    "created_at": "2025-10-28T13:26:51.744785"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "3e268d6e-be3c-455e-993a-56ad6a092a6a",
-    "created_at": "2025-10-28T13:26:51.791302"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "c5187407-46ea-4fa5-85f0-f47fca4d48de",
-    "created_at": "2025-10-28T13:26:51.838978"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "d53ce078-cb4f-4cd9-bb1d-ad93db2f7e80",
-    "created_at": "2025-10-28T13:26:51.883199"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "507fe51b-947f-4d1a-8102-64e56236c0b3",
-    "created_at": "2025-10-28T13:26:51.929170"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "e86162e2-3aff-410a-b989-a00b64934162",
-    "created_at": "2025-10-28T13:26:51.970035"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "186dbcd2-ac6f-43d1-b275-19327146f4ab",
-    "created_at": "2025-10-28T13:26:52.008295"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "50595a63-fda9-4061-8c81-be376347dbfe",
-    "created_at": "2025-10-28T13:26:52.045692"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "c0682fe7-e5ca-4c10-a143-816608e0ba72",
-    "created_at": "2025-10-28T13:26:52.089201"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "e8c1b00d-fb15-45a7-9be4-935bb33541c0",
-    "created_at": "2025-10-28T13:26:52.129742"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "f9452099-1a89-4f39-b100-e6394fecc821",
-    "created_at": "2025-10-28T13:26:52.172056"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "9af9be43-921e-4553-82c8-19c6e50accb4",
-    "created_at": "2025-10-28T13:26:52.216175"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "6288ebd5-a0c2-4711-b321-98493b6adc25",
-    "created_at": "2025-10-28T13:26:52.257476"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b340411d-5f8c-49e9-8cf2-bf6f36e0291b",
-    "created_at": "2025-10-28T13:26:52.308753"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "0c6e7e91-01be-4894-86e7-2e8107fb0618",
-    "created_at": "2025-10-28T13:26:52.360665"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "73440278-a6df-4d9b-8b6d-efccf488ac29",
-    "created_at": "2025-10-28T13:26:52.404778"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b301c737-c135-4160-927c-5f13e4a0c669",
-    "created_at": "2025-10-28T13:26:52.443917"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "5d5e587d-d1ea-4461-98de-3faf6d810f68",
-    "created_at": "2025-10-28T13:26:52.486270"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "df1610de-a22d-416b-9c81-67d63fdbd8c3",
-    "created_at": "2025-10-28T13:26:52.529594"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "976ad216-bca1-4ee3-8a57-2043dc90709c",
-    "created_at": "2025-10-28T13:26:52.567333"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "e77dd45a-1812-4086-b230-5c2ad6b4d528",
-    "created_at": "2025-10-28T13:26:52.602425"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "986897bd-867f-49fe-9b71-18a2dbc16bc6",
-    "created_at": "2025-10-28T13:26:52.642965"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "10b5c725-2ab7-489b-a1f2-d415856a4ebc",
-    "created_at": "2025-10-28T13:26:52.687004"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "06307a48-4b65-40d5-ba48-de74e25fe6f7",
-    "created_at": "2025-10-28T13:26:52.731142"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "d110a707-cfcc-488b-b3cb-630e09ba5cd9",
-    "created_at": "2025-10-28T13:26:52.770194"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "5193971b-1340-49b6-8fc1-b455113da72e",
-    "created_at": "2025-10-28T13:26:52.814003"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "78e7001c-750a-410d-82de-f34094128f9e",
-    "created_at": "2025-10-28T13:26:52.858060"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "6ec319e2-8eb8-4604-b84c-82361317764f",
-    "created_at": "2025-10-28T13:26:52.896934"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "ccc1c3b5-3212-4d49-aa76-db8bb5f8eaa6",
-    "created_at": "2025-10-28T13:26:52.941441"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "27b212a1-8ef0-49eb-b450-339db580045a",
-    "created_at": "2025-10-28T13:26:52.985714"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "0b7d4bf9-f2bc-4f52-b9e6-4625f3cf261a",
-    "created_at": "2025-10-28T13:26:53.023240"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "71c6955c-0320-4e12-841a-912804e2d237",
-    "created_at": "2025-10-28T13:26:53.063777"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "dd8bdbd5-35ae-4592-b6a9-52250c129407",
-    "created_at": "2025-10-28T13:26:53.104566"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b87c2f46-eb4d-46a4-bc4f-f53b83133d12",
-    "created_at": "2025-10-28T13:26:53.153604"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "424522d3-7c35-4d02-af5c-effbdfc8f690",
-    "created_at": "2025-10-28T13:26:53.202912"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "a65f27bd-4574-41a7-a2ec-223eea6acc57",
-    "created_at": "2025-10-28T13:26:53.246425"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "d5bd9612-719a-4c55-b104-92f1216a2f1c",
-    "created_at": "2025-10-28T13:26:53.290816"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "aecd945b-eddc-4085-99d0-49eb49ab44b1",
-    "created_at": "2025-10-28T13:26:53.336639"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "752a4410-aa98-4332-b2c2-34693c0f223e",
-    "created_at": "2025-10-28T13:26:53.379571"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1e3e0b3e-c783-472f-9368-dd3506570897",
-    "created_at": "2025-10-28T13:26:53.418689"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "b3a5ea05-564a-4059-9363-38e654ad1dbe",
-    "created_at": "2025-10-28T13:26:53.467901"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "ce9e72f0-db1e-498b-bc8e-d3a7fb346b0a",
-    "created_at": "2025-10-28T13:26:53.514192"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "38ca7636-a854-4c7f-bf30-422b2522f3b8",
-    "created_at": "2025-10-28T13:26:53.552606"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "67bef857-8092-4851-8436-32dfbb0306e9",
-    "created_at": "2025-10-28T13:26:53.599225"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "a2a35d5b-2d5e-48b5-a912-45e51dbeceaa",
-    "created_at": "2025-10-28T13:26:53.642572"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1cf10b00-c77f-4c8d-a8b7-0ede1d74a0a2",
-    "created_at": "2025-10-28T13:26:53.684497"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "193a70bc-f5a3-4552-8ce4-10ca412345db",
-    "created_at": "2025-10-28T13:26:53.736980"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "6d4af444-4b52-47f2-a32f-4d323d5821e3",
-    "created_at": "2025-10-28T13:26:53.780750"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "9f21cd34-2a6e-473d-98ed-ea6dd6e9bce4",
-    "created_at": "2025-10-28T13:26:53.826435"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "0024e38f-8515-4baf-a39a-1c072684d74e",
-    "created_at": "2025-10-28T13:26:53.878965"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "c846f0a4-4e63-4058-a3dc-8507434db431",
-    "created_at": "2025-10-28T13:26:53.927416"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "dbf4a93b-8607-4c28-a9ca-154b73210a53",
-    "created_at": "2025-10-28T13:26:53.973567"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "16961bad-0395-463a-abd8-66f4655def23",
-    "created_at": "2025-10-28T13:26:54.030383"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "daf42dc5-1359-401c-8011-fb09052ee33c",
-    "created_at": "2025-10-28T13:26:54.082336"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "40b90bb7-1cc9-4105-9549-b682638d5f9a",
-    "created_at": "2025-10-28T13:26:54.131709"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "6240f3c8-7bd7-41f7-8bb6-fa48a0e1fe3a",
-    "created_at": "2025-10-28T13:26:54.179408"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "f066b192-d6e5-430b-860b-c927c934bb38",
-    "created_at": "2025-10-28T13:26:54.222599"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "3e67a81f-7c90-440e-be9e-3ac34b547c87",
-    "created_at": "2025-10-28T13:26:54.264485"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "158a3e40-7a15-4802-bbc4-f9462843e0e0",
-    "created_at": "2025-10-28T13:26:54.296902"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "c67fe86d-eee8-4e79-abd7-ac920d49a14f",
-    "created_at": "2025-10-28T13:26:54.338109"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "08ee83fe-e31f-4f95-a059-27a49d39fab4",
-    "created_at": "2025-10-28T13:26:54.392762"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "96b35cb9-7d39-4893-9309-4638cc92bbb1",
-    "created_at": "2025-10-28T13:26:54.435366"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1bc5faee-ab27-4ae0-b907-dc66cf332f9b",
-    "created_at": "2025-10-28T13:26:54.480975"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "4b44d589-a2e3-4cab-94e7-81c40666edbd",
-    "created_at": "2025-10-28T13:26:54.525748"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "0004a0a4-29c1-43cd-8877-6fa1257bad36",
-    "created_at": "2025-10-28T13:26:54.564905"
-  },
-  {
-    "date": "2025-10-28",
-    "type": "depense",
-    "montant": 0.01,
-    "categorie": "🍔 Alimentation",
-    "description": "",
-    "mode_paiement": "💳 Carte Bancaire",
-    "id": "1fd725a8-d001-489b-b727-10f331eb59ed",
-    "created_at": "2025-10-28T13:26:54.612114"
+    "mode_paiement": " Virement",
+    "created_at": "2025-10-29T11:32:39.234558"
   }
 ]

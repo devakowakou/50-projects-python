@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Analyse de Données</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #1f77b4;
+            text-align: center;
+            border-bottom: 3px solid #1f77b4;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            border-left: 5px solid #1f77b4;
+            padding-left: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #1f77b4;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .metric {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #1f77b4;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f77b4;
+        }
+        .metric-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+        .recommendation {
+            background: #e7f3ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #0066cc;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Rapport d'Analyse de Données</h1>
+        <p style="text-align: center; color: #666;">
+            Généré le 29/10/2025 à 11:24
+        </p>
+        
+        <h2> Résumé Exécutif</h2>
+        <div style="text-align: center;">
+            <div class="metric">
+                <div class="metric-value">36</div>
+                <div class="metric-label">Lignes</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">8</div>
+                <div class="metric-label">Colonnes</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">99.7%</div>
+                <div class="metric-label">Complétude</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Duplicatas</div>
+            </div>
+        </div>
+        
+        <h2> Statistiques Descriptives</h2>
+        <table><thead><tr><th>Colonne</th><th>Moyenne</th><th>Mediane</th><th>Ecart-type</th><th>Min</th><th>Max</th></tr></thead><tbody>
+            <tr>
+                <td><strong>Quantite</strong></td>
+                <td>14.94</td>
+                <td>12.00</td>
+                <td>10.97</td>
+                <td>2.00</td>
+                <td>50.00</td>
+            </tr>
+            
+            <tr>
+                <td><strong>Prix_Unitaire</strong></td>
+                <td>735.91</td>
+                <td>650.00</td>
+                <td>586.50</td>
+                <td>45.00</td>
+                <td>2500.00</td>
+            </tr>
+            
+            <tr>
+                <td><strong>Montant_Total</strong></td>
+                <td>6423.19</td>
+                <td>6496.00</td>
+                <td>2892.24</td>
+                <td>1349.85</td>
+                <td>13600.00</td>
+            </tr>
+            </tbody></table>
+        
+        <h2> Recommandations</h2>
+        <div class="recommendation">1. Le dataset contient 0.3% de valeurs manquantes, ce qui est acceptable.</div><div class="recommendation">2. Aucune ligne dupliquee detectee.</div><div class="recommendation">3. STATISTIQUES: 3 colonnes numeriques disponibles pour des analyses statistiques avancees.</div><div class="recommendation">4. ATTENTION: Dataset de petite taille. Les analyses statistiques peuvent etre moins fiables.</div>
+        
+        <div class="footer">
+            <p>Rapport généré automatiquement par Analyseur CSV Professionnel</p>
+            <p>© 2025 - Fait avec ❤️ et Python</p>
+        </div>
+    </div>
+</body>
+</html>
