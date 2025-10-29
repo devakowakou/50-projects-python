@@ -1,0 +1,160 @@
+/* Styles personnalisés pour Amazon Price Tracker */
+
+/* En-tête */
+.main-header {
+    background: linear-gradient(135deg, #FF9900 0%, #FFB84D 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+}
+
+/* Cartes métriques */
+.metric-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #FF9900;
+    margin-bottom: 1rem;
+}
+
+/* Alertes */
+.alert-success {
+    background-color: #d4edda;
+    border-left: 4px solid #067D62;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    color: #155724;
+    font-weight: 500;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #FF9900;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    color: #856404;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-left: 4px solid #B12704;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    color: #721c24;
+    font-weight: 500;
+}
+
+/* Table des produits */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.product-table th {
+    background-color: #FF9900;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.product-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Images produits */
+.product-image {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Badges de tendance */
+.badge-up {
+    background-color: #B12704;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.badge-down {
+    background-color: #067D62;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.badge-stable {
+    background-color: #808080;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+/* Boutons personnalisés */
+.btn-primary {
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #E88900;
+}
+
+.btn-danger {
+    background-color: #B12704;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #901f03;
+}
+
+/* Sections */
+.section-header {
+    border-bottom: 3px solid #FF9900;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Stats boxes */
+.stats-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Loading spinner */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #FF9900;
+}
