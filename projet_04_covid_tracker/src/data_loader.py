@@ -46,7 +46,8 @@ class CovidDataLoader:
             df = pd.read_csv(
                 config.COVID_DATA_URL,
                 usecols=config.COLUMNS_TO_LOAD,
-                parse_dates=['date']
+                parse_dates=['date'],
+                dtype={'iso_code': 'object', 'continent': 'object', 'location': 'object'}
             )
             
             # Sauvegarder dans le cache

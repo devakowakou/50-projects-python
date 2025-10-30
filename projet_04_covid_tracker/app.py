@@ -155,6 +155,9 @@ def main():
     # Métriques principales
     st.markdown(f"## 📊 Vue d'ensemble - {selected_country}")
     metrics = analyzer.calculate_metrics(country_df)
+    if metrics is None:
+        st.warning("Pas de données disponibles pour ce pays")
+        st.stop()
     show_metrics(metrics)
     
     st.markdown("---")
@@ -265,11 +268,14 @@ def main():
             st.plotly_chart(fig_pie, use_container_width=True)
         
         with col2:
-            st.markdown("#### Détails")
-            st.metric("Population totale", f"{metrics['population']:,.0f}")
-            st.metric("Personnes vaccinées", f"{metrics['people_vaccinated']:,.0f}")
-            st.metric("Complètement vaccinés", f"{metrics['people_fully_vaccinated']:,.0f}")
-            st.metric("Taux de vaccination", f"{metrics['vaccination_rate']:.1f}%")
+            if metrics:
+                st.markdown("#### Détails")
+                st.metric("Population totale", f"{metrics['population']:,.0f}")
+                st.metric("Personnes vaccinées", f"{metrics['people_vaccinated']:,.0f}")
+                st.metric("Complètement vaccinés", f"{metrics['people_fully_vaccinated']:,.0f}")
+                st.metric("Taux de vaccination", f"{metrics['vaccination_rate']:.1f}%")
+            else:
+                st.warning("Pas de données de vaccination disponibles pour ce pays")    
     
     # Footer
     st.markdown("---")
