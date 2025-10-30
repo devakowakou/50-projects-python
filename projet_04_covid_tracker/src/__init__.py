@@ -1,5 +1,5 @@
 """
-Amazon Price Tracker - Modules
+COVID-19 Tracker - Modules
 """
 
 __version__ = "1.0.0"
