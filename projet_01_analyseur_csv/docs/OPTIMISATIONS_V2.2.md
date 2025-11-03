@@ -1,4 +1,4 @@
-# 🚀 Optimisations v2.2 - Guide Complet
+# Optimisations v2.2 - Guide Complet
 
 **Date:** 28 octobre 2025  
 **Version:** 2.2  
@@ -250,7 +250,7 @@ show_sampling_warning(total_rows, sample_size)
 Pour un fichier de **200K lignes × 40 colonnes:**
 - ⏱️ Avant: ~2 minutes
 - ⏱️ Après: ~12 secondes
-- 🚀 **Gain: 90%**
+- **Gain: 90%**
 
 ---
 

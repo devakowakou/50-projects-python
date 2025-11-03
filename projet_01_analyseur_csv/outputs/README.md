@@ -1,4 +1,4 @@
-# 📤 Dossier de Sortie
+# Dossier de Sortie
 
 Ce dossier contient tous les fichiers générés par l'application.
 
@@ -115,7 +115,7 @@ make clean  # si Makefile disponible
 
 ---
 
-## 🚀 Génération de Fichiers
+## Génération de Fichiers
 
 ### Via Streamlit
 1. Lancer l'application

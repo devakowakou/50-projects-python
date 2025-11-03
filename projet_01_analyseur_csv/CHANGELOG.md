@@ -31,7 +31,7 @@
 - Mesure des gains par module
 - Rapport de performance détaillé
 
-### 🚀 Optimisations
+### Optimisations
 
 #### Module data_loader.py
 - ⚡ Évite la double lecture du fichier

@@ -66,7 +66,7 @@ projet_01_analyseur_csv/
 ├──  app.py                        # Application Streamlit (618 lignes)
 ├──  config.py                     # Configuration (54 lignes)
 ├──  requirements.txt              # Dépendances Python
-├── 🚀 run.sh                        # Script de lancement
+├── run.sh                        # Script de lancement
 ├──  README.md                     # Documentation utilisateur
 ├── 📚 DOCUMENTATION_TECHNIQUE.md    # Documentation développeur
 ├── 🚫 .gitignore                    # Fichiers à ignorer
@@ -111,7 +111,7 @@ projet_01_analyseur_csv/
 
 ---
 
-## 🚀 Comment Lancer
+## Comment Lancer
 
 ### Méthode 1 : Script automatique
 ```bash

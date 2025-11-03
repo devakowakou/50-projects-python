@@ -1,6 +1,6 @@
 # 🔧 Corrections des Rapports - v2.1
 
-## 📅 Date : 27 octobre 2025
+##  Date : 27 octobre 2025
 
 ---
 
@@ -258,7 +258,7 @@ TEST DES RAPPORTS CORRIGES
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Générer un Rapport Corrigé
 

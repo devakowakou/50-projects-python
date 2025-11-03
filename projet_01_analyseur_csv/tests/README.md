@@ -65,7 +65,7 @@ TESTS TERMINES - 100% REUSSIS
 
 ---
 
-## 🚀 Lancer les Tests
+## Lancer les Tests
 
 ### Méthode 1 : Script Direct
 ```bash

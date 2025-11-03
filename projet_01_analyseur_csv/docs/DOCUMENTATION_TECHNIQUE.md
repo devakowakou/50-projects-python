@@ -317,7 +317,7 @@ Variables de session Streamlit:
 
 ---
 
-## 🚀 Optimisations Futures
+## Optimisations Futures
 
 ### Performance
 - [ ] Lazy loading pour gros fichiers

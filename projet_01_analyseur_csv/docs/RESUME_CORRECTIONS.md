@@ -62,7 +62,7 @@ test_rapport_corrige.html    5.0 KB
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Dans Streamlit
 

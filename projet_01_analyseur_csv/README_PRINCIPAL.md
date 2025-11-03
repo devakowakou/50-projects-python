@@ -23,7 +23,7 @@ Application web interactive **ultra-optimisée** pour analyser des fichiers CSV/
 -  **Rapports professionnels** - PDF, DOCX, HTML avec graphiques
 -  **Recommandations intelligentes** - Analyse automatique de la qualité
 
-### 🚀 Nouveautés v2.2 - Performance Boost
+### Nouveautés v2.2 - Performance Boost
 - ⚡ **5-10x plus rapide** sur gros fichiers
 -  **Échantillonnage intelligent** - Automatique pour datasets > 100K lignes
 -  **Parallélisation** - Détection d'anomalies sur 4 threads
@@ -74,14 +74,14 @@ projet_01_analyseur_csv/
 │   ├── test_rapports_corriges.py # Tests automatiques v2.1
 │   └── test_performance.py     # ⚡ Tests de performance (NEW v2.2)
 │
-└── outputs/                    # 📤 Fichiers générés
+└── outputs/                    # Fichiers générés
     ├── reports/                # Rapports PDF/DOCX/HTML
     └── exports/                # Exports CSV/JSON/Excel
 ```
 
 ---
 
-## 🚀 Installation Rapide
+## Installation Rapide
 
 ### Prérequis
 - Python 3.9+ (recommandé 3.11)

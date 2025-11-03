@@ -2,7 +2,7 @@
 
 # Script de lancement rapide pour le Budget Dashboard
 
-echo "🚀 Lancement du Budget Dashboard..."
+echo "Lancement du Budget Dashboard..."
 echo ""
 
 # Vérifier si l'environnement virtuel existe

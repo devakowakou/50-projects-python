@@ -49,7 +49,7 @@ projet_01_analyseur_csv/
 │   ├── README.md                   # Guide des tests
 │   └── test_rapports_corriges.py   # Tests automatiques
 │
-├── 📤 outputs/                     # Fichiers générés (ignorés par Git)
+├── outputs/                     # Fichiers générés (ignorés par Git)
 │   ├── README.md                   # Documentation du dossier
 │   ├── reports/                    # Rapports PDF/DOCX/HTML
 │   │   └── .gitkeep
@@ -180,7 +180,7 @@ touch outputs/exports/.gitkeep
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Lancer l'Application
 

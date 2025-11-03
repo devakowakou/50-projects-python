@@ -157,7 +157,7 @@
 
 ---
 
-### 🚀 Test 8 : Performance
+### Test 8 : Performance
 
 **Objectif** : Mesurer les temps de génération
 
@@ -269,4 +269,4 @@
 
 ** Objectif** : Valider que la version 2.0 est production-ready
 
-**📅 Date de validation** : _______________
+** Date de validation** : _______________

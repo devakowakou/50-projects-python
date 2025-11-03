@@ -33,7 +33,7 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
 - Dataset 100K lignes:  45.2s → 7.2s (84% gain) ⚡⚡
 - Dataset 200K lignes:  118.5s → 12.4s (90% gain) ⚡⚡⚡
 
-🚀 OPTIMISATIONS PAR MODULE:
+OPTIMISATIONS PAR MODULE:
 
 1. data_loader.py (40-50% plus rapide)
    - Détection encodage sur échantillon (10 KB au lieu du fichier complet)
@@ -121,14 +121,14 @@ feat: v2.2 Performance Boost - Optimisations majeures de performance
 Version: 2.2.0
 Date: 2025-10-28
 Status: Production Ready
-Performance: 🚀 5-10x faster
+Performance: 5-10x faster
 EOF
 ```
 
 ## Pour GitHub Pull Request
 
 ```markdown
-## 🚀 Version 2.2 - Performance Boost
+## Version 2.2 - Performance Boost
 
 ###  Résumé
 Optimisations majeures rendant l'analyseur CSV **5-10x plus rapide** sur les gros fichiers.

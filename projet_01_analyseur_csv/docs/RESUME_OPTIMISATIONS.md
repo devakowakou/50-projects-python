@@ -96,7 +96,7 @@ Documentation complète:
 **Pour un fichier de 200K lignes × 40 colonnes:**
 - ⏱️ Temps avant optimisations: ~120 secondes
 - ⏱️ Temps après optimisations: ~12 secondes
-- 🚀 **AMÉLIORATION: 90% (10x plus rapide !)**
+- **AMÉLIORATION: 90% (10x plus rapide !)**
 
 ## 🔧 Configuration Recommandée
 
@@ -187,7 +187,7 @@ Le script teste automatiquement:
    - Max colonnes corrélation: 50 (configurable)
    - Max bins histogramme: 50
 
-## 🚀 Prochaines Étapes (v2.3)
+## Prochaines Étapes (v2.3)
 
 - [ ] Support Dask pour datasets > 1 GB
 - [ ] Cache persistant sur disque
@@ -200,4 +200,4 @@ Le script teste automatiquement:
 **Version:** 2.2  
 **Date:** 28 octobre 2025  
 **Statut:**  Production Ready  
-**Performance:** 🚀 5-10x plus rapide
+**Performance:** 5-10x plus rapide

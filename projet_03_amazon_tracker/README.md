@@ -2,13 +2,13 @@
 
 Suivez l'évolution des prix de vos produits Amazon favoris et recevez des alertes lorsqu'ils atteignent votre prix cible.
 
-## 📋 Description
+##  Description
 
 Amazon Price Tracker est une application web interactive qui permet de :
 - 🔍 Surveiller les prix de produits Amazon
-- 📊 Visualiser l'historique des prix
+-  Visualiser l'historique des prix
 - 🔔 Recevoir des alertes email quand le prix atteint votre cible
-- 📈 Analyser les tendances et obtenir des recommandations d'achat
+-  Analyser les tendances et obtenir des recommandations d'achat
 
 ## ✨ Fonctionnalités MVP
 
@@ -82,7 +82,7 @@ AMAZON_DOMAIN=amazon.fr
 - Vous devez générer un "App Password" (pas votre mot de passe normal)
 - Allez dans : Compte Google → Sécurité → Validation en deux étapes → Mots de passe des applications
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Lancer l'application
 ```bash
@@ -174,7 +174,7 @@ Si Amazon change sa structure HTML, vous pouvez ajuster les sélecteurs dans `co
 - Historique limité à 30 jours
 - Support Amazon.fr uniquement (facilement extensible)
 
-## 🔄 Évolutions Futures (Version Complète)
+## Évolutions Futures (Version Complète)
 
 - [ ] Scraping automatique avec scheduler (APScheduler)
 - [ ] Support multi-sites (eBay, Cdiscount)

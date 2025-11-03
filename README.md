@@ -11,7 +11,7 @@ Bienvenue dans mon challenge de 50 projets Python axés sur la data science, l'a
 **Progression actuelle**: 2/50 (4%) 
 
 ```
-████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4%
+████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4%
 ```
 
 ---
@@ -73,23 +73,75 @@ Application web de gestion de budget personnel avec analyses et visualisations i
 
 ## 🚧 Projets en Développement
 
-*Aucun projet en cours actuellement*
+###  Projet 5 : Calculateur de ROI Marketing
+**Status**: 🚧 EN COURS | **Date début**: 28 oct 2025 | **Dossier**: [`projet_05_roi_calculator/`](./projet_05_roi_calculator/)
+
+Outil complet de calcul de ROI et conversion de métriques pour campagnes marketing.
+
+**Stack Technique**:
+- Frontend: Streamlit
+- Calculs: NumPy, Pandas
+- Visualisation: Plotly
+- Export: ReportLab (PDF)
+
+**Fonctionnalités prévues**:
+-  Calculateur de ROI basique
+-  Convertisseur de métriques (CPC, CPM, CPA, CTR)
+-  Calculateur de seuil de rentabilité
+-  Simulateur de scénarios marketing
+-  Visualisations interactives
+-  Export de rapports
+
+**Avancement**: 🔧 Structure créée | En développement
 
 ---
 
-## 📅 Projets Planifiés (Top 10)
+##  Projets Planifiés (Prochains)
 
-| # | Projet | Technologies Prévues | Priorité |
-|---|--------|---------------------|----------|
-| 2 | ~~Dashboard de suivi de budget personnel~~ |  Streamlit, Plotly |  **TERMINÉ** |
-| 3 | Scraper de prix Amazon avec alertes | BeautifulSoup, Scrapy |  Haute |
-| 4 | Visualiseur de données COVID | Pandas, Plotly | Moyenne |
-| 5 | Calculatrice de ROI marketing | NumPy, Streamlit | Moyenne |
-| 6 | Tracker de cours d'actions | yfinance, Plotly | Moyenne |
-| 7 | Générateur de rapports PDF depuis Excel | ReportLab, openpyxl | Moyenne |
-| 8 | Dashboard métro avec prévisions | Pandas, Prophet | Basse |
-| 9 | Analyseur de logs web | Regex, Pandas | Basse |
-| 10 | Extracteur de données APIs publiques | Requests, FastAPI | Basse |
+### 🔜 Projet 3 : Scraper de Prix Amazon avec Alertes
+**Priorité**: ⭐⭐⭐ HAUTE | **Technologies**: BeautifulSoup, Scrapy, Requests
+
+Système de surveillance des prix Amazon avec notifications automatiques.
+
+**Fonctionnalités prévues**:
+- 🔍 Scraping de pages produits Amazon
+-  Historique des prix et graphiques d'évolution
+- 🔔 Alertes email/SMS quand prix cible atteint
+- 💾 Base de données SQLite pour stockage
+-  Analyse de tendances de prix
+- 🤖 Scheduler pour vérifications automatiques
+
+---
+
+### 🔜 Projet 4 : Visualiseur de Données COVID-19
+**Priorité**: ⭐⭐ MOYENNE | **Technologies**: Pandas, Plotly, Streamlit
+
+Dashboard interactif d'analyse des données COVID-19 mondiales.
+
+**Fonctionnalités prévues**:
+- 🌍 Carte interactive mondiale
+-  Graphiques d'évolution par pays
+-  Comparaisons entre pays/régions
+- Mise à jour automatique des données
+- 📉 Calcul de taux (mortalité, guérison)
+- 📱 Interface responsive
+
+---
+
+##  Projets Planifiés (Top 10 complet)
+
+| # | Projet | Technologies Prévues | Priorité | Status |
+|---|--------|---------------------|----------|--------|
+| 1 | ~~Analyseur CSV Professionnel~~ | Streamlit, Pandas, Plotly |  |  **TERMINÉ** |
+| 2 | ~~Dashboard Budget Personnel~~ | Streamlit, Plotly |  |  **TERMINÉ** |
+| 3 | Scraper de prix Amazon | BeautifulSoup, Scrapy | ⭐⭐⭐ Haute | 🔜 Suivant |
+| 4 | Visualiseur données COVID | Pandas, Plotly | ⭐⭐ Moyenne | 🔜 Planifié |
+| 5 | ~~Calculateur ROI marketing~~ | NumPy, Streamlit | ⭐⭐ Moyenne | 🚧 **EN COURS** |
+| 6 | Tracker de cours d'actions | yfinance, Plotly | ⭐⭐ Moyenne |  Backlog |
+| 7 | Générateur rapports PDF/Excel | ReportLab, openpyxl | ⭐ Basse |  Backlog |
+| 8 | Dashboard métro avec prévisions | Pandas, Prophet | ⭐ Basse |  Backlog |
+| 9 | Analyseur de logs web | Regex, Pandas | ⭐ Basse |  Backlog |
+| 10 | Extracteur données APIs | Requests, FastAPI | ⭐ Basse |  Backlog |
 
 [ Voir la liste complète des 50 projets →](./PROGRESSION.md)
 
@@ -97,17 +149,22 @@ Application web de gestion de budget personnel avec analyses et visualisations i
 
 ## 🛠️ Stack Technologique
 
-### Acquises 
+### ✅ Acquises 
 - **Data Processing**: Pandas, NumPy
 - **Visualisation**: Plotly, Streamlit
 - **Statistiques**: SciPy
 - **Gestion Fichiers**: openpyxl, chardet
 
-### À Apprendre 📚
+### 📚 En Apprentissage (Projet 3-5)
 - **Web Scraping**: BeautifulSoup, Scrapy, Selenium
+- **Bases de Données**: SQLite
+- **APIs**: Requests
+- **Automatisation**: Schedule, APScheduler
+
+###  À Apprendre (Futurs projets)
 - **Machine Learning**: Scikit-learn, TensorFlow
-- **Bases de Données**: SQLite, PostgreSQL, MongoDB
-- **APIs**: FastAPI, Flask
+- **Bases de Données**: PostgreSQL, MongoDB
+- **APIs avancées**: FastAPI, Flask
 - **Big Data**: Dask, PySpark
 - **Time Series**: Prophet, Statsmodels
 - **NLP**: NLTK, spaCy
@@ -119,24 +176,26 @@ Application web de gestion de budget personnel avec analyses et visualisations i
 | Métrique | Valeur |
 |----------|--------|
 | Projets terminés | 2 |
-| Projets en cours | 0 |
+| Projets en cours | 1 |
+| Projets planifiés | 2 |
 | Jours actifs | 3 |
-| Lignes de code totales | 3,184 |
+| Lignes de code totales | ~3,184 |
 | Technologies maîtrisées | 6 |
 | Documentation (pages) | 5 |
+| Progression globale | 4% |
 
 ---
 
 ##  Compétences Développées
 
-### Techniques
+### 💻 Techniques
 -  Architecture logicielle modulaire
 -  Séparation des responsabilités (SoC)
 -  Type hints et documentation
 -  Gestion d'erreurs robuste
 -  Interface utilisateur moderne
 
-### Data Science
+###  Data Science
 -  Analyse exploratoire de données (EDA)
 -  Nettoyage et preprocessing
 -  Statistiques descriptives avancées
@@ -144,6 +203,12 @@ Application web de gestion de budget personnel avec analyses et visualisations i
 -  Détection d'anomalies
 -  Analyse de corrélations
 -  Visualisation interactive
+
+### En Développement
+- Web scraping éthique
+- Automatisation de tâches
+- Calculs marketing avancés
+- Gestion de bases de données
 
 ---
 
@@ -154,7 +219,7 @@ Application web de gestion de budget personnel avec analyses et visualisations i
 ├── README.md                      # Ce fichier
 ├── PROGRESSION.md                 # Suivi détaillé
 │
-├── projet_01_analyseur_csv/       #  TERMINÉ
+├── projet_01_analyseur_csv/       #  TERMINÉ (27 oct)
 │   ├── src/                       # 7 modules Python
 │   ├── app.py                     # Application Streamlit
 │   ├── config.py                  # Configuration
@@ -162,14 +227,27 @@ Application web de gestion de budget personnel avec analyses et visualisations i
 │   ├── README.md                  # Documentation
 │   └── ...
 │
-├── projet_02_dashboard_budget/    # 🔜 À VENIR
-├── projet_03_scraper_amazon/      # 🔜 À VENIR
-└── ...
+├── projet_02_budget_dashboard/    #  TERMINÉ (28 oct)
+│   ├── src/                       # 3 modules Python
+│   ├── app.py                     # Application Streamlit
+│   ├── requirements.txt           # Dépendances
+│   ├── README.md                  # Documentation
+│   └── data/                      # Données exemple
+│
+├── projet_05_roi_calculator/      # 🚧 EN COURS (28 oct)
+│   ├── src/                       # Modules en développement
+│   ├── app.py                     # Application Streamlit
+│   ├── config.py                  # Configuration
+│   ├── requirements.txt           # Dépendances
+│   └── README.md                  # Documentation
+│
+├── projet_03_scraper_amazon/      # 🔜 SUIVANT
+└── projet_04_covid_dashboard/     # 🔜 PLANIFIÉ
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Cloner le repository
 ```bash
@@ -177,13 +255,23 @@ git clone <your-repo-url>
 cd 50-projects-python
 ```
 
-### Lancer un projet
+### Lancer un projet terminé
 ```bash
-# Exemple: Projet 1
+# Projet 1: Analyseur CSV
 cd projet_01_analyseur_csv
-./run.sh
+pip install -r requirements.txt
+streamlit run app.py
 
-# Ou manuellement
+# Projet 2: Dashboard Budget
+cd projet_02_budget_dashboard
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+### Suivre le développement
+```bash
+# Projet 5: ROI Calculator (en cours)
+cd projet_05_roi_calculator
 pip install -r requirements.txt
 streamlit run app.py
 ```
@@ -206,7 +294,7 @@ streamlit run app.py
  **Git**: Commits réguliers et descriptifs
 
 ### Documentation
- **README**: Guide utilisateur  
+ **README**: Guide utilisateur complet  
  **Documentation Technique**: Architecture et concepts  
  **Code Comments**: Explications inline  
  **Examples**: Fichiers de données d'exemple
@@ -215,13 +303,15 @@ streamlit run app.py
 
 ##  Objectifs du Challenge
 
-### Court Terme (1 mois)
-- [x] Projet 1 terminé 
+### ✅ Court Terme (1 mois)
+- [x] Projet 1 terminé (Analyseur CSV)
+- [x] Projet 2 terminé (Budget Dashboard)
+- [ ] Projet 5 terminé (ROI Calculator)
 - [ ] 10 projets complétés (20%)
-- [ ] Maîtriser Streamlit et Plotly
-- [ ] Apprendre web scraping
+- [x] Maîtriser Streamlit et Plotly
+- [ ] Apprendre web scraping (Projet 3)
 
-### Moyen Terme (3 mois)
+###  Moyen Terme (3 mois)
 - [ ] 25 projets complétés (50%)
 - [ ] Maîtriser Machine Learning basique
 - [ ] Créer un portfolio en ligne
@@ -237,23 +327,33 @@ streamlit run app.py
 
 ##  Leçons Apprises
 
-### Projet 1
+### 📘 Projet 1 (Analyseur CSV)
 1. **Architecture avant code** = gain de temps énorme
 2. **Modules indépendants** = debug plus facile
 3. **Documentation parallèle** = pas de rattrapage
 4. **Type hints** = moins d'erreurs runtime
 5. **Streamlit** = prototypage ultra-rapide
 
+### 📗 Projet 2 (Budget Dashboard)
+1. **Simplicité** = meilleure UX
+2. **Données exemple** = onboarding facile
+3. **Filtres multiples** = flexibilité maximale
+4. **Alertes visuelles** = engagement utilisateur
+5. **Export données** = fonctionnalité clé
+
+### 📙 Projet 5 (ROI Calculator - en cours)
+*Leçons à venir lors du développement...*
+
 ---
 
 ## 🏆 Milestones
 
-- [ ] 🥉 **Bronze** (10 projets - 20%)
+- [ ] 🥉 **Bronze** (10 projets - 20%) - *En progression: 2/10*
 - [ ] 🥈 **Argent** (25 projets - 50%)
 - [ ] 🥇 **Or** (40 projets - 80%)
 - [ ] 💎 **Diamant** (50 projets - 100%)
 
-**Progression actuelle**: En route vers le Bronze ! 
+**Progression actuelle**: 20% vers le Bronze ! 
 
 ---
 
@@ -265,6 +365,7 @@ streamlit run app.py
 - [Streamlit Docs](https://docs.streamlit.io/)
 - [Plotly Python](https://plotly.com/python/)
 - [SciPy Reference](https://docs.scipy.org/)
+- [BeautifulSoup Docs](https://www.crummy.com/software/BeautifulSoup/)
 
 ### Apprentissage
 - [Real Python](https://realpython.com/)
@@ -295,11 +396,23 @@ MIT License - Libre d'utilisation et modification
 
 ##  Mises à Jour
 
-### 27 octobre 2025
--  Projet 1 complété avec succès
+###  28 octobre 2025
+-  **Projet 5 démarré** (ROI Calculator)
+- 📁 Structure du projet créée
+-  Modules de base initialisés
+-  Dashboard mis à jour avec les 5 premiers projets
+
+###  28 octobre 2025
+-  **Projet 2 terminé** (Budget Dashboard)
+- 💰 800 lignes de code
+-  Interface intuitive avec alertes
+-  100 transactions exemple
+
+###  27 octobre 2025
+-  **Projet 1 terminé** (Analyseur CSV)
 -  2,384 lignes de code
 - 📚 Documentation complète créée
--  Prêt pour Projet 2
+-  7 modules modulaires
 
 ---
 
@@ -309,8 +422,18 @@ MIT License - Libre d'utilisation et modification
 
 *"The best way to learn is by doing"*
 
-**Progression: 1/50** | **Suivez le parcours !** 🚀
+---
 
-[ Retour en haut](#-challenge-50-projets-python---data--analytics)
+###  Progression Challenge
+
+**2/50 projets terminés** | **1/50 en cours** | **4% complété**
+
+ Prochain objectif: **Bronze (10 projets - 20%)**
+
+---
+
+**Suivez le parcours !** 🚀
+
+[ ⬆️ Retour en haut](#-challenge-50-projets-python---data--analytics)
 
 </div>

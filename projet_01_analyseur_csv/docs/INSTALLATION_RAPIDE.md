@@ -1,4 +1,4 @@
-# 🚀 Installation Rapide - Analyseur CSV Professionnel
+# Installation Rapide - Analyseur CSV Professionnel
 
 ## ⏱️ Installation en 3 minutes
 
@@ -126,4 +126,4 @@ streamlit run app.py --server.port 8502
 
 ---
 
-**🚀 Vous êtes prêt ! Bon analyse !**
+**Vous êtes prêt ! Bon analyse !**
