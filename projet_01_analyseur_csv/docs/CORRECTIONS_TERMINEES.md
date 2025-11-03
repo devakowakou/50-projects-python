@@ -111,7 +111,7 @@ TESTS TERMINES - 100% REUSSIS
 
 ---
 
-## 🚀 Comment Utiliser les Nouveaux Rapports
+## Comment Utiliser les Nouveaux Rapports
 
 ### Via Streamlit (Recommandé)
 

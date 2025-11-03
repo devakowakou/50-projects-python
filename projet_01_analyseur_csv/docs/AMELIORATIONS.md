@@ -1,6 +1,6 @@
-# 🚀 Améliorations du Projet - Analyseur CSV Professionnel
+# Améliorations du Projet - Analyseur CSV Professionnel
 
-## 📅 Date : 27 octobre 2025
+##  Date : 27 octobre 2025
 
 ---
 

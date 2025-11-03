@@ -62,7 +62,7 @@ projet_01_analyseur_csv/
 
 ---
 
-## 🚀 Fonctionnalités Principales
+## Fonctionnalités Principales
 
 ### 1.  Chargement de Données
 - Support CSV (tous encodages avec détection auto)
@@ -277,7 +277,7 @@ kaleido==1.1.0         # Export graphiques
 
 ---
 
-## 🚀 Installation et Lancement
+## Installation et Lancement
 
 ### Installation Rapide (3 minutes)
 
@@ -472,6 +472,6 @@ Le projet est maintenant prêt pour une utilisation en environnement professionn
 
 ---
 
-**🚀 Projet 1 des 50 Projets Python : COMPLÉTÉ AVEC SUCCÈS ! 🚀**
+**Projet 1 des 50 Projets Python : COMPLÉTÉ AVEC SUCCÈS ! 🚀**
 
 **Next Step** : Passer au Projet 2 du défi "50 Projets Python" ! 

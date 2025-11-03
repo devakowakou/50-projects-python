@@ -69,7 +69,7 @@ projet_02_budget_dashboard/
 
 ---
 
-## 🚀 Installation & Lancement
+## Installation & Lancement
 
 ### Prérequis
 - Python 3.9+

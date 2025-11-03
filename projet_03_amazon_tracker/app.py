@@ -61,7 +61,7 @@ def show_dashboard():
     show_header()
     
     # Métriques globales
-    st.markdown("## 📊 Vue d'ensemble")
+    st.markdown("##  Vue d'ensemble")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -96,7 +96,7 @@ def show_dashboard():
             ''', unsafe_allow_html=True)
     
     # Graphique de comparaison
-    st.markdown("## 📈 Comparaison des Produits")
+    st.markdown("##  Comparaison des Produits")
     products_df = db.get_all_products()
     
     if not products_df.empty:
@@ -210,13 +210,13 @@ def show_products_list():
     """Page de liste des produits"""
     show_header()
     
-    st.markdown("## 📋 Mes Produits Suivis")
+    st.markdown("##  Mes Produits Suivis")
     
     # Bouton de rafraîchissement
     col1, col2 = st.columns([3, 1])
     
     with col2:
-        if st.button("🔄 Rafraîchir tous les prix", use_container_width=True):
+        if st.button("Rafraîchir tous les prix", use_container_width=True):
             refresh_all_prices()
     
     # Récupérer les produits
@@ -250,7 +250,7 @@ def show_products_list():
                         
                         # Alerte si sous le prix cible
                         if product['current_price'] <= product['target_price']:
-                            st.markdown(f"<span style='color: {config.COLOR_SUCCESS}; font-weight: bold;'>🎯 Prix atteint !</span>", unsafe_allow_html=True)
+                            st.markdown(f"<span style='color: {config.COLOR_SUCCESS}; font-weight: bold;'> Prix atteint !</span>", unsafe_allow_html=True)
                     else:
                         st.markdown("**Prix cible:** Non défini")
                 
@@ -266,7 +266,7 @@ def show_products_list():
                 st.markdown(f"*Dernière vérification: {product['last_checked'] or 'Jamais'}*")
             
             with col3:
-                if st.button(f"📈 Historique", key=f"hist_{product['id']}"):
+                if st.button(f" Historique", key=f"hist_{product['id']}"):
                     st.session_state['selected_product'] = product['id']
                     st.rerun()
                 
@@ -282,7 +282,7 @@ def show_product_history():
     """Page d'historique d'un produit"""
     show_header()
     
-    st.markdown("## 📈 Historique des Prix")
+    st.markdown("##  Historique des Prix")
     
     # Sélection du produit
     products_df = db.get_all_products()
@@ -323,13 +323,13 @@ def show_product_history():
         # Recommandation
         best_price = analyzer.get_best_price_info(product_id)
         if best_price:
-            st.markdown("### 💡 Recommandation")
+            st.markdown("###  Recommandation")
             st.markdown(best_price['recommendation'])
     
     st.divider()
     
     # Statistiques
-    st.markdown("### 📊 Statistiques (30 derniers jours)")
+    st.markdown("###  Statistiques (30 derniers jours)")
     
     stats = analyzer.get_price_stats(product_id)
     
@@ -350,7 +350,7 @@ def show_product_history():
             st.metric("Variation", delta_text, delta_text)
     
     # Graphique d'évolution
-    st.markdown("### 📈 Évolution du Prix")
+    st.markdown("###  Évolution du Prix")
     
     history_df = db.get_price_history(product_id, config.DEFAULT_HISTORY_DAYS)
     
@@ -446,7 +446,7 @@ def show_settings():
     st.divider()
     
     # Informations système
-    st.markdown("### 📊 Informations")
+    st.markdown("###  Informations")
     
     col1, col2 = st.columns(2)
     

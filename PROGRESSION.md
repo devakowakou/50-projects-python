@@ -64,7 +64,7 @@
 
 ---
 
-## 📅 Projets À Venir (selon la liste)
+##  Projets À Venir (selon la liste)
 
 ### Semaine 1 (Projets 1-7)
 1.  Analyseur CSV avec statistiques descriptives
@@ -259,4 +259,4 @@
 **Dernière mise à jour**: 27 octobre 2025  
 **Prochain objectif**: Projet 2/50 
 
-🚀 **Keep going! The best is yet to come!** 🚀
+**Keep going! The best is yet to come!** 🚀

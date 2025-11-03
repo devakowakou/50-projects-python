@@ -2,7 +2,7 @@
 
 # Script de lancement du Amazon Price Tracker
 
-echo "🚀 Démarrage du Amazon Price Tracker..."
+echo "Démarrage du Amazon Price Tracker..."
 
 # Vérifier si le virtual environment existe
 if [ ! -d "../.venv" ]; then

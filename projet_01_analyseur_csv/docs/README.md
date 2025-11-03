@@ -104,7 +104,7 @@ venv\Scripts\activate  # Sur Windows
 pip install -r requirements.txt
 ```
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Lancer l'application
 ```bash

@@ -201,7 +201,7 @@ APRÈS v2.2:
 
 ---
 
-## 🚀 Prochaines Étapes
+## Prochaines Étapes
 
 ### Immédiat (Aujourd'hui)
 - [x] Commit des optimisations v2.2

@@ -216,7 +216,7 @@ projet_02_budget_dashboard/
 
 ---
 
-## 🚀 Améliorations Futures (v2.0)
+## Améliorations Futures (v2.0)
 
 ### Priorité Haute
 - [ ] Export rapports PDF

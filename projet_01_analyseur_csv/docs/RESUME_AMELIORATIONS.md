@@ -144,7 +144,7 @@ kaleido==1.1.0        # Export graphiques Plotly
 
 ---
 
-## 🚀 Comment Utiliser les Nouvelles Fonctionnalités
+## Comment Utiliser les Nouvelles Fonctionnalités
 
 ### Méthode 1 : Interface Streamlit (Recommandé)
 

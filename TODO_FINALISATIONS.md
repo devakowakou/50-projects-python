@@ -1,6 +1,6 @@
 # TODO - Finalisations Projets 1, 2, 3
 
-## 📊 PROJET 1 : Analyseur CSV
+##  PROJET 1 : Analyseur CSV
 
 ### ✅ Déjà Implémenté
 - Interface Streamlit complète
@@ -236,7 +236,7 @@
 
 ---
 
-## 📊 RÉCAPITULATIF PRIORITÉS
+##  RÉCAPITULATIF PRIORITÉS
 
 ### 🔥 Haute Priorité (Finir pour LinkedIn)
 **Projet 1 (2-3h) :**
@@ -256,13 +256,13 @@
 
 **Total priorité haute : 9-12 heures**
 
-### 🎯 Moyenne Priorité (Nice to Have)
+###  Moyenne Priorité (Nice to Have)
 - Prévisions ML
 - API REST
 - Multi-sites scraping
 - Exports avancés
 
-### 💡 Basse Priorité (Futures)
+###  Basse Priorité (Futures)
 - Mobile apps
 - Intégrations tierces complexes
 - Analytics avancées
@@ -308,7 +308,7 @@ Implémenter tous les "Haute Priorité" + une partie "Moyenne Priorité"
 
 ---
 
-## 🎯 MA RECOMMANDATION
+##  MA RECOMMANDATION
 
 **Suivre l'Option C (Équilibré) :**
 1. ✅ Projets assez complets pour portfolio/LinkedIn

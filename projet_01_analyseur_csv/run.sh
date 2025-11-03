@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script de lancement rapide pour l'analyseur CSV
 
-echo "🚀 Lancement de l'Analyseur CSV Professionnel..."
+echo "Lancement de l'Analyseur CSV Professionnel..."
 echo ""
 
 # Vérifier si l'environnement virtuel existe

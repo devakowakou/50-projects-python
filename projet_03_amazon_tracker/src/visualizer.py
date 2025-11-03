@@ -201,7 +201,7 @@ class PriceVisualizer:
             HTML string pour affichage
         """
         if trend == 'hausse':
-            icon = "📈"
+            icon = ""
             color = config.COLOR_DANGER
             text = f"En hausse ({variation_percent:+.1f}%)"
         elif trend == 'baisse':

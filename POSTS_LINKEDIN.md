@@ -1,13 +1,13 @@
 # Posts LinkedIn - Challenge 50 Projets Python
 
-## 🎯 Post d'Introduction au Challenge
+##  Post d'Introduction au Challenge
 
 ```
-🚀 Je me lance dans un défi ambitieux : créer 50 projets Python en 25 jours ! 
+Je me lance dans un défi ambitieux : créer 50 projets Python en 25 jours ! 
 
 Objectif : développer mes compétences en développement, data science et automatisation en construisant des projets concrets et utilisables.
 
-📊 Suivi en temps réel sur GitHub : [lien-vers-votre-repo]
+ Suivi en temps réel sur GitHub : [lien-vers-votre-repo]
 
 Restez connectés pour découvrir mes créations ! 💻
 
@@ -16,11 +16,11 @@ Restez connectés pour découvrir mes créations ! 💻
 
 ---
 
-## 📊 Projet 1 : Analyseur CSV Avancé
+##  Projet 1 : Analyseur CSV Avancé
 
 ### Post Version Courte
 ```
-📊 Projet 1/50 : Analyseur CSV Intelligent
+ Projet 1/50 : Analyseur CSV Intelligent
 
 J'ai développé un outil d'analyse de données avec interface web complète :
 
@@ -32,7 +32,7 @@ J'ai développé un outil d'analyse de données avec interface web complète :
 ✅ Nettoyage de données automatique
 
 🛠️ Tech Stack : Python, Streamlit, Pandas, Plotly
-📈 2,384 lignes de code en 2 jours
+ 2,384 lignes de code en 2 jours
 
 L'outil peut analyser n'importe quel fichier CSV et générer des insights en quelques clics.
 
@@ -45,14 +45,14 @@ GitHub : [lien-vers-projet-1]
 
 ### Post Version Détaillée (Article LinkedIn)
 ```
-📊 Projet 1/50 du Challenge : Analyseur CSV Avancé avec IA
+ Projet 1/50 du Challenge : Analyseur CSV Avancé avec IA
 
 Dans le cadre de mon défi de créer 50 projets Python, voici le premier : un analyseur CSV professionnel avec détection d'anomalies automatique.
 
-🎯 Le Problème
+ Le Problème
 Les analystes perdent des heures à nettoyer et analyser des données CSV. J'ai voulu automatiser ce processus.
 
-💡 La Solution
+ La Solution
 Une application web Streamlit qui :
 
 1. 🔍 Détection Automatique
@@ -61,13 +61,13 @@ Une application web Streamlit qui :
    - Doublons
    - Incohérences de format
 
-2. 📊 Analyse Avancée
+2.  Analyse Avancée
    - Statistiques descriptives complètes
    - Matrices de corrélation
    - Distribution des variables
    - Tests de normalité
 
-3. 📈 Visualisations Interactives
+3.  Visualisations Interactives
    - Graphiques Plotly dynamiques
    - Heatmaps de corrélation
    - Box plots pour outliers
@@ -86,7 +86,7 @@ Une application web Streamlit qui :
 - visualizer.py : Graphiques interactifs
 - report_generator.py : Génération de rapports
 
-📊 Résultats
+ Résultats
 ✅ 2,384 lignes de code
 ✅ 6 modules séparés
 ✅ Tests de performance inclus
@@ -124,7 +124,7 @@ Application web pour gérer ses finances personnelles :
 ✅ Suivi des économies en temps réel
 
 🛠️ Tech : Python, Streamlit, Pandas, Plotly, JSON
-📊 ~800 lignes de code
+ ~800 lignes de code
 
 Interface intuitive, zéro configuration requise. Vos données restent locales !
 
@@ -141,10 +141,10 @@ GitHub : [lien-vers-projet-2]
 
 Deuxième projet de mon challenge : une application complète de gestion budgétaire.
 
-🎯 Le Besoin
+ Le Besoin
 60% des Français ne suivent pas leur budget précisément. J'ai voulu créer un outil simple mais puissant.
 
-💡 Fonctionnalités Clés
+ Fonctionnalités Clés
 
 1. 💳 Gestion des Transactions
    - Ajout/modification/suppression facile
@@ -152,7 +152,7 @@ Deuxième projet de mon challenge : une application complète de gestion budgét
    - Modes de paiement multiples
    - Import/Export CSV
 
-2. 📊 Visualisations Intelligentes
+2.  Visualisations Intelligentes
    - Graphique de tendance revenus/dépenses
    - Répartition par catégorie (camemberts)
    - Évolution du solde dans le temps
@@ -163,7 +163,7 @@ Deuxième projet de mon challenge : une application complète de gestion budgét
    - Alertes en temps réel
    - Budget par catégorie personnalisable
 
-4. 📈 Analyses
+4.  Analyses
    - Taux d'épargne automatique
    - Identification des top dépenses
    - Filtres par période (30j, 90j, mois, personnalisé)
@@ -181,14 +181,14 @@ Deuxième projet de mon challenge : une application complète de gestion budgét
 - CSS personnalisé
 - UX fluide
 
-📊 Résultats
+ Résultats
 ✅ ~800 lignes de code
 ✅ 100% fonctionnel en 2.5h
 ✅ Aucune dépendance externe complexe
 ✅ Données stockées localement (privacy first)
 ✅ Générateur de 100 transactions de test
 
-💡 Ce que j'ai appris
+ Ce que j'ai appris
 - Conception d'UI/UX pour applications financières
 - Manipulation avancée de JSON avec Pandas
 - Création de graphiques financiers interactifs
@@ -221,7 +221,7 @@ Suivez vos produits Amazon favoris et économisez malin :
 ✅ Analyse des tendances (hausse/baisse)
 
 🛠️ Tech : BeautifulSoup, SQLite, Streamlit, Plotly, SMTP
-📊 ~1,716 lignes de code
+ ~1,716 lignes de code
 
 Mode démo inclus pour tester sans scraping réel !
 
@@ -238,10 +238,10 @@ GitHub : [lien-vers-projet-3]
 
 Troisième projet du challenge : un tracker de prix Amazon complet avec historique et alertes.
 
-🎯 Le Problème
+ Le Problème
 Les prix sur Amazon fluctuent constamment. Comment savoir quand acheter ?
 
-💡 Ma Solution
+ Ma Solution
 
 1. 🔍 Web Scraping Intelligent
    - BeautifulSoup + requests
@@ -256,7 +256,7 @@ Les prix sur Amazon fluctuent constamment. Comment savoir quand acheter ?
    - Index optimisés pour performance
    - CRUD complet
 
-3. 📊 Analyses Avancées
+3.  Analyses Avancées
    - Statistiques sur 30 jours (min/max/moyenne)
    - Détection de tendances (hausse/baisse/stable)
    - Calcul des économies potentielles
@@ -268,7 +268,7 @@ Les prix sur Amazon fluctuent constamment. Comment savoir quand acheter ?
    - Template HTML professionnel
    - Prix cible personnalisable
 
-5. 📈 Visualisations
+5.  Visualisations
    - Graphiques Plotly interactifs
    - Évolution temporelle des prix
    - Comparaison multi-produits
@@ -294,21 +294,21 @@ Les prix sur Amazon fluctuent constamment. Comment savoir quand acheter ?
 - Rate limiting → délais entre requêtes
 - Parsing de prix multi-formats
 
-📊 Résultats
+ Résultats
 ✅ ~1,716 lignes de code
 ✅ 6 modules fonctionnels
 ✅ Interface complète (Dashboard, Ajout, Liste, Historique, Paramètres)
 ✅ Support email Gmail
 ✅ Documentation exhaustive
 
-💡 Ce que j'ai appris
+ Ce que j'ai appris
 - Web scraping éthique et robuste
 - Gestion de bases de données SQLite
 - Conception de systèmes de notification
 - Patterns anti-détection pour scraping
 - Architecture MVC avec Streamlit
 
-🎯 Cas d'Usage Réels
+ Cas d'Usage Réels
 - Suivi de deals Black Friday
 - Attente du meilleur prix avant achat
 - Veille concurrentielle
@@ -344,7 +344,7 @@ Prochain projet : [teaser du projet 4]
 
 ---
 
-## 📅 Calendrier de Publication Suggéré
+##  Calendrier de Publication Suggéré
 
 **Jour 5 (aujourd'hui) :**
 - Post Introduction au Challenge
@@ -379,7 +379,7 @@ Prochain projet : [teaser du projet 4]
 
 ---
 
-## 💡 Conseils
+##  Conseils
 
 1. **Variez les formats** : Posts courts + articles longs
 2. **Ajoutez des visuels** : Screenshots, GIFs, diagrammes
@@ -391,7 +391,7 @@ Prochain projet : [teaser du projet 4]
 
 ---
 
-## 🚀 Templates Bonus
+## Templates Bonus
 
 ### Post "Behind the Scenes"
 ```
@@ -426,7 +426,7 @@ Quelles sont vos best practices ? 👇
 
 ### Post de Motivation
 ```
-🎯 Challenge Update : 3/50 projets terminés
+ Challenge Update : 3/50 projets terminés
 
 Objectif : 50 projets en 25 jours
 Réalité : 5 jours, 3 projets
@@ -462,7 +462,7 @@ Qui d'autre se lance des défis techniques ? 👇
 ✅ [Feature 6]
 
 🛠️ Tech Stack : [technologies]
-📊 [Statistique impressionnante]
+ [Statistique impressionnante]
 
 [Phrase d'accroche sur l'utilité/résultat]
 
