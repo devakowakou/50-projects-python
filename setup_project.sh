@@ -1,197 +1,115 @@
 #!/bin/bash
 
-echo "🚀 Configuration du projet Stock Analysis Dashboard..."
+echo "🚀 Configuration du Projet 07 - PDF Reporter..."
 
-# Création de la structure de dossiers
-echo "📁 Création de la structure de dossiers..."
-mkdir -p projet_06_stock_tracker/{database,src/{layout,core,components,utils},tests/integration,assets,migrations}
+# Couleurs pour les messages
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Création de la structure de base
+echo -e "${BLUE}📁 Création de la structure de dossiers...${NC}"
+
+mkdir -p projet_07_pdf_reporter/{data/samples,outputs,templates/{commercial,financier,technique},scripts,docs}
+mkdir -p projet_07_pdf_reporter/src/{ingestion,transformation,visualization,reporting,ui,utils}
+mkdir -p projet_07_pdf_reporter/tests/{unit,integration,fixtures/expected_outputs}
+
+# Création des fichiers __init__.py
+echo -e "${BLUE}📄 Création des fichiers __init__.py...${NC}"
+
+touch projet_07_pdf_reporter/src/__init__.py
+touch projet_07_pdf_reporter/src/ingestion/__init__.py
+touch projet_07_pdf_reporter/src/transformation/__init__.py
+touch projet_07_pdf_reporter/src/visualization/__init__.py
+touch projet_07_pdf_reporter/src/reporting/__init__.py
+touch projet_07_pdf_reporter/src/ui/__init__.py
+touch projet_07_pdf_reporter/src/utils/__init__.py
+touch projet_07_pdf_reporter/tests/__init__.py
+touch projet_07_pdf_reporter/tests/unit/__init__.py
+touch projet_07_pdf_reporter/tests/integration/__init__.py
 
 # Création des fichiers principaux
-echo "📄 Création des fichiers principaux..."
+echo -e "${BLUE}📝 Création des fichiers principaux...${NC}"
 
-# Fichiers racine
-touch projet_06_stock_tracker/app.py
-touch projet_06_stock_tracker/requirements.txt
-touch projet_06_stock_tracker/config.py
-touch projet_06_stock_tracker/README.md
-touch projet_06_stock_tracker/.gitignore
-touch projet_06_stock_tracker/setup.py
+touch projet_07_pdf_reporter/app.py
+touch projet_07_pdf_reporter/config.py
+touch projet_07_pdf_reporter/requirements.txt
+touch projet_07_pdf_reporter/README.md
+touch projet_07_pdf_reporter/.gitignore
 
-# Database
-touch projet_06_stock_tracker/database/__init__.py
-touch projet_06_stock_tracker/database/models.py
-touch projet_06_stock_tracker/database/crud.py
-touch projet_06_stock_tracker/database/session.py
+# Fichiers de données
+touch projet_07_pdf_reporter/data/samples/.gitkeep
+touch projet_07_pdf_reporter/outputs/.gitkeep
 
-# Source
-touch projet_06_stock_tracker/src/__init__.py
-touch projet_06_stock_tracker/src/layout/__init__.py
-touch projet_06_stock_tracker/src/layout/header.py
-touch projet_06_stock_tracker/src/layout/sidebar.py
-touch projet_06_stock_tracker/src/layout/charts_layout.py
-touch projet_06_stock_tracker/src/core/__init__.py
-touch projet_06_stock_tracker/src/core/data_manager.py
-touch projet_06_stock_tracker/src/core/technical_engine.py
-touch projet_06_stock_tracker/src/core/signals_engine.py
-touch projet_06_stock_tracker/src/components/__init__.py
-touch projet_06_stock_tracker/src/components/charts.py
-touch projet_06_stock_tracker/src/components/indicators.py
-touch projet_06_stock_tracker/src/utils/__init__.py
-touch projet_06_stock_tracker/src/utils/helpers.py
+# Fichiers templates
+touch projet_07_pdf_reporter/templates/commercial/template.json
+touch projet_07_pdf_reporter/templates/commercial/styles.css
+touch projet_07_pdf_reporter/templates/financier/template.json
+touch projet_07_pdf_reporter/templates/financier/styles.css
+touch projet_07_pdf_reporter/templates/technique/template.json
+touch projet_07_pdf_reporter/templates/technique/styles.css
+
+# Modules ingestion
+touch projet_07_pdf_reporter/src/ingestion/excel_reader.py
+touch projet_07_pdf_reporter/src/ingestion/validator.py
+
+# Modules transformation
+touch projet_07_pdf_reporter/src/transformation/transformer.py
+touch projet_07_pdf_reporter/src/transformation/kpi_calculator.py
+
+# Modules visualization
+touch projet_07_pdf_reporter/src/visualization/chart_generator.py
+touch projet_07_pdf_reporter/src/visualization/chart_config.py
+
+# Modules reporting
+touch projet_07_pdf_reporter/src/reporting/pdf_builder.py
+touch projet_07_pdf_reporter/src/reporting/template_engine.py
+touch projet_07_pdf_reporter/src/reporting/formatters.py
+
+# Modules UI
+touch projet_07_pdf_reporter/src/ui/components.py
+touch projet_07_pdf_reporter/src/ui/pages.py
+touch projet_07_pdf_reporter/src/ui/styles.py
+
+# Modules utils
+touch projet_07_pdf_reporter/src/utils/helpers.py
+touch projet_07_pdf_reporter/src/utils/logger.py
+touch projet_07_pdf_reporter/src/utils/constants.py
 
 # Tests
-touch projet_06_stock_tracker/tests/__init__.py
-touch projet_06_stock_tracker/tests/test_database.py
-touch projet_06_stock_tracker/tests/test_core.py
-touch projet_06_stock_tracker/tests/test_components.py
-touch projet_06_stock_tracker/tests/integration/__init__.py
-touch projet_06_stock_tracker/tests/integration/test_dashboard.py
+touch projet_07_pdf_reporter/tests/conftest.py
+touch projet_07_pdf_reporter/tests/unit/test_excel_reader.py
+touch projet_07_pdf_reporter/tests/unit/test_transformer.py
+touch projet_07_pdf_reporter/tests/unit/test_chart_generator.py
+touch projet_07_pdf_reporter/tests/unit/test_pdf_builder.py
+touch projet_07_pdf_reporter/tests/integration/test_pipeline.py
+touch projet_07_pdf_reporter/tests/integration/test_templates.py
+touch projet_07_pdf_reporter/tests/fixtures/sample_data.xlsx
 
-# Assets
-touch projet_06_stock_tracker/assets/style.css
+# Scripts
+touch projet_07_pdf_reporter/scripts/batch_generate.py
+touch projet_07_pdf_reporter/scripts/migrate_templates.py
 
-echo "✅ Structure de dossiers créée!"
+# Documentation
+touch projet_07_pdf_reporter/docs/architecture.md
+touch projet_07_pdf_reporter/docs/templates_guide.md
+touch projet_07_pdf_reporter/docs/api_reference.md
+
+echo -e "${GREEN}✅ Structure créée avec succès!${NC}"
 
 # Création de l'environnement virtuel
-echo "🐍 Création de l'environnement virtuel Python 3.11..."
-cd projet_06_stock_tracker
+echo -e "${BLUE}🐍 Création de l'environnement virtuel...${NC}"
+cd projet_07_pdf_reporter
 python3.11 -m venv .venv
 
-echo "✅ Environnement virtuel créé!"
+echo -e "${GREEN}✅ Environnement virtuel créé!${NC}"
 
-# Activation de l'environnement
-echo "🔧 Activation de l'environnement..."
-source .venv/bin/activate
-
-# Installation des packages
-echo "📦 Installation des packages..."
-pip install --upgrade pip
-
-cat > requirements.txt << 'EOF'
-dash==2.14.0
-dash-bootstrap-components==1.5.0
-plotly==5.15.0
-pandas==2.1.0
-numpy==1.24.0
-yfinance==0.2.18
-sqlalchemy==2.0.23
-python-dateutil==2.8.2
-pytest==7.4.0
-pytest-dash==2.1.0
-selenium==4.15.0
-gunicorn==21.2.0
-EOF
-
-pip install -r requirements.txt
-
-echo "✅ Packages installés!"
-
-# Création des fichiers de configuration
-echo "⚙️ Création des fichiers de configuration..."
-
-# .gitignore
-cat > .gitignore << 'EOF'
-# Environment
-.venv/
-.env
-.env.local
-
-# Database
-*.db
-*.sqlite3
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.so
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-*.log
-logs/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
-*.temp
-
-# Data cache
-data/cache/
-EOF
-
-# Fichier de configuration
-cat > config.py << 'EOF'
-"""
-Configuration de l'application Stock Analysis Dashboard
-"""
-
-import os
-
-# Configuration de la base de données
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASE_URL = f"sqlite:///{os.path.join(BASE_DIR, 'data', 'stock_analysis.db')}"
-
-# Configuration des données boursières
-DEFAULT_SYMBOLS = ["AAPL", "TSLA", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "NFLX"]
-DEFAULT_TIMEFRAME = "6mo"
-DEFAULT_PERIOD = "1y"
-
-# Configuration des indicateurs techniques
-INDICATOR_CONFIG = {
-    "sma_periods": [20, 50, 200],
-    "ema_periods": [12, 26],
-    "rsi_period": 14,
-    "macd_fast": 12,
-    "macd_slow": 26,
-    "macd_signal": 9,
-    "bollinger_period": 20,
-    "bollinger_std": 2
-}
-
-# Configuration de l'interface
-CHART_CONFIG = {
-    "height": 600,
-    "template": "plotly_white",
-    "colors": {
-        "primary": "#1f77b4",
-        "secondary": "#ff7f0e", 
-        "success": "#2ca02c",
-        "danger": "#d62728",
-        "warning": "#ffbb78",
-        "info": "#17a2b8"
-    }
-}
-
-# Configuration du layout
-LAYOUT_CONFIG = {
-    "sidebar_width": 2,
-    "main_width": 10,
-    "header_height": "60px"
-}
-EOF
-
-# Création du dossier data
-mkdir -p data
-
-echo "✅ Configuration créée!"
-
-# Message final
 echo ""
-echo "🎉 Projet configuré avec succès!"
+echo -e "${GREEN}🎉 Projet configuré avec succès!${NC}"
 echo ""
 echo "Prochaines étapes:"
-echo "1. cd projet_06_stock_tracker"
+echo "1. cd projet_07_pdf_reporter"
 echo "2. source .venv/bin/activate"
-echo "3. python app.py"
+echo "3. pip install -r requirements.txt"
+echo "4. streamlit run app.py"
 echo ""
-echo "🚀 Prêt pour le développement!"
