@@ -1,0 +1,39 @@
+{
+    "name": "Rapport Financier",
+    "description": "Rapport d'analyse financière",
+    "kpis": [
+        "revenus",
+        "depenses",
+        "benefice_net",
+        "marge_beneficiaire"
+    ],
+    "charts": [
+        "evolution_tresorerie",
+        "repartition_charges",
+        "analyse_rentabilite"
+    ],
+    "sections": [
+        {
+            "type": "synthese",
+            "title": "Résumé Financier"
+        },
+        {
+            "type": "donnees",
+            "title": "États Financiers"
+        },
+        {
+            "type": "graphiques",
+            "title": "Graphiques Financiers"
+        },
+        {
+            "type": "analyse",
+            "title": "Analyse de Rentabilité"
+        }
+    ],
+    "colors": {
+        "primary": "#1B4965",
+        "secondary": "#62B6CB",
+        "success": "#5FA052",
+        "warning": "#EE964B"
+    }
+}

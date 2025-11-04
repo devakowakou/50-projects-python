@@ -5,6 +5,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Union
 import pandas as pd
+import warnings
 
 def generate_filename(prefix: str, extension: str = "pdf") -> str:
     """
@@ -64,15 +65,26 @@ def detect_date_columns(df: pd.DataFrame) -> list:
         Liste des noms de colonnes de type date
     """
     date_columns = []
+    
     for col in df.columns:
+        # Vérifier si déjà datetime
         if pd.api.types.is_datetime64_any_dtype(df[col]):
             date_columns.append(col)
+        # Essayer de convertir les colonnes object
         elif df[col].dtype == "object":
             try:
-                pd.to_datetime(df[col], errors="raise")
-                date_columns.append(col)
-            except:
+                # Supprimer les warnings et essayer la conversion
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore")
+                    # Essayer sur un échantillon d'abord
+                    sample = df[col].dropna().head(10)
+                    if len(sample) > 0:
+                        pd.to_datetime(sample, errors="raise")
+                        date_columns.append(col)
+            except (ValueError, TypeError):
+                # Pas une colonne de dates
                 pass
+    
     return date_columns
 
 def safe_division(numerator: float, denominator: float, default: float = 0.0) -> float:

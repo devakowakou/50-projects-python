@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 import tempfile
 import os
-from pathlib import Path
 
 from src.ingestion.excel_reader import ExcelReader
 from src.ingestion.validator import DataValidator
@@ -15,10 +14,11 @@ from src.visualization.chart_generator import ChartGenerator
 from src.reporting.pdf_builder import PDFBuilder
 from src.reporting.template_engine import TemplateEngine
 from src.ui.components import (
-    file_uploader_section, template_selector, data_preview,
+    file_uploader_section, data_preview,
     validation_report, display_kpi_grid, progress_bar_section,
     success_download_button
 )
+
 from config import OUTPUTS_DIR
 
 def generation_page():
@@ -155,6 +155,8 @@ def generate_report(
     """
     progress = progress_bar_section("Génération en cours...")
     chart_paths = []
+    chart_gen = None
+    charts = []
     
     try:
         # Transformation
@@ -200,7 +202,18 @@ def generate_report(
         # Charger template
         progress.progress(80)
         template_engine = TemplateEngine()
-        template_config = template_engine.load_template(template_type)
+        
+        try:
+            template_config = template_engine.load_template(template_type)
+            st.info(f"📋 Template chargé: {template_config.get('name', template_type)}")
+        except Exception as e:
+            st.warning(f"⚠️ Erreur chargement template: {str(e)}")
+            st.info("📋 Utilisation de la configuration par défaut")
+            template_config = {
+                "name": f"Rapport {template_type.title()}",
+                "description": "Rapport généré avec configuration par défaut",
+                "sections": ["synthese", "donnees", "analyse"]
+            }
         
         # Génération PDF
         pdf_builder = PDFBuilder()
@@ -227,7 +240,8 @@ def generate_report(
     finally:
         # Cleanup garanti
         try:
-            chart_gen.cleanup()
+            if chart_gen:
+                chart_gen.cleanup()
             # Supprimer les fichiers de graphiques temporaires
             for chart_path in chart_paths:
                 if os.path.exists(chart_path):

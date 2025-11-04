@@ -1,0 +1,39 @@
+{
+    "name": "Rapport RH",
+    "description": "Rapport des ressources humaines",
+    "kpis": [
+        "effectif_total",
+        "taux_turnover",
+        "masse_salariale",
+        "taux_absenteisme"
+    ],
+    "charts": [
+        "evolution_effectif",
+        "pyramide_ages",
+        "repartition_services"
+    ],
+    "sections": [
+        {
+            "type": "synthese",
+            "title": "Vue d'Ensemble RH"
+        },
+        {
+            "type": "donnees",
+            "title": "Données du Personnel"
+        },
+        {
+            "type": "graphiques",
+            "title": "Indicateurs RH"
+        },
+        {
+            "type": "analyse",
+            "title": "Analyse des Effectifs"
+        }
+    ],
+    "colors": {
+        "primary": "#6A4C93",
+        "secondary": "#8AC926",
+        "success": "#1982C4",
+        "warning": "#FFCA3A"
+    }
+}

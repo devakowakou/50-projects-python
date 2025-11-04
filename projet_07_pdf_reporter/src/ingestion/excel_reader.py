@@ -1,137 +1,90 @@
 """
-Module de lecture et extraction de données Excel
+Lecteur de fichiers Excel
 """
 import pandas as pd
 from pathlib import Path
-from typing import Union, Optional, List, Dict
-from src.utils.logger import setup_logger
-from src.utils.constants import SUPPORTED_EXCEL_EXTENSIONS
-
-logger = setup_logger(__name__)
+from typing import Optional
+from config import EXCEL_CONFIG
 
 class ExcelReader:
-    """Classe pour lire et extraire des données depuis fichiers Excel"""
+    """Lecteur de fichiers Excel avec gestion robuste"""
     
     def __init__(self):
-        self.current_file = None
-        self.sheets = []
+        self.max_file_size = EXCEL_CONFIG["max_file_size_mb"] * 1024 * 1024
     
-    def read_excel(
-        self, 
-        file_path: Union[str, Path], 
-        sheet_name: Optional[Union[str, int]] = 0,
-        **kwargs
-    ) -> pd.DataFrame:
+    def read_excel(self, file_path: str, sheet_name: Optional[str] = None) -> pd.DataFrame:
         """
         Lit un fichier Excel et retourne un DataFrame
         
         Args:
-            file_path: Chemin du fichier Excel
-            sheet_name: Nom ou index de la feuille (0 par défaut)
-            **kwargs: Arguments supplémentaires pour pd.read_excel
-        
+            file_path: Chemin du fichier
+            sheet_name: Nom de la feuille (None = première feuille)
+            
         Returns:
-            DataFrame contenant les données
-        
-        Raises:
-            ValueError: Si extension non supportée
-            FileNotFoundError: Si fichier introuvable
+            DataFrame avec les données
         """
-        file_path = Path(file_path)
+        path = Path(file_path)
         
-        # Validation extension
-        if file_path.suffix not in SUPPORTED_EXCEL_EXTENSIONS:
-            raise ValueError(
-                f"Extension {file_path.suffix} non supportée. "
-                f"Extensions valides: {', '.join(SUPPORTED_EXCEL_EXTENSIONS)}"
-            )
-        
-        # Validation existence
-        if not file_path.exists():
+        # Vérifier existence
+        if not path.exists():
             raise FileNotFoundError(f"Fichier introuvable: {file_path}")
         
-        logger.info(f"Lecture du fichier: {file_path.name}")
+        # Vérifier taille
+        if path.stat().st_size > self.max_file_size:
+            raise ValueError(f"Fichier trop volumineux (max {EXCEL_CONFIG['max_file_size_mb']} Mo)")
+        
+        # Vérifier extension
+        if path.suffix not in EXCEL_CONFIG["allowed_extensions"]:
+            raise ValueError(f"Extension invalide. Formats acceptés: {EXCEL_CONFIG['allowed_extensions']}")
         
         try:
-            df = pd.read_excel(
-                file_path,
-                sheet_name=sheet_name,
-                engine="openpyxl",
-                **kwargs
-            )
+            # Lecture du fichier
+            df = pd.read_excel(file_path, sheet_name=sheet_name or 0)
             
-            self.current_file = file_path
-            logger.info(
-                f"✅ Fichier lu avec succès: {len(df)} lignes, "
-                f"{len(df.columns)} colonnes"
-            )
+            # Nettoyage basique
+            df = self._clean_dataframe(df)
             
             return df
             
         except Exception as e:
-            logger.error(f"Erreur lors de la lecture: {str(e)}")
-            raise
+            raise Exception(f"Erreur lecture Excel: {str(e)}")
     
-    def get_sheet_names(self, file_path: Union[str, Path]) -> List[str]:
+    def _clean_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Récupère la liste des noms de feuilles dans un fichier Excel
+        Nettoyage basique du DataFrame
         
         Args:
-            file_path: Chemin du fichier Excel
-        
-        Returns:
-            Liste des noms de feuilles
-        """
-        file_path = Path(file_path)
-        
-        try:
-            excel_file = pd.ExcelFile(file_path, engine="openpyxl")
-            self.sheets = excel_file.sheet_names
-            logger.info(f"Feuilles détectées: {', '.join(self.sheets)}")
-            return self.sheets
+            df: DataFrame à nettoyer
             
-        except Exception as e:
-            logger.error(f"Erreur lors de la lecture des feuilles: {str(e)}")
-            raise
-    
-    def infer_schema(self, df: pd.DataFrame) -> Dict[str, str]:
-        """
-        Analyse le schéma d'un DataFrame
-        
-        Args:
-            df: DataFrame à analyser
-        
         Returns:
-            Dictionnaire {colonne: type}
+            DataFrame nettoyé
         """
-        schema = {}
-        for col in df.columns:
-            dtype = str(df[col].dtype)
-            schema[col] = dtype
+        # Supprimer colonnes entièrement vides
+        df = df.dropna(axis=1, how='all')
         
-        logger.info(f"Schéma détecté: {len(schema)} colonnes")
-        return schema
+        # Supprimer lignes entièrement vides
+        df = df.dropna(axis=0, how='all')
+        
+        # Nettoyer les noms de colonnes
+        df.columns = df.columns.str.strip()
+        
+        # Reset index
+        df = df.reset_index(drop=True)
+        
+        return df
     
-    def get_metadata(self, file_path: Union[str, Path]) -> Dict:
+    def get_sheet_names(self, file_path: str) -> list:
         """
-        Extrait les métadonnées d'un fichier Excel
+        Récupère les noms des feuilles du fichier Excel
         
         Args:
             file_path: Chemin du fichier
-        
+            
         Returns:
-            Dictionnaire de métadonnées
+            Liste des noms de feuilles
         """
-        file_path = Path(file_path)
-        
-        metadata = {
-            "filename": file_path.name,
-            "size_bytes": file_path.stat().st_size,
-            "size_mb": round(file_path.stat().st_size / (1024*1024), 2),
-            "modified": pd.Timestamp.fromtimestamp(
-                file_path.stat().st_mtime
-            ).strftime("%Y-%m-%d %H:%M:%S"),
-            "sheets": self.get_sheet_names(file_path)
-        }
-        
-        return metadata
+        try:
+            excel_file = pd.ExcelFile(file_path)
+            return excel_file.sheet_names
+        except Exception as e:
+            raise Exception(f"Erreur lecture feuilles: {str(e)}")

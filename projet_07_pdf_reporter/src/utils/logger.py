@@ -1,39 +1,46 @@
 """
-Configuration du logging pour l'application
+Configuration du système de logging
 """
 import logging
 import sys
-from pathlib import Path
-from config import LOG_LEVEL, LOG_FORMAT, BASE_DIR
+from config import LOG_LEVEL, LOG_FORMAT, LOG_FILE
 
-def setup_logger(name: str, log_file: str = None) -> logging.Logger:
+def setup_logger(name: str = "pdf_reporter") -> logging.Logger:
     """
     Configure et retourne un logger
     
     Args:
         name: Nom du logger
-        log_file: Chemin du fichier de log (optionnel)
-    
+        
     Returns:
         Logger configuré
     """
     logger = logging.getLogger(name)
-    logger.setLevel(getattr(logging, LOG_LEVEL))
     
-    # Formatter
+    # Éviter duplication des handlers
+    if logger.handlers:
+        return logger
+    
+    # Niveau de log
+    level = getattr(logging, LOG_LEVEL.upper(), logging.INFO)
+    logger.setLevel(level)
+    
+    # Format
     formatter = logging.Formatter(LOG_FORMAT)
     
-    # Console handler
+    # Handler console
     console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(level)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
     
-    # File handler (optionnel)
-    if log_file:
-        log_path = BASE_DIR / "logs"
-        log_path.mkdir(exist_ok=True)
-        file_handler = logging.FileHandler(log_path / log_file)
+    # Handler fichier
+    try:
+        file_handler = logging.FileHandler(LOG_FILE, encoding='utf-8')
+        file_handler.setLevel(level)
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
+    except Exception as e:
+        logger.warning(f"Impossible de créer le fichier de log: {e}")
     
     return logger

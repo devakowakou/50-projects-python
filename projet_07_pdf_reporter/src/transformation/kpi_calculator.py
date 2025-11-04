@@ -1,150 +1,144 @@
 """
-Module de calcul des KPIs métier - VERSION FLEXIBLE
+Calculateur de KPIs
 """
 import pandas as pd
-import numpy as np
-from typing import Dict, Optional
-from src.utils.logger import setup_logger
-from src.utils.helpers import safe_division
-
-logger = setup_logger(__name__)
+from typing import Dict, Any
+from config import KPI_CONFIG
 
 class KPICalculator:
-    """Classe pour calculer les indicateurs clés de performance de manière flexible"""
+    """Calculateur de KPIs dynamique selon le type de données"""
     
-    def __init__(self, template_type: str = "generic"):
+    def __init__(self, template_type: str = "commercial"):
         self.template_type = template_type
         self.kpis = {}
     
-    def calculate_generic_kpis(self, df: pd.DataFrame) -> Dict:
+    def calculate(self, df: pd.DataFrame) -> Dict[str, Any]:
         """
-        Calcule des KPIs génériques pour n'importe quel dataset
+        Calcule les KPIs selon le template
         
         Args:
             df: DataFrame
-        
+            
         Returns:
-            Dictionnaire de KPIs
-        """
-        logger.info("📊 Calcul des KPIs génériques...")
-        
-        kpis = {}
-        
-        try:
-            # KPIs basiques
-            kpis["total_lignes"] = len(df)
-            kpis["total_colonnes"] = len(df.columns)
-            
-            # Colonnes numériques
-            numeric_cols = df.select_dtypes(include=[np.number]).columns
-            kpis["colonnes_numeriques"] = len(numeric_cols)
-            
-            if len(numeric_cols) > 0:
-                # Prendre la première colonne numérique pour des stats
-                main_col = numeric_cols[0]
-                kpis[f"somme_{main_col}"] = float(df[main_col].sum())
-                kpis[f"moyenne_{main_col}"] = float(df[main_col].mean())
-                kpis[f"max_{main_col}"] = float(df[main_col].max())
-                kpis[f"min_{main_col}"] = float(df[main_col].min())
-            
-            # Colonnes de texte
-            text_cols = df.select_dtypes(include=['object']).columns
-            if len(text_cols) > 0:
-                main_text_col = text_cols[0]
-                kpis[f"valeurs_uniques_{main_text_col}"] = int(df[main_text_col].nunique())
-            
-            # Taux de complétion
-            completion_rate = (1 - df.isnull().sum().sum() / (len(df) * len(df.columns))) * 100
-            kpis["taux_completion_pct"] = round(completion_rate, 2)
-            
-            logger.info(f"✅ {len(kpis)} KPIs génériques calculés")
-            
-        except Exception as e:
-            logger.error(f"❌ Erreur calcul KPIs: {e}")
-        
-        self.kpis = kpis
-        return kpis
-    
-    def calculate_commercial_kpis(self, df: pd.DataFrame) -> Dict:
-        """Calcule les KPIs commerciaux si colonnes disponibles"""
-        logger.info("📊 Tentative calcul KPIs commerciaux...")
-        
-        kpis = {}
-        
-        # Recherche flexible des colonnes
-        price_col = self._find_column(df, ['prix', 'price', 'montant', 'amount'])
-        qty_col = self._find_column(df, ['quantité', 'quantity', 'qty', 'qte'])
-        ca_col = self._find_column(df, ['ca', 'chiffre', 'revenue', 'total'])
-        
-        if price_col:
-            kpis["prix_moyen"] = float(df[price_col].mean())
-        
-        if qty_col:
-            kpis["quantite_totale"] = int(df[qty_col].sum())
-        
-        if ca_col:
-            kpis["ca_total"] = float(df[ca_col].sum())
-        
-        # Si pas assez de données commerciales, passer en mode générique
-        if len(kpis) < 2:
-            logger.info("Pas assez de données commerciales, passage en mode générique")
-            return self.calculate_generic_kpis(df)
-        
-        self.kpis = kpis
-        return kpis
-    
-    def _find_column(self, df: pd.DataFrame, keywords: list) -> Optional[str]:
-        """
-        Trouve une colonne par mots-clés
-        
-        Args:
-            df: DataFrame
-            keywords: Liste de mots-clés à chercher
-        
-        Returns:
-            Nom de colonne ou None
-        """
-        for col in df.columns:
-            col_lower = col.lower()
-            if any(kw in col_lower for kw in keywords):
-                return col
-        return None
-    
-    def calculate(self, df: pd.DataFrame) -> Dict:
-        """
-        Calcule les KPIs selon le type de template ou en mode générique
-        
-        Args:
-            df: DataFrame
-        
-        Returns:
-            Dictionnaire de KPIs
+            Dictionnaire des KPIs calculés
         """
         if self.template_type == "commercial":
-            return self.calculate_commercial_kpis(df)
-        elif self.template_type == "generic":
-            return self.calculate_generic_kpis(df)
+            self.kpis = self._calculate_commercial(df)
+        elif self.template_type == "financier":
+            self.kpis = self._calculate_financier(df)
+        elif self.template_type == "ressources_humaines":
+            self.kpis = self._calculate_rh(df)
         else:
-            # Par défaut, mode générique
-            return self.calculate_generic_kpis(df)
+            self.kpis = self._calculate_generic(df)
+        
+        return self.kpis
+    
+    def _calculate_commercial(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Calcule KPIs commerciaux"""
+        kpis = {}
+        
+        numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
+        
+        if numeric_cols:
+            # Chiffre d'affaires total
+            kpis['chiffre_affaires'] = df[numeric_cols[0]].sum()
+            
+            # Nombre de ventes
+            kpis['nombre_ventes'] = len(df)
+            
+            # Panier moyen
+            kpis['panier_moyen'] = df[numeric_cols[0]].mean() if len(numeric_cols) > 0 else 0
+            
+            # Évolution (si possible)
+            if len(numeric_cols) > 1:
+                kpis['taux_croissance'] = (
+                    (df[numeric_cols[0]].sum() - df[numeric_cols[1]].sum()) / 
+                    df[numeric_cols[1]].sum() * 100 if df[numeric_cols[1]].sum() != 0 else 0
+                )
+        
+        return kpis
+    
+    def _calculate_financier(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Calcule KPIs financiers"""
+        kpis = {}
+        
+        numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
+        
+        if len(numeric_cols) >= 2:
+            # Revenus
+            kpis['revenus'] = df[numeric_cols[0]].sum()
+            
+            # Dépenses
+            kpis['depenses'] = df[numeric_cols[1]].sum()
+            
+            # Bénéfice net
+            kpis['benefice_net'] = kpis['revenus'] - kpis['depenses']
+            
+            # Marge bénéficiaire
+            kpis['marge_beneficiaire'] = (
+                kpis['benefice_net'] / kpis['revenus'] * 100 
+                if kpis['revenus'] != 0 else 0
+            )
+        
+        return kpis
+    
+    def _calculate_rh(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Calcule KPIs RH"""
+        kpis = {}
+        
+        # Effectif total
+        kpis['effectif_total'] = len(df)
+        
+        numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
+        
+        if numeric_cols:
+            # Masse salariale
+            kpis['masse_salariale'] = df[numeric_cols[0]].sum()
+            
+            # Salaire moyen
+            kpis['salaire_moyen'] = df[numeric_cols[0]].mean()
+            
+            # Salaire médian
+            kpis['salaire_median'] = df[numeric_cols[0]].median()
+        
+        return kpis
+    
+    def _calculate_generic(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Calcule KPIs génériques"""
+        kpis = {}
+        
+        # Statistiques de base
+        kpis['total_lignes'] = len(df)
+        kpis['total_colonnes'] = len(df.columns)
+        
+        numeric_cols = df.select_dtypes(include=['number']).columns.tolist()
+        
+        if numeric_cols:
+            kpis['somme_totale'] = df[numeric_cols].sum().sum()
+            kpis['moyenne_generale'] = df[numeric_cols].mean().mean()
+        
+        return kpis
     
     def format_kpis_for_display(self) -> Dict[str, str]:
         """
-        Formate les KPIs pour affichage
+        Formate les KPIs pour l'affichage
         
         Returns:
-            Dictionnaire de KPIs formatés
+            Dictionnaire des KPIs formatés
         """
         formatted = {}
         
         for key, value in self.kpis.items():
             if isinstance(value, (int, float)):
-                if "pct" in key or "taux" in key:
-                    formatted[key] = f"{value:.2f}%"
-                elif "ca" in key.lower() or "prix" in key.lower():
-                    formatted[key] = f"{value:,.2f} €"
+                if 'taux' in key or 'marge' in key or 'croissance' in key:
+                    # Formatage en pourcentage
+                    formatted[key] = KPI_CONFIG['percentage_format'].format(value)
+                elif 'chiffre' in key or 'revenu' in key or 'depense' in key or 'salaire' in key:
+                    # Formatage monétaire
+                    formatted[key] = f"{value:,.{KPI_CONFIG['decimal_places']}f} {KPI_CONFIG['currency_symbol']}".replace(',', KPI_CONFIG['thousand_separator'])
                 else:
-                    formatted[key] = f"{value:,.0f}" if isinstance(value, int) else f"{value:,.2f}"
+                    # Formatage numérique standard
+                    formatted[key] = f"{value:,.{KPI_CONFIG['decimal_places']}f}".replace(',', KPI_CONFIG['thousand_separator'])
             else:
                 formatted[key] = str(value)
         

@@ -1,16 +1,21 @@
 """
-Module de transformation et nettoyage des données
+Transformateur de données
 """
 import pandas as pd
 import numpy as np
-from typing import List, Optional, Dict
-from src.utils.logger import setup_logger
-from src.utils.helpers import detect_date_columns
+from typing import Optional, Dict
+import warnings
 
-logger = setup_logger(__name__)
+# Logging optionnel
+try:
+    from src.utils.logger import setup_logger
+    logger = setup_logger(__name__)
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
 
 class Transformer:
-    """Classe pour transformer et nettoyer les données"""
+    """Transformateur de données avec normalisation et nettoyage"""
     
     def __init__(self):
         self.transformations_applied = []
@@ -55,36 +60,45 @@ class Transformer:
         self.transformations_applied.append("normalize")
         return df
     
-    def convert_dates(
-        self, 
-        df: pd.DataFrame, 
-        columns: Optional[List[str]] = None
-    ) -> pd.DataFrame:
+    def convert_dates(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        Convertit les colonnes en type datetime
+        Convertit les colonnes de dates au format datetime
         
         Args:
-            df: DataFrame
-            columns: Liste des colonnes à convertir (auto-détection si None)
-        
+            df: DataFrame à convertir
+            
         Returns:
             DataFrame avec dates converties
         """
-        df = df.copy()
+        df_converted = df.copy()
+        converted_count = 0
         
-        if columns is None:
-            columns = detect_date_columns(df)
-        
-        for col in columns:
-            if col in df.columns:
+        for col in df_converted.columns:
+            # Essayer de convertir en datetime
+            if df_converted[col].dtype == 'object':
                 try:
-                    df[col] = pd.to_datetime(df[col], errors='coerce')
-                    logger.info(f"📅 Colonne '{col}' convertie en datetime")
-                except Exception as e:
-                    logger.warning(f"⚠️ Impossible de convertir '{col}': {e}")
+                    # Supprimer les warnings pour la conversion
+                    with warnings.catch_warnings():
+                        warnings.simplefilter("ignore")
+                        # Essayer la conversion
+                        converted = pd.to_datetime(
+                            df_converted[col], 
+                            errors='coerce',
+                            infer_datetime_format=True
+                        )
+                        
+                        # Vérifier si la conversion a réussi (au moins 50% de valeurs non-null)
+                        if converted.notna().sum() / len(converted) >= 0.5:
+                            df_converted[col] = converted
+                            converted_count += 1
+                            logger.info(f"📅 Colonne '{col}' convertie en datetime")
+                except Exception:
+                    pass
         
-        self.transformations_applied.append("convert_dates")
-        return df
+        if converted_count > 0:
+            logger.info(f"✅ {converted_count} colonne(s) de dates converties")
+        
+        return df_converted
     
     def handle_missing_values(
         self, 
@@ -254,3 +268,46 @@ class Transformer:
                 }
         
         return stats
+    
+    def remove_outliers(
+        self, 
+        df: pd.DataFrame, 
+        columns: Optional[list] = None,
+        method: str = "iqr"
+    ) -> pd.DataFrame:
+        """
+        Supprime les outliers
+        
+        Args:
+            df: DataFrame
+            columns: Colonnes à traiter (None = toutes les numériques)
+            method: Méthode ('iqr', 'zscore')
+            
+        Returns:
+            DataFrame sans outliers
+        """
+        df_clean = df.copy()
+        
+        if columns is None:
+            columns = df_clean.select_dtypes(include=['number']).columns
+        
+        if method == "iqr":
+            for col in columns:
+                Q1 = df_clean[col].quantile(0.25)
+                Q3 = df_clean[col].quantile(0.75)
+                IQR = Q3 - Q1
+                
+                lower_bound = Q1 - 1.5 * IQR
+                upper_bound = Q3 + 1.5 * IQR
+                
+                df_clean = df_clean[
+                    (df_clean[col] >= lower_bound) & 
+                    (df_clean[col] <= upper_bound)
+                ]
+        
+        elif method == "zscore":
+            for col in columns:
+                z_scores = np.abs((df_clean[col] - df_clean[col].mean()) / df_clean[col].std())
+                df_clean = df_clean[z_scores < 3]
+        
+        return df_clean
