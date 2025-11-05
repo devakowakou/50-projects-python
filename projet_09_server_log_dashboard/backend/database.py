@@ -3,12 +3,31 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 
-DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://loguser:logpass@localhost:5432/logs_db')
+# Utiliser SQLite local pour le développement si non défini
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///./data/logs.db')
 
-engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+# Si SQLite, s'assurer que le dossier existe (utile pour init_db)
+if DATABASE_URL.startswith("sqlite"):
+    db_path = DATABASE_URL.split("sqlite:///")[-1]
+    db_file = Path(db_path)
+    db_dir = db_file.parent
+    if not db_dir.exists():
+        db_dir.mkdir(parents=True, exist_ok=True)
+
+# Détecter SQLite pour ajouter les bons connect_args
+if DATABASE_URL.startswith("sqlite"):
+    engine = create_engine(
+        DATABASE_URL,
+        connect_args={"check_same_thread": False},
+        echo=False
+    )
+else:
+    engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
@@ -25,7 +44,6 @@ class LogRecord(Base):
     response_time = Column(Float, nullable=True)
     user_agent = Column(String(512), nullable=False)
     
-    # Index composé pour les requêtes fréquentes
     __table_args__ = (
         Index('idx_timestamp_status', 'timestamp', 'status_code'),
         Index('idx_ip_timestamp', 'ip', 'timestamp'),

@@ -4,9 +4,9 @@ from pathlib import Path
 
 # Configuration
 URLS = [
-    '/home', '/api/users', '/api/users/123', '/login', '/dashboard', 
-    '/api/data', '/static/style.css', '/static/app.js', '/admin',
-    '/api/products', '/api/orders', '/api/cart', '/logout', '/profile'
+    '/', '/home', '/login', '/dashboard', '/api/users', '/api/data', 
+    '/api/products', '/api/orders', '/profile', '/settings',
+    '/static/app.js', '/static/style.css', '/admin', '/logout'
 ]
 
 METHODS = {

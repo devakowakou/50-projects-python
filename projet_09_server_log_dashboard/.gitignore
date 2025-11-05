@@ -11,7 +11,7 @@ env/
 # Environment
 .env
 .env.local
-.venv/
+
 # IDE
 .vscode/
 .idea/
@@ -22,6 +22,10 @@ data/raw_logs/*.log
 data/processed/*.csv
 *.db
 *.sqlite
+
+# Exports
+rapport_logs_*.csv
+rapport_logs_*.json
 
 # Docker
 *.log

@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import List, Dict, Tuple
 import logging
 
@@ -11,10 +11,6 @@ class AnomalyDetector:
     """Détection d'anomalies dans les logs avec ML"""
     
     def __init__(self, contamination: float = 0.1):
-        """
-        Args:
-            contamination: Proportion attendue d'anomalies (10% par défaut)
-        """
         self.model = IsolationForest(
             contamination=contamination,
             random_state=42,
@@ -24,23 +20,13 @@ class AnomalyDetector:
         self.is_trained = False
     
     def prepare_features(self, logs_data: List[Dict]) -> np.ndarray:
-        """
-        Extrait les features pour la détection d'anomalies
-        
-        Features:
-        - Requêtes par minute
-        - Taux d'erreurs
-        - Temps de réponse moyen
-        - Nombre d'IPs uniques
-        - Ratio GET/POST
-        """
+        """Extrait les features pour la détection d'anomalies"""
         if not logs_data:
             return np.array([])
         
         features = []
-        
-        # Grouper par minute
         time_windows = {}
+        
         for log in logs_data:
             minute = log['timestamp'].replace(second=0, microsecond=0)
             if minute not in time_windows:
@@ -61,18 +47,17 @@ class AnomalyDetector:
             time_windows[minute]['methods'][log['method']] = \
                 time_windows[minute]['methods'].get(log['method'], 0) + 1
         
-        # Créer le vecteur de features
         for minute, stats in time_windows.items():
             avg_response = np.mean(stats['response_times']) if stats['response_times'] else 0
             error_rate = stats['errors'] / stats['requests'] if stats['requests'] > 0 else 0
             get_post_ratio = stats['methods']['GET'] / max(stats['methods']['POST'], 1)
             
             features.append([
-                stats['requests'],                  # Requêtes par minute
-                error_rate,                         # Taux d'erreur
-                avg_response,                       # Temps de réponse moyen
-                len(stats['ips']),                  # IPs uniques
-                get_post_ratio                      # Ratio GET/POST
+                stats['requests'],
+                error_rate,
+                avg_response,
+                len(stats['ips']),
+                get_post_ratio
             ])
         
         return np.array(features)
@@ -86,22 +71,14 @@ class AnomalyDetector:
             logger.warning("⚠️ Pas assez de données pour l'entraînement")
             return
         
-        # Normalisation
         features_scaled = self.scaler.fit_transform(features)
-        
-        # Entraînement
         self.model.fit(features_scaled)
         self.is_trained = True
         
         logger.info(f"✅ Modèle entraîné sur {len(features)} fenêtres temporelles")
     
     def detect(self, logs_data: List[Dict]) -> Tuple[List[Dict], int]:
-        """
-        Détecte les anomalies dans les logs
-        
-        Returns:
-            Tuple (anomalies, score_total)
-        """
+        """Détecte les anomalies dans les logs"""
         if not self.is_trained:
             logger.warning("⚠️ Modèle non entraîné, entraînement automatique...")
             self.train(logs_data)
@@ -111,12 +88,9 @@ class AnomalyDetector:
             return [], 0
         
         features_scaled = self.scaler.transform(features)
-        
-        # Prédiction (-1 = anomalie, 1 = normal)
         predictions = self.model.predict(features_scaled)
         scores = self.model.score_samples(features_scaled)
         
-        # Identifier les anomalies
         anomalies = []
         for idx, (pred, score) in enumerate(zip(predictions, scores)):
             if pred == -1:

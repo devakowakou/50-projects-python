@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from typing import List, Dict, Tuple
+from typing import List, Dict
 from collections import defaultdict
 import hashlib
 
@@ -7,12 +7,7 @@ class SessionAnalyzer:
     """Analyse des sessions utilisateur et parcours clients"""
     
     def __init__(self, session_timeout: int = 30):
-        """
-        Args:
-            session_timeout: Timeout de session en minutes (défaut: 30min)
-        """
         self.session_timeout = timedelta(minutes=session_timeout)
-        self.sessions = {}
     
     def generate_session_id(self, ip: str, user_agent: str) -> str:
         """Génère un identifiant de session unique"""
@@ -20,13 +15,7 @@ class SessionAnalyzer:
         return hashlib.md5(data).hexdigest()[:16]
     
     def analyze_logs(self, logs: List[Dict]) -> Dict:
-        """
-        Analyse les logs pour extraire les sessions
-        
-        Returns:
-            Statistiques détaillées sur les sessions
-        """
-        # Trier par timestamp
+        """Analyse les logs pour extraire les sessions"""
         sorted_logs = sorted(logs, key=lambda x: x['timestamp'])
         
         sessions = defaultdict(lambda: {
@@ -43,23 +32,19 @@ class SessionAnalyzer:
             session_id = self.generate_session_id(log['ip'], log['user_agent'])
             session = sessions[session_id]
             
-            # Nouvelle session ou continuation ?
             if session['start_time'] is None:
                 session['start_time'] = log['timestamp']
                 session['ip'] = log['ip']
                 session['user_agent'] = log['user_agent']
             else:
-                # Vérifier le timeout
                 time_diff = log['timestamp'] - session['end_time']
                 if time_diff > self.session_timeout:
-                    # Créer une nouvelle session
                     session_id = f"{session_id}_{len([s for s in sessions if s.startswith(session_id)])}"
                     session = sessions[session_id]
                     session['start_time'] = log['timestamp']
                     session['ip'] = log['ip']
                     session['user_agent'] = log['user_agent']
             
-            # Mettre à jour la session
             session['end_time'] = log['timestamp']
             session['pages'].append({
                 'url': log['url'],
@@ -71,7 +56,6 @@ class SessionAnalyzer:
             if log['status_code'] >= 400:
                 session['errors'] += 1
         
-        # Calculer les statistiques
         return self._compute_statistics(dict(sessions))
     
     def _compute_statistics(self, sessions: Dict) -> Dict:
@@ -91,20 +75,16 @@ class SessionAnalyzer:
         pages_per_session = []
         bounce_count = 0
         
-        for session_id, session in sessions.items():
-            # Durée de session
+        for session in sessions.values():
             if session['start_time'] and session['end_time']:
                 duration = (session['end_time'] - session['start_time']).total_seconds()
                 durations.append(duration)
             
-            # Pages par session
             pages_per_session.append(session['requests'])
             
-            # Bounce (1 seule page)
             if session['requests'] == 1:
                 bounce_count += 1
         
-        # Top parcours clients
         conversion_paths = self._extract_top_paths(sessions, limit=10)
         
         return {
@@ -125,13 +105,9 @@ class SessionAnalyzer:
                 path = ' → '.join([page['url'] for page in session['pages'][:5]])
                 paths[path] += 1
         
-        # Trier par fréquence
         sorted_paths = sorted(paths.items(), key=lambda x: x[1], reverse=True)[:limit]
         
-        return [
-            {'path': path, 'count': count}
-            for path, count in sorted_paths
-        ]
+        return [{'path': path, 'count': count} for path, count in sorted_paths]
     
     def _format_sessions(self, sessions: Dict) -> List[Dict]:
         """Formate les sessions pour l'API"""
@@ -148,7 +124,7 @@ class SessionAnalyzer:
                 'duration': duration,
                 'pages_visited': session['requests'],
                 'errors': session['errors'],
-                'pages': [p['url'] for p in session['pages'][:10]]  # Max 10 pages
+                'pages': [p['url'] for p in session['pages'][:10]]
             })
         
-        return formatted[:100]  # Limiter à 100 sessions pour l'API
+        return formatted[:100]

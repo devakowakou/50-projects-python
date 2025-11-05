@@ -1,12 +1,16 @@
 from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy.orm import Session
-from typing import List, Optional
+from typing import List
 from datetime import datetime, timedelta
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
 
-from backend.database import get_db, LogRecord
-from backend.services.session_analyzer import SessionAnalyzer
-from backend.ml.anomaly_detector import AnomalyDetector
-from backend.scraper.website_analyzer import WebsiteAnalyzer
+from database import get_db, LogRecord
+from services.session_analyzer import SessionAnalyzer
+from ml.anomaly_detector import AnomalyDetector
+from scraper.website_analyzer import WebsiteAnalyzer
+from sqlalchemy import func, desc
 
 router = APIRouter(prefix="/api/analytics", tags=["analytics"])
 
@@ -124,7 +128,6 @@ def get_insights(
     """Génère des insights et recommandations intelligentes"""
     cutoff = datetime.now() - timedelta(hours=hours)
     
-    # Statistiques
     total = db.query(LogRecord).filter(LogRecord.timestamp >= cutoff).count()
     errors = db.query(LogRecord).filter(
         LogRecord.timestamp >= cutoff,
@@ -136,20 +139,22 @@ def get_insights(
         LogRecord.response_time > 2000
     ).count()
     
-    # Top pages lentes
+    # CORRECTION ICI
+    avg_time_label = func.avg(LogRecord.response_time).label('avg_time')
+    count_label = func.count(LogRecord.id).label('count')
+    
     slow_pages = db.query(
         LogRecord.url,
-        func.avg(LogRecord.response_time).label('avg_time'),
-        func.count(LogRecord.id).label('count')
+        avg_time_label,
+        count_label
     ).filter(
         LogRecord.timestamp >= cutoff,
         LogRecord.response_time.isnot(None)
-    ).group_by(LogRecord.url).order_by('avg_time DESC').limit(5).all()
+    ).group_by(LogRecord.url).order_by(desc(avg_time_label)).limit(5).all()
     
-    # Générer recommandations
     recommendations = []
     
-    if errors / total > 0.1:
+    if total > 0 and errors / total > 0.1:
         recommendations.append({
             'type': 'CRITICAL',
             'title': 'Taux d\'erreur élevé',
@@ -157,7 +162,7 @@ def get_insights(
             'action': 'Vérifier les logs d\'erreur et corriger les endpoints défaillants'
         })
     
-    if slow_requests / total > 0.2:
+    if total > 0 and slow_requests / total > 0.2:
         recommendations.append({
             'type': 'WARNING',
             'title': 'Performances dégradées',
@@ -171,7 +176,7 @@ def get_insights(
         'error_rate': round((errors / total) * 100, 2) if total > 0 else 0,
         'slow_requests_rate': round((slow_requests / total) * 100, 2) if total > 0 else 0,
         'slowest_pages': [
-            {'url': url, 'avg_time_ms': float(avg_time), 'requests': count}
+            {'url': url, 'avg_time_ms': float(avg_time) if avg_time else 0, 'requests': count}
             for url, avg_time, count in slow_pages
         ],
         'recommendations': recommendations,

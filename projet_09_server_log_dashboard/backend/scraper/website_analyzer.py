@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 import time
 import logging
 
@@ -17,18 +17,13 @@ class WebsiteAnalyzer:
         })
     
     def analyze_website(self, url: str) -> Dict:
-        """
-        Analyse complète d'un site web
-        
-        Returns:
-            Métriques de performance et SEO
-        """
+        """Analyse complète d'un site web"""
         logger.info(f"🔍 Analyse de {url}...")
         
         try:
             start_time = time.time()
             response = self.session.get(url, timeout=self.timeout, allow_redirects=True)
-            load_time = (time.time() - start_time) * 1000  # en ms
+            load_time = (time.time() - start_time) * 1000
             
             if response.status_code != 200:
                 return {
@@ -40,7 +35,6 @@ class WebsiteAnalyzer:
             
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Métriques extraites
             metrics = {
                 'url': url,
                 'status': 'success',
@@ -60,7 +54,6 @@ class WebsiteAnalyzer:
                 'encoding': response.encoding
             }
             
-            # Score de performance (0-100)
             metrics['performance_score'] = self._calculate_performance_score(metrics)
             
             logger.info(f"✅ {url} analysé (Score: {metrics['performance_score']}/100)")
@@ -75,14 +68,11 @@ class WebsiteAnalyzer:
             return {'url': url, 'status': 'error', 'error': str(e)}
     
     def _get_meta_description(self, soup: BeautifulSoup) -> Optional[str]:
-        """Extrait la meta description"""
         meta = soup.find('meta', attrs={'name': 'description'})
         return meta.get('content') if meta else None
     
     def _detect_analytics(self, soup: BeautifulSoup) -> Dict:
-        """Détecte les outils d'analytics présents"""
         html_str = str(soup)
-        
         return {
             'google_analytics': 'google-analytics.com' in html_str or 'gtag' in html_str,
             'google_tag_manager': 'googletagmanager.com' in html_str,
@@ -91,15 +81,12 @@ class WebsiteAnalyzer:
         }
     
     def _check_mobile_viewport(self, soup: BeautifulSoup) -> bool:
-        """Vérifie si le site a une balise viewport mobile"""
         viewport = soup.find('meta', attrs={'name': 'viewport'})
         return viewport is not None
     
     def _calculate_performance_score(self, metrics: Dict) -> int:
-        """Calcule un score de performance sur 100"""
         score = 100
         
-        # Pénalités
         if metrics['load_time_ms'] > 3000:
             score -= 30
         elif metrics['load_time_ms'] > 1000:
@@ -128,6 +115,6 @@ class WebsiteAnalyzer:
         for url in urls:
             result = self.analyze_website(url)
             results.append(result)
-            time.sleep(1)  # Rate limiting
+            time.sleep(1)
         
         return results

@@ -21,7 +21,6 @@ class LogEntry:
         self.response_time = response_time
 
     def to_dict(self) -> dict:
-        """Convertit en dictionnaire"""
         return {
             'ip': self.ip,
             'timestamp': self.timestamp,
@@ -35,20 +34,14 @@ class LogEntry:
 class LogParser:
     """Parser pour logs Apache/Nginx format Combined"""
     
-    # Pattern pour Apache Combined Log Format
     APACHE_PATTERN = re.compile(
-        r'(?P<ip>[\d.:a-fA-F]+) '  # IP (IPv4/IPv6)
-        r'- - '
-        r'\[(?P<timestamp>[^\]]+)\] '
+        r'(?P<ip>[\d.:a-fA-F]+) - - \[(?P<timestamp>[^\]]+)\] '
         r'"(?P<method>\w+) (?P<url>[^\s]+) HTTP/[\d.]+" '
-        r'(?P<status>\d{3}) '
-        r'(?P<size>\d+|-) '
-        r'"[^"]*" '  # Referer
-        r'"(?P<user_agent>[^"]*)"'
-        r'(?: (?P<response_time>\d+))?'  # Temps de réponse optionnel
+        r'(?P<status>\d{3}) (?P<size>\d+|-) '
+        r'"[^"]*" "(?P<user_agent>[^"]*)"'
+        r'(?: (?P<response_time>\d+))?'
     )
     
-    # Format de timestamp Apache
     TIMESTAMP_FORMAT = '%d/%b/%Y:%H:%M:%S %z'
     
     def __init__(self):
@@ -63,14 +56,17 @@ class LogParser:
         if not match:
             self.error_count += 1
             self.errors.append(f"Line {line_num}: Format non reconnu")
-            logger.warning(f"Ligne {line_num} ignorée: format invalide")
             return None
         
         try:
             data = match.groupdict()
             
             # Parser le timestamp
-            timestamp = datetime.strptime(data['timestamp'], self.TIMESTAMP_FORMAT)
+            try:
+                timestamp = datetime.strptime(data['timestamp'], self.TIMESTAMP_FORMAT)
+            except ValueError:
+                # Essayer sans timezone
+                timestamp = datetime.strptime(data['timestamp'].split()[0], '%d/%b/%Y:%H:%M:%S')
             
             # Extraire le temps de réponse si présent
             response_time = float(data['response_time']) if data.get('response_time') else None
@@ -104,7 +100,7 @@ class LogParser:
         
         with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
             for line_num, line in enumerate(f, start=1):
-                if line.strip():  # Ignorer les lignes vides
+                if line.strip():
                     entry = self.parse_line(line, line_num)
                     if entry:
                         entries.append(entry)
@@ -114,9 +110,9 @@ class LogParser:
     
     def get_stats(self) -> dict:
         """Retourne les statistiques de parsing"""
+        total = self.parsed_count + self.error_count
         return {
             'parsed': self.parsed_count,
             'errors': self.error_count,
-            'success_rate': round(self.parsed_count / (self.parsed_count + self.error_count) * 100, 2) 
-                           if (self.parsed_count + self.error_count) > 0 else 0
+            'success_rate': round(self.parsed_count / total * 100, 2) if total > 0 else 0
         }

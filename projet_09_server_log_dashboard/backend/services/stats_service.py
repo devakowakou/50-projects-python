@@ -2,7 +2,10 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func, distinct
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
-from backend.database import LogRecord
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+from database import LogRecord
 
 class StatsService:
     """Service pour calculer les statistiques"""
@@ -76,13 +79,10 @@ class StatsService:
         start_date = datetime.now() - timedelta(days=days)
         
         results = db.query(
-            func.date_trunc('hour', LogRecord.timestamp).label('hour'),
+            func.strftime('%Y-%m-%d %H:00:00', LogRecord.timestamp).label('hour'),
             func.count(LogRecord.id).label('count')
         ).filter(
             LogRecord.timestamp >= start_date
         ).group_by('hour').order_by('hour').all()
         
-        return [
-            {'hour': hour.isoformat(), 'count': count} 
-            for hour, count in results
-        ]
+        return [{'hour': hour, 'count': count} for hour, count in results]

@@ -1,7 +1,6 @@
 import sys
 from pathlib import Path
 
-# Ajouter le répertoire parent au path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from backend.database import SessionLocal, init_db, LogRecord
@@ -14,10 +13,8 @@ logger = logging.getLogger(__name__)
 def import_logs(log_file: Path, batch_size: int = 500):
     """Importe les logs dans la base de données"""
     
-    # Initialiser la DB
     init_db()
     
-    # Parser le fichier
     parser = LogParser()
     entries = parser.parse_file(log_file)
     
@@ -27,15 +24,12 @@ def import_logs(log_file: Path, batch_size: int = 500):
     
     logger.info(f"📦 Import de {len(entries)} logs en base...")
     
-    # Session DB
     db = SessionLocal()
     
     try:
-        # Import par batch
         for i in range(0, len(entries), batch_size):
             batch = entries[i:i + batch_size]
             
-            # Convertir en objets SQLAlchemy
             db_logs = [
                 LogRecord(
                     ip=entry.ip,
@@ -62,16 +56,26 @@ def import_logs(log_file: Path, batch_size: int = 500):
     finally:
         db.close()
     
-    # Afficher les stats de parsing
     stats = parser.get_stats()
     logger.info(f"📊 Stats: {stats['parsed']} OK, {stats['errors']} erreurs ({stats['success_rate']}% succès)")
 
 def main():
-    log_file = Path(__file__).parent.parent / 'data' / 'raw_logs' / 'access.log'
+    # Détecter le fichier de logs (massive ou normal)
+    base_path = Path(__file__).parent.parent / 'data' / 'raw_logs'
+    massive_log = base_path / 'access_massive.log'
+    normal_log = base_path / 'access.log'
     
-    if not log_file.exists():
-        logger.error(f"❌ Fichier introuvable: {log_file}")
-        logger.info("💡 Lancer d'abord: python scripts/generate_sample_logs.py")
+    if massive_log.exists():
+        log_file = massive_log
+        logger.info("🎯 Fichier MASSIF détecté (utilise import_production_logs.py pour performances optimales)")
+    elif normal_log.exists():
+        log_file = normal_log
+        logger.info("📄 Fichier normal détecté")
+    else:
+        logger.error(f"❌ Fichier introuvable: {normal_log}")
+        logger.info("💡 Générez d'abord des logs:")
+        logger.info("   - python scripts/generate_massive_logs.py  (2M logs)")
+        logger.info("   - python scripts/generate_sample_logs.py   (5K logs)")
         return
     
     import_logs(log_file)

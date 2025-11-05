@@ -2,17 +2,20 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 from datetime import datetime
 from typing import Optional
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
 
-from backend.database import get_db
-from backend.services.stats_service import StatsService
-from backend.models.log_model import StatsOverview
+from database import get_db
+from services.stats_service import StatsService
+from models.log_model import StatsOverview
 
 router = APIRouter(prefix="/api/stats", tags=["statistics"])
 
 @router.get("/overview", response_model=StatsOverview)
 def get_overview_stats(
-    start_date: Optional[datetime] = Query(None, description="Date de début (ISO format)"),
-    end_date: Optional[datetime] = Query(None, description="Date de fin (ISO format)"),
+    start_date: Optional[datetime] = Query(None),
+    end_date: Optional[datetime] = Query(None),
     db: Session = Depends(get_db)
 ):
     """Statistiques globales du dashboard"""
@@ -33,7 +36,7 @@ def get_status_distribution(db: Session = Depends(get_db)):
 
 @router.get("/requests-timeline")
 def get_requests_timeline(
-    days: int = Query(7, ge=1, le=30, description="Nombre de jours"),
+    days: int = Query(7, ge=1, le=30),
     db: Session = Depends(get_db)
 ):
     """Timeline des requêtes par heure"""

@@ -1,5 +1,4 @@
 import streamlit as st
-from pathlib import Path
 
 # Configuration de la page
 st.set_page_config(
@@ -26,22 +25,12 @@ st.markdown("""
         border-radius: 10px;
         border-left: 4px solid #667eea;
     }
-    .stAlert {
-        border-radius: 10px;
-    }
     </style>
 """, unsafe_allow_html=True)
 
 # Sidebar navigation
 st.sidebar.title("🎯 Navigation")
-
-pages = {
-    "🏠 Dashboard Principal": "pages/1_dashboard.py",
-    "👥 Analyse de Sessions": "pages/2_sessions.py",
-    "🔍 Détection d'Anomalies": "pages/3_anomalies.py",
-    "📊 Benchmarking": "pages/4_benchmark.py",
-    "💡 Insights & Recommandations": "pages/5_insights.py"
-}
+st.sidebar.info("Utilisez les pages ci-dessus pour naviguer")
 
 # Header
 st.markdown('<h1 class="main-header">📊 Analyseur de Logs Web Avancé</h1>', unsafe_allow_html=True)
@@ -80,6 +69,6 @@ st.info("👈 **Utilisez la barre latérale pour naviguer entre les différentes
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666;'>
-    <p>🔒 Projet 9/50 - Stack: Streamlit + FastAPI + PostgreSQL + Scikit-learn + Plotly</p>
+    <p>🔒 Projet 9/50 - Stack: Streamlit + FastAPI + SQLite + Scikit-learn + Plotly</p>
 </div>
 """, unsafe_allow_html=True)
