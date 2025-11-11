@@ -41,6 +41,27 @@ outputs/exports/*.csv
 outputs/exports/*.json
 outputs/exports/*.xlsx
 
+# Logs
+*.log
+logs/
+**/logs/
+**/*.log
+**/logs/*.log
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+**/data/*.db
+**/data/*.sqlite
+**/data/*.sqlite3
+
+# Large data files
+**/data/raw_*/
+**/data/raw_*/*
+**/data/*_raw/
+**/data/*_raw/*
+
 # Reports
 rapport_*.md
 rapport_*.xlsx
