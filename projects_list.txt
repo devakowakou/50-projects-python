@@ -1,0 +1,50 @@
+1. Analyseur de fichiers CSV avec statistiques descriptives
+2. Dashboard de suivi de budget personnel avec graphiques
+3. Scraper de prix Amazon avec historique et alertes
+4. Visualiseur de données COVID par pays et régions
+5. Calculatrice de ROI et conversion pour campagnes marketing
+6. Tracker de cours d’actions avec moyennes mobiles
+7. Générateur automatique de rapports PDF depuis Excel
+8. Dashboard météo avec historiques et prévisions
+9. Analyse du trafic web des sites (visiteurs, sessions, pages)
+10. Extracteur de données depuis APIs publiques (Twitter, Reddit)
+11. Dashboard de KPIs e-commerce (CA, panier moyen, taux conversion)
+12. Calculatrice de significativité statistique pour A/B test
+13. Scraper immobilier avec analyse de prix par quartier
+14. Analyse d’audiences Instagram/TikTok (engagement, reach)
+15. Pipeline de nettoyage automatique de datasets
+16. Analyse de sentiment sur des reviews Amazon/Trustpilot
+17. Dashboard de cohort analysis et rétention clients
+18. ETL pour consolider plusieurs sources de données (CSV, API, DB)
+19. Dashboard de funnel analysis e-commerce (abandon de panier)
+20. Système de détection d’outliers et valeurs aberrantes
+21. Analyseur de market basket (produits achetés ensemble)
+22. Dashboard RFM pour segmentation (Récence, Fréquence, Montant)
+23. Pipeline de traitement de logs serveur avec alertes
+24. Dashboard Google Analytics/Ads avec prédictions
+25. Analyseur de séries temporelles (tendances, anomalies)
+26. Dashboard de Customer Lifetime Value avec prédictions
+27. Système de détection d’anomalies clients
+28. Dashboard de métriques SaaS (MRR, CAC, LTV, Churn)
+29. Pipeline ETL avec orchestration (Airflow-like)
+30. Dashboard de tests statistiques (t-test, chi2, ANOVA)
+31. Modèle de prédiction de churn clients (Classification ML)
+32. Recommandation de produits (collaborative filtering)
+33. Système de scoring marketing et risque
+34. Prédiction de séries temporelles de ventes (Prophet/ARIMA)
+35. Détection de fraude par machine learning
+36. Modèle de segmentation clients avec KMeans, DBSCAN
+37. Prédiction de prix immobiliers avec features engineering
+38. Système de lead scoring automatique au ML
+39. Pipeline de traitement de data avec PySpark
+40. Dashboard de suivi de modèles ML en production
+41. Système d’optimisation de prix dynamiques
+42. Modèle de prédiction de stock et ruptures
+43. Système prédictif de Customer LTV avec XGBoost
+44. Traitement de data avec Kafka et Spark Streaming
+45. Dashboard en direct et détection d’état (IoT data)
+46. Système de prédiction de churn pour SaaS B2B
+47. Analyse de logs et alertes automatisées
+48. Système MLOps complet avec version et CI/CD
+49. Générateur de rapports interactifs (data + visualisation + contenu)
+50. Plateforme de monitoring de qualité de données en temps réel
