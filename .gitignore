@@ -72,3 +72,5 @@ donnees_nettoyees_*.csv
 # Logs
 *.log
 projet_09_server_log_dashboard/data/logs.db
+*.db
+*/data/*.db
