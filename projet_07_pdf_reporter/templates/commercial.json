@@ -1,0 +1,27 @@
+{
+    "name": "Rapport Commercial",
+    "description": "Rapport d'analyse commerciale",
+    "kpis": [
+        "chiffre_affaires",
+        "nombre_ventes",
+        "panier_moyen",
+        "taux_conversion"
+    ],
+    "charts": [
+        "evolution_ventes",
+        "top_produits",
+        "repartition_ca"
+    ],
+    "sections": [
+        "synthese",
+        "performance",
+        "tendances",
+        "recommandations"
+    ],
+    "colors": {
+        "primary": "#2E86AB",
+        "secondary": "#A23B72",
+        "success": "#06A77D",
+        "warning": "#F18F01"
+    }
+}
