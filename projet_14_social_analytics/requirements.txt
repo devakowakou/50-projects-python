@@ -1,0 +1,31 @@
+# Backend - FastAPI
+fastapi
+uvicorn[standard]
+python-jose[cryptography]
+passlib[bcrypt]
+httpx
+
+# Frontend - Dash
+dash
+plotly
+dash-bootstrap-components
+
+# Database
+sqlalchemy
+alembic
+
+# Data Processing
+pandas
+numpy
+
+# Scheduling
+apscheduler
+
+# Environment
+python-dotenv
+pydantic
+
+# Development
+pytest
+black
+flake8
