@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Amazing product!",
+    "text": "This product exceeded my expectations! The quality is outstanding and the delivery was super fast. I would definitely recommend this to anyone looking for a reliable solution. The customer service was also very helpful when I had questions.",
+    "rating": 5,
+    "date": "2025-10-25",
+    "author": "Sarah M.",
+    "platform": "amazon",
+    "product_url": "https://amazon.com/example-product",
+    "scraped_at": "2025-10-29T10:00:00"
+  },
+  {
+    "title": "Terrible experience",
+    "text": "I'm very disappointed with this purchase. The product arrived damaged and the quality is much worse than advertised. The price is way too high for what you get. Customer service was unhelpful and rude. I want my money back!",
+    "rating": 1,
+    "date": "2025-10-24",
+    "author": "John D.",
+    "platform": "amazon",
+    "product_url": "https://amazon.com/example-product",
+    "scraped_at": "2025-10-29T10:05:00"
+  },
+  {
+    "title": "Good value for money",
+    "text": "The product is decent for the price. It's not the best quality but it does the job. Delivery was on time and packaging was good. I would consider buying again if the price stays reasonable.",
+    "rating": 4,
+    "date": "2025-10-23",
+    "author": "Mike R.",
+    "platform": "amazon",
+    "product_url": "https://amazon.com/example-product",
+    "scraped_at": "2025-10-29T10:10:00"
+  },
+  {
+    "title": "Excellent service",
+    "text": "Outstanding customer service from this company! They resolved my issue quickly and professionally. The staff was friendly and knowledgeable. The product quality is also very good. Highly recommended!",
+    "rating": 5,
+    "date": "2025-10-22",
+    "author": "Emma L.",
+    "platform": "trustpilot",
+    "company_url": "https://trustpilot.com/example-company",
+    "scraped_at": "2025-10-29T10:15:00"
+  },
+  {
+    "title": "Poor quality control",
+    "text": "The product I received was defective. It seems like there's no quality control at all. Very disappointing experience. The company took weeks to respond to my complaint and offered no real solution.",
+    "rating": 2,
+    "date": "2025-10-21",
+    "author": "David K.",
+    "platform": "trustpilot",
+    "company_url": "https://trustpilot.com/example-company",
+    "scraped_at": "2025-10-29T10:20:00"
+  },
+  {
+    "title": "Average product",
+    "text": "It's an okay product. Nothing special but it works as expected. The price is fair and delivery was normal. I wouldn't say it's bad but it's not great either. Just average overall.",
+    "rating": 3,
+    "date": "2025-10-20",
+    "author": "Lisa P.",
+    "platform": "amazon",
+    "product_url": "https://amazon.com/example-product",
+    "scraped_at": "2025-10-29T10:25:00"
+  },
+  {
+    "title": "Fast delivery, great product",
+    "text": "I'm really happy with this purchase! The product arrived much faster than expected and the quality is excellent. The packaging was perfect and everything was exactly as described. Will definitely order again!",
+    "rating": 5,
+    "date": "2025-10-19",
+    "author": "Tom W.",
+    "platform": "amazon",
+    "product_url": "https://amazon.com/example-product",
+    "scraped_at": "2025-10-29T10:30:00"
+  },
+  {
+    "title": "Overpriced and underwhelming",
+    "text": "For the price I paid, I expected much better quality. The product feels cheap and doesn't work as well as advertised. The company's marketing is misleading. I regret this purchase and won't be buying from them again.",
+    "rating": 2,
+    "date": "2025-10-18",
+    "author": "Anna S.",
+    "platform": "trustpilot",
+    "company_url": "https://trustpilot.com/example-company",
+    "scraped_at": "2025-10-29T10:35:00"
+  },
+  {
+    "title": "Good customer support",
+    "text": "Had an issue with my order but the customer support team was very helpful. They resolved everything quickly and professionally. The product itself is good quality and works well. Happy with the overall experience.",
+    "rating": 4,
+    "date": "2025-10-17",
+    "author": "Chris B.",
+    "platform": "amazon",
+    "product_url": "https://amazon.com/example-product",
+    "scraped_at": "2025-10-29T10:40:00"
+  },
+  {
+    "title": "Not worth the money",
+    "text": "This product is way overpriced for what it offers. The quality is mediocre at best and there are much better alternatives available for less money. The delivery was also slower than promised. Very disappointed.",
+    "rating": 2,
+    "date": "2025-10-16",
+    "author": "Rachel T.",
+    "platform": "trustpilot",
+    "company_url": "https://trustpilot.com/example-company",
+    "scraped_at": "2025-10-29T10:45:00"
+  }
+]

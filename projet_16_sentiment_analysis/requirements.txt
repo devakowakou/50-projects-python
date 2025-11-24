@@ -1,0 +1,35 @@
+# Scraping avec Botasaurus
+botasaurus
+botasaurus[all]
+
+# NLP et Machine Learning
+nltk
+spacy
+textblob
+vaderSentiment
+transformers
+torch
+scikit-learn
+
+# Data Processing
+pandas
+numpy
+
+# Dashboard et Visualisation
+streamlit
+plotly
+seaborn
+matplotlib
+wordcloud
+
+# Utilitaires
+requests
+beautifulsoup4
+lxml
+python-dotenv
+tqdm
+
+# Development
+pytest
+black
+flake8
